@@ -1,48 +1,118 @@
-# Introducción
+---
+title: "Introducción"
+description: "Plataforma de abstracción para construir productos y procesos AI-native dentro de entornos SaaS."
+---
 
 ## Qué es Devic
 
-Devic es una plataforma de abstracción que permite a empresas SaaS transformarse en organizaciones **AI-native**, integrando inteligencia artificial en sus procesos internos y en sus productos sin necesidad de desarrollar infraestructura propia.
+Devic es una plataforma de abstracción que permite a empresas **SaaS** transformarse en organizaciones **AI-native**, integrando inteligencia artificial en sus procesos internos y en sus productos sin necesidad de desarrollar infraestructura propia.
 
-La plataforma ofrece un entorno unificado para crear, desplegar y operar sistemas impulsados por IA, combinando agentes, asistentes, bases de datos vectoriales y herramientas (MCPs) en una arquitectura interoperable.
+La plataforma ofrece un entorno unificado para crear, desplegar y operar sistemas impulsados por IA, combinando **agentes**, **asistentes**, **bases de datos vectoriales** y **herramientas (MCPs)** en una arquitectura interoperable.
 
-Devic nace de la experiencia de un equipo de emprendedores y técnicos que, tras años construyendo productos SaaS, detectaron la falta de un estándar para incorporar IA de manera estructurada, segura y escalable dentro de entornos empresariales.
+Devic nace de la experiencia de un equipo de emprendedores y técnicos que, tras años construyendo productos SaaS, detectaron la falta de un estándar para incorporar IA de forma estructurada, segura y escalable dentro de entornos empresariales.
 
 ---
 
 ## Por qué Devic
 
-Adoptar IA en una empresa SaaS implica resolver múltiples desafíos técnicos: gestión de modelos, versionado de prompts, trazabilidad, costes, autenticación, orquestación de herramientas, entre otros.\
-Devic abstrae toda esa complejidad en una capa única de control y gobierno, evitando que cada organización deba invertir en I+D para construir las mismas piezas.
+<Card
+  title="Capa de abstracción completa"
+  icon="layers"
+  horizontal
+>
+  Devic centraliza la gestión de modelos, prompts, herramientas y datos, eliminando la necesidad de desarrollar infraestructura AI desde cero.
+</Card>
 
-Entre sus capacidades principales:
-
-- **Agnosticismo de modelo:** soporte para múltiples LLMs en paralelo (OpenAI, Anthropic, Azure, modelos locales, etc.).
-- **Gestión y versionado de prompts:** control de versiones, histórico y auditoría de instrucciones por agente.
-- **MCPs (Model Context Protocol):** creación, importación y publicación de herramientas propias o de terceros.
-- **Integración con APIs y autenticación:** soporte para servicios internos y externos, con control de acceso y multitenancy.
-- **RAG nativo:** ingesta y vectorización automática de documentos para ampliar el contexto de los agentes.
-- **Evaluaciones automáticas:** posibilidad de usar un modelo como juez (_LLM as a Judge_) para auditar resultados.
-- **FinOps y control de costes:** trazabilidad de consumo de tokens, contexto y herramientas en tiempo real.
-- **Logs y trazabilidad completa:** registro detallado de requests, respuestas y tool calls.
-- **Bases de datos vectoriales nativas:** búsqueda semántica, indexación automática y acceso directo desde los agentes.
-- **Integración fluida con sistemas existentes:** SDKs, API, webhooks y widgets embebibles para desplegar agentes o asistentes.
-
-Con Devic, las empresas SaaS pueden acelerar la adopción de IA sin sacrificar control técnico ni invertir recursos duplicados en infraestructura.
+<Columns cols={2}>
+  <Card
+    title="Agnóstico de modelo"
+    icon="brain"
+  >
+    Compatible con múltiples LLMs (OpenAI, Anthropic, Azure, modelos locales). Permite elegir el modelo más eficiente según el caso de uso.
+  </Card>
+  <Card
+    title="Gestión de prompts"
+    icon="file-lines"
+  >
+    Control de versiones, histórico y trazabilidad completa de cada prompt utilizado por agentes o asistentes.
+  </Card>
+  <Card
+    title="MCPs y herramientas personalizadas"
+    icon="plug"
+  >
+    Crea, importa y publica herramientas que los modelos pueden invocar directamente bajo el estándar MCP.
+  </Card>
+  <Card
+    title="RAG nativo"
+    icon="book-open"
+  >
+    Ingesta automática de documentos con vectorización y búsqueda semántica integrada.
+  </Card>
+  <Card
+    title="Evaluaciones automáticas"
+    icon="scale-balanced"
+  >
+    Usa un modelo como juez (LLM as a Judge) para auditar resultados y evaluar calidad sin intervención humana.
+  </Card>
+  <Card
+    title="FinOps y trazabilidad"
+    icon="chart-line"
+  >
+    Control granular de costes, consumo de tokens y logs detallados de cada ejecución.
+  </Card>
+</Columns>
 
 ---
 
 ## Qué puedes construir
 
-Devic proporciona todos los componentes necesarios para construir productos y flujos AI-native dentro de tu propio entorno SaaS.\
-Desde la plataforma, los equipos pueden:
+Devic proporciona todos los componentes necesarios para construir productos y flujos **AI-native** dentro de tu propio entorno SaaS.
 
-- **Crear MCPs personalizados** a partir de sus APIs o servicios internos.
-- **Diseñar herramientas específicas** para ser invocadas por agentes o modelos de lenguaje.
-- **Definir roles y permisos** para gestionar accesos dentro de entornos multiusuario.
-- **Configurar agentes autónomos** que ejecutan procesos de negocio complejos con lógica propia.
-- **Desplegar asistentes conversacionales** para interactuar con usuarios o empleados en tiempo real.
-- **Integrar widgets y SDKs** para conectar sus agentes o asistentes con ChatGPT u otros entornos.
-- **Implementar procesos agénticos y flujos híbridos**, combinando automatización con intervención humana (Human-in-the-Loop).
+<Columns cols={2}>
+  <Card
+    title="MCPs personalizados"
+    icon="server"
+  >
+    Conecta tus APIs o servicios internos y publícalos como MCPs listos para ser usados por tus modelos o agentes.
+  </Card>
+  <Card
+    title="Agentes autónomos"
+    icon="robot"
+  >
+    Configura agentes que ejecutan procesos de negocio complejos, con control de contexto, herramientas y tareas.
+  </Card>
+  <Card
+    title="Asistentes conversacionales"
+    icon="comments"
+  >
+    Crea asistentes en tiempo real con acceso a tus datos y herramientas, integrables en tus productos o intranets.
+  </Card>
+  <Card
+    title="Widgets y SDKs"
+    icon="window-maximize"
+  >
+    Integra tus agentes y asistentes en ChatGPT o cualquier interfaz mediante SDKs o widgets embebibles.
+  </Card>
+  <Card
+    title="Procesos agénticos y Human-in-the-Loop"
+    icon="user-check"
+  >
+    Diseña flujos híbridos que combinan automatización con validación humana en puntos críticos del proceso.
+  </Card>
+  <Card
+    title="Bases de datos vectoriales"
+    icon="database"
+  >
+    Crea y gestiona bases de datos nativas con búsqueda semántica y acceso directo desde tus agentes y MCPs.
+  </Card>
+</Columns>
 
-Cada elemento creado en Devic se integra de forma natural con los sistemas existentes, permitiendo evolucionar productos SaaS tradicionales hacia arquitecturas totalmente impulsadas por IA.
+---
+
+<Card
+  title="Empieza ahora"
+  icon="rocket"
+  href="/quickstart"
+>
+  Configura tu primer agente o asistente y transforma tu producto SaaS en una solución AI-native en minutos.
+</Card>
