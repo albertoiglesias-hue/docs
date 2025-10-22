@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Devic Documentation",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -13,6 +13,37 @@
       {
         "tab": "Guides",
         "groups": [
+          {
+            "group": "Introducción",
+            "pages": [
+              "devic/introduccion",
+              "devic/quickstart"
+            ]
+          },
+          {
+            "group": "MCP",
+            "pages": [
+              "devic/MCPs/mis-mcps"
+            ]
+          },
+          {
+            "group": "Agentes",
+            "pages": [
+              "devic/Agentes/que-son"
+            ]
+          },
+          {
+            "group": "Asistentes",
+            "pages": [
+              "devic/Asistentes/que-son"
+            ]
+          },
+          {
+            "group": "Bases de datos (BD)",
+            "pages": [
+              "devic/Basesdedatos/vision-general"
+            ]
+          },
           {
             "group": "Getting started",
             "pages": [
@@ -102,15 +133,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
