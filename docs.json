@@ -120,8 +120,9 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/devic-light.svg",
+    "dark": "/logo/devic-dark.svg",
+    "height": "28px"
   },
   "navbar": {
     "links": [
