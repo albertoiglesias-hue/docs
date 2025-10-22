@@ -14,37 +14,6 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Introducción",
-            "pages": [
-              "devic/introduccion",
-              "devic/quickstart"
-            ]
-          },
-          {
-            "group": "MCP",
-            "pages": [
-              "devic/MCPs/mis-mcps"
-            ]
-          },
-          {
-            "group": "Agentes",
-            "pages": [
-              "devic/Agentes/que-son"
-            ]
-          },
-          {
-            "group": "Asistentes",
-            "pages": [
-              "devic/Asistentes/que-son"
-            ]
-          },
-          {
-            "group": "Bases de datos (BD)",
-            "pages": [
-              "devic/Basesdedatos/vision-general"
-            ]
-          },
-          {
             "group": "Getting started",
             "pages": [
               "index",
@@ -94,6 +63,42 @@
               "api-reference/endpoint/create",
               "api-reference/endpoint/delete",
               "api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Devic",
+        "groups": [
+          {
+            "group": "Introducción",
+            "pages": [
+              "devic/introduccion",
+              "devic/quickstart"
+            ]
+          },
+          {
+            "group": "MCP",
+            "pages": [
+              "devic/MCPs/mis-mcps"
+            ]
+          },
+          {
+            "group": "Agentes",
+            "pages": [
+              "devic/Agentes/que-son"
+            ]
+          },
+          {
+            "group": "Asistentes",
+            "pages": [
+              "devic/Asistentes/que-son"
+            ]
+          },
+          {
+            "group": "Bases de datos (BD)",
+            "pages": [
+              "devic/Basesdedatos/vision-general"
             ]
           }
         ]
