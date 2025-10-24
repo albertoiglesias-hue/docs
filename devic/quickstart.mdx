@@ -1,5 +1,118 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Primeros pasos"
+description: "Configura tu entorno inicial en Devic: selecciona tu proveedor de modelo, establece tu clave API y familiarízate con el panel principal."
 ---
 
+## 1. Seleccionar tu proveedor de modelo
+
+Al iniciar sesión en Devic, el primer paso es seleccionar el proveedor de modelo que utilizarás para ejecutar tus agentes y asistentes.
+
+En la parte superior de la interfaz encontrarás el selector de modelos, donde puedes elegir entre:
+
+- **OpenAI**
+- **DeepSeek**
+- **Anthropic**
+- **XAi**
+- **Kimi-K2**
+
+<Card
+  title="Configuración de proveedor"
+  icon="gear"
+  horizontal
+>
+  Haz clic en el icono de configuración junto al nombre del proveedor para definir tu proyecto y clave de API.
+</Card>
+
+### Configuración del proyecto
+
+En el cuadro de diálogo **OpenAI Project Configuration**, introduce los datos correspondientes:
+
+- **Project Name:** nombre descriptivo del proyecto o entorno.  
+- **Project API Key:** clave del modelo o proveedor (se guarda de forma segura).  
+
+Esto permite asociar ejecuciones y costes a proyectos concretos dentro de tu organización.
+
+![Configuración de modelo](f12c590c-d27b-4ed0-a47d-8a47fa383e36.png)
+
+---
+
+## 2. Dashboard
+
+El **Dashboard** centraliza toda la actividad de tus agentes y asistentes.  
+Desde aquí puedes supervisar en tiempo real las ejecuciones, estados y métricas clave.
+
+<Columns cols={2}>
+  <Card
+    title="Ejecuciones recientes"
+    icon="clock-rotate-left"
+  >
+    Lista de ejecuciones completadas o en curso, con fecha, estado y agente asociado.
+  </Card>
+  <Card
+    title="Ejecuciones en progreso"
+    icon="spinner"
+  >
+    Visualiza qué agentes están activos y las tareas actualmente en ejecución.
+  </Card>
+  <Card
+    title="Ejecuciones próximas"
+    icon="calendar"
+  >
+    Planificación de agentes programados para ejecución automática.
+  </Card>
+  <Card
+    title="Gráficas de rendimiento"
+    icon="chart-line"
+  >
+    Métricas en tiempo real de agentes ejecutados en las últimas 12 horas.
+  </Card>
+</Columns>
+
+![Dashboard principal](f1f0d830-ca53-4614-aa34-0e4493772e7e.png)
+
+---
+
+## 3. Principales áreas
+
+Devic organiza todas las funcionalidades en áreas modulares, accesibles desde el menú lateral izquierdo.
+
+<Columns cols={2}>
+  <Card
+    title="Asistentes"
+    icon="comments"
+    href="/asistentes"
+  >
+    Interfaces conversacionales que interactúan con usuarios en tiempo real. Pueden conectarse a tus datos y herramientas internas.
+  </Card>
+  <Card
+    title="Agentes"
+    icon="robot"
+    href="/agentes"
+  >
+    Entidades autónomas capaces de ejecutar flujos complejos, invocar MCPs y gestionar tareas dentro de tus sistemas SaaS.
+  </Card>
+  <Card
+    title="Bases de datos"
+    icon="database"
+    href="/bases-de-datos"
+  >
+    Bases de datos nativas vectoriales con búsqueda semántica, integradas con agentes y MCPs.
+  </Card>
+  <Card
+    title="MCPs"
+    icon="plug"
+    href="/mcps"
+  >
+    Herramientas y conectores basados en el estándar Model Context Protocol. Puedes importar, crear y publicar los tuyos propios.
+  </Card>
+</Columns>
+
+---
+
+<Card
+  title="Siguiente paso"
+  icon="rocket"
+  href="/agentes"
+>
+  Crea tu primer agente y empieza a construir procesos agénticos dentro de tu entorno SaaS.
+</Card>
