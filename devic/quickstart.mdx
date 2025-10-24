@@ -15,124 +15,85 @@ En la barra superior encontrarás el selector de modelos, con soporte para los s
 - **XAi**
 - **Kimi-K2**
 
-<Card
-  title="Configuración de proveedor"
-  icon="gear"
-  horizontal
->
+<Card title="Configuración de proveedor" icon="gear" horizontal>
   Haz clic en el icono de configuración junto al nombre del proveedor para autenticarte con tu clave de API.
 </Card>
 
 ### Autenticación con el proveedor
 
-Antes de poder crear o ejecutar agentes, debes autenticar tu cuenta con la **API Key del modelo seleccionado**.  
+Antes de poder crear o ejecutar agentes, debes autenticar tu cuenta con la **API Key del modelo seleccionado**.\
 Este paso es obligatorio: la plataforma no permite avanzar hasta que la autenticación se complete correctamente.
 
 En la ventana de configuración introduce:
 
-- **Project Name:** nombre identificativo del proyecto o entorno.  
+- **Project Name:** nombre identificativo del proyecto o entorno.
 - **Project API Key:** clave API proporcionada por el proveedor del modelo.
+
+![Autenticación de proveedor](/APIKeymodel.jpg)
 
 Para obtener tu clave API, consulta las guías oficiales:
 
-- [Cómo generar una API Key en OpenAI](https://platform.openai.com/account/api-keys)  
-- [Cómo generar una API Key en Anthropic](https://docs.anthropic.com/en/api/getting-started)  
-- [Cómo generar una API Key en DeepSeek](https://platform.deepseek.com/docs)  
-- [Cómo generar una API Key en XAi](https://x.ai/api)  
+- [Cómo generar una API Key en OpenAI](https://platform.openai.com/account/api-keys)
+- [Cómo generar una API Key en Anthropic](https://docs.anthropic.com/en/api/getting-started)
+- [Cómo generar una API Key en DeepSeek](https://platform.deepseek.com/docs)
+- [Cómo generar una API Key en XAi](https://x.ai/api)
 - [Cómo generar una API Key en Kimi-K2](https://kimi.moonshot.cn/docs)
 
 Una vez autenticado, el modelo quedará disponible para su uso en agentes, asistentes y MCPs.
-
-![Autenticación de proveedor](f12c590c-d27b-4ed0-a47d-8a47fa383e36.png)
 
 ---
 
 ## 2. Dashboard
 
-El **Dashboard** es el punto central de control de Devic.  
+El **Dashboard** es el punto central de control de Devic.\
 Aquí podrás monitorizar el rendimiento de los agentes y el estado de las ejecuciones en tiempo real.
 
 <Columns cols={2}>
-  <Card
-    title="Ejecuciones en espera de aprobación"
-    icon="hand"
-  >
-    Muestra las tareas pausadas bajo el flujo *Human-in-the-Loop* que requieren validación manual antes de continuar.
+  <Card title="Ejecuciones en espera de aprobación" icon="hand">
+    Muestra las tareas pausadas bajo el flujo _Human-in-the-Loop_ que requieren validación manual antes de continuar.
   </Card>
-  <Card
-    title="Ejecuciones recientes"
-    icon="clock-rotate-left"
-  >
+  <Card title="Ejecuciones recientes" icon="clock-rotate-left">
     Lista de ejecuciones completadas o en curso, con fecha, estado y agente asociado.
   </Card>
-  <Card
-    title="Ejecuciones en progreso"
-    icon="spinner"
-  >
+  <Card title="Ejecuciones en progreso" icon="spinner">
     Visualiza qué agentes están activos y las tareas actualmente en ejecución.
   </Card>
-  <Card
-    title="Ejecuciones próximas"
-    icon="calendar"
-  >
+  <Card title="Ejecuciones próximas" icon="calendar">
     Planificación de agentes programados para ejecución automática.
   </Card>
-  <Card
-    title="Gráficas de rendimiento"
-    icon="chart-line"
-  >
+  <Card title="Gráficas de rendimiento" icon="chart-line">
     Métricas en tiempo real de agentes ejecutados en las últimas 12 horas.
   </Card>
 </Columns>
 
-![Dashboard principal](f1f0d830-ca53-4614-aa34-0e4493772e7e.png)
+![Dashboard principal](/Dashboard.jpg)
 
 ---
 
 ## 3. Principales áreas
 
-El menú lateral izquierdo agrupa todas las secciones funcionales de Devic.  
+El menú lateral izquierdo agrupa todas las secciones funcionales de Devic.\
 Desde aquí puedes acceder a cada módulo principal para configurar, monitorear y operar tu entorno AI-native.
 
-![Menú lateral principal](dc4046b0-3106-4852-80c2-174d88f78bd6.png)
+![Menú lateral principal](/menu.jpg)
 
 <Columns cols={2}>
-  <Card
-    title="Asistentes"
-    icon="comments"
-    href="/asistentes"
-  >
+  <Card title="Asistentes" icon="comments" href="/asistentes">
     Interfaces conversacionales que responden en tiempo real. Puedes conectarlas a tus datos o integrarlas en tus productos.
   </Card>
-  <Card
-    title="Agentes"
-    icon="robot"
-    href="/agentes"
-  >
+  <Card title="Agentes" icon="robot" href="/agentes">
     Entidades autónomas que ejecutan flujos de negocio, invocan herramientas (MCPs) y gestionan tareas complejas.
   </Card>
-  <Card
-    title="Bases de datos"
-    icon="database"
-    href="/bases-de-datos"
-  >
+  <Card title="Bases de datos" icon="database" href="/bases-de-datos">
     Bases de datos vectoriales con búsqueda semántica integrada, disponibles para tus agentes y MCPs.
   </Card>
-  <Card
-    title="MCPs"
-    icon="plug"
-    href="/mcps"
-  >
+  <Card title="MCPs" icon="plug" href="/mcps">
     Herramientas y conectores que amplían las capacidades de tus agentes bajo el estándar Model Context Protocol.
   </Card>
 </Columns>
 
 ---
 
-<Card
-  title="Siguiente paso"
-  icon="rocket"
-  href="/agentes"
->
+<Card title="Siguiente paso" icon="rocket" href="/agentes">
   Crea tu primer agente y pon en marcha un flujo agéntico completo dentro de tu entorno SaaS.
 </Card>
