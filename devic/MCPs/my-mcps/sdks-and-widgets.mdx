@@ -1,14 +1,25 @@
 ---
 title: "SDKs y Widgets"
-description: "Crea y personaliza widgets visuales que pueden ser invocados directamente desde tus tools MCP."
+description: "Renderiza componentes personalizados de tu SaaS en las conversaciones con ChatGPT mediante widgets integrados."
 ---
 
 ## Introducción
 
-Los **widgets** son componentes visuales personalizables que permiten representar resultados o interfaces interactivas directamente dentro del entorno de Devic.  
-Cada widget puede incluir **HTML**, **CSS** y **JavaScript**, ofreciendo total flexibilidad para diseñar dashboards, informes o visualizaciones de datos.
+Los **widgets** permiten **renderizar contenido visual o interactivo directamente dentro de las conversaciones de ChatGPT** cuando se invoca una tool del MCP.  
+Se basan en la tecnología de [ChatKit Widgets](https://platform.openai.com/docs/guides/chatkit-widgets) de OpenAI, que habilita la representación de componentes enriquecidos como gráficos, tablas, formularios o dashboards dentro del flujo conversacional.
 
 ![Vista general del editor de widgets](fef8a677-789a-44c2-a101-35c26a415cfa.png)
+
+---
+
+## Capa de abstracción de Devic
+
+**Devic** proporciona una capa de abstracción que permite a los equipos técnicos **definir y desplegar fácilmente los widgets que representarán visualmente su SaaS** cuando un usuario interactúe con ChatGPT a través de su MCP.
+
+En otras palabras:
+- Tu SaaS puede definir sus propios componentes de interfaz (widgets).  
+- Cuando un cliente usa ChatGPT y llama a una *tool* de tu MCP, el widget que hayas diseñado se mostrará con tu **imagen de marca y experiencia visual personalizada**.  
+- Devic se encarga de gestionar la infraestructura, el enlace entre las *tools* y los widgets, y la publicación automática para ChatGPT.
 
 ---
 
@@ -71,7 +82,7 @@ A la derecha del editor, puedes configurar las propiedades del widget:
 
 Para que un widget pueda ser invocado automáticamente desde una **Tool**, debe asociarse a ella mediante el campo **Widget Binding** disponible en la sección **More Options** del configurador de la tool.
 
-Esto permite que, cuando la tool sea ejecutada, Devic renderice el widget vinculado con los datos devueltos.
+Esto permite que, cuando la tool sea ejecutada, Devic renderice el widget vinculado con los datos devueltos en la conversación de ChatGPT.
 
 ![Vincular widget en More Options de la Tool](e3fd56af-2f11-4ba2-964e-9a615f1d4a4f.png)
 
@@ -95,7 +106,7 @@ La plataforma ofrece SDKs en varios lenguajes (JavaScript, Python y próximament
 
 ## Recursos adicionales
 
-Para aprender más sobre cómo construir y utilizar widgets, consulta la documentación oficial de OpenAI sobre componentes y ChatKit Widgets:  
+Para aprender más sobre cómo construir y utilizar widgets compatibles con ChatGPT, consulta la documentación oficial de OpenAI sobre ChatKit Widgets:  
 👉 [https://platform.openai.com/docs/guides/chatkit-widgets](https://platform.openai.com/docs/guides/chatkit-widgets)
 
 <Card
