@@ -88,7 +88,6 @@
                 "icon": "layers",
                 "expanded": false,
                 "pages": [
-                  "devic/MCPs/my-mcps/index",
                   "devic/MCPs/my-mcps/what-it-is",
                   "devic/MCPs/my-mcps/import-tool",
                   "devic/MCPs/my-mcps/tools-menu",
