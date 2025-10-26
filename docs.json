@@ -85,7 +85,7 @@
               "devic/MCPs/index",
               {
                 "group": "Mis MCPs",
-                "icon": "layers",
+                "icon": "shield",
                 "expanded": false,
                 "pages": [
                   "devic/MCPs/my-mcps/what-it-is",
