@@ -1,5 +1,81 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Importar tool"
+description: "Crea un nuevo servidor MCP a partir de una especificación OpenAPI o desde cero."
 ---
 
+## Crear un nuevo MCP
+
+Para iniciar la creación de tu propio MCP, accede a la sección **MCPs → Mis MCPs** en el menú lateral y haz clic en el botón **Add custom MCP**.
+
+<Card
+  title="Añadir un MCP personalizado"
+  icon="plus"
+  horizontal
+>
+  Desde este botón podrás importar tu API existente o definir un nuevo MCP desde cero.
+</Card>
+
+![Vista del botón Add custom MCP](8efe43d9-6502-4c37-9de1-d238489c789d.png)
+
+---
+
+## Seleccionar modo de importación
+
+Una vez abierto el asistente de creación, se despliega el cuadro **Import Tool Server**, donde podrás elegir el método de importación.
+
+Las opciones disponibles son:
+
+- **OpenAPI URL:** importa directamente la especificación pública de tu API mediante su URL.  
+- **OpenAPI JSON:** carga un archivo local con la especificación de tu API.  
+- **Start from scratch:** crea un MCP vacío para definir manualmente tus tools y endpoints.
+
+<Card
+  title="Importar desde OpenAPI"
+  icon="link"
+>
+  Si tu API ya tiene una definición OpenAPI, basta con pegar la URL o subir el archivo JSON.  
+  Devic generará automáticamente las tools y endpoints correspondientes.
+</Card>
+
+![Import Tool Server - opciones de importación](38f335f5-3db6-42df-b3df-e6d882f51873.png)
+
+---
+
+## Configuración inicial del MCP
+
+Tras importar o crear el MCP, accederás a su panel de configuración.  
+Desde aquí podrás definir:
+
+- **Nombre** y **descripción** del MCP.  
+- **Server URL:** endpoint base de tu servicio.  
+- **Método de autenticación:** soporta Basic, Bearer o JWT.  
+- **API Key o Token:** clave necesaria para que los agentes puedan acceder al servicio.  
+- **Tools Configuration:** listado de endpoints detectados o añadidos manualmente.
+
+![Configuración inicial del MCP](6174130d-277d-4ff6-bc28-f76439b0ace7.png)
+
+<Card
+  title="Guardar configuración"
+  icon="floppy-disk"
+  horizontal
+>
+  Una vez completada la configuración, haz clic en <strong>Save Changes</strong> para registrar el MCP y habilitar sus tools.
+</Card>
+
+---
+
+## Resultado final
+
+Una vez creado, el nuevo MCP aparecerá dentro del listado principal de **Mis MCPs** con su estado activo, listo para ser utilizado por agentes o asistentes.
+
+![Vista de MCPs creados](38f335f5-3db6-42df-b3df-e6d882f51873.png)
+
+---
+
+<Card
+  title="Siguiente paso"
+  icon="wrench"
+  href="/mcp/my-mcps/tools-menu"
+>
+  Descubre cómo acceder al menú de tools de tu MCP y gestionar cada endpoint disponible.
+</Card>
