@@ -1,5 +1,100 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "SDKs y Widgets"
+description: "Crea y personaliza widgets visuales que pueden ser invocados directamente desde tus tools MCP."
 ---
 
+## Introducción
+
+Los **widgets** son componentes visuales personalizables que permiten representar resultados o interfaces interactivas directamente dentro del entorno de Devic.  
+Cada widget puede incluir **HTML**, **CSS** y **JavaScript**, ofreciendo total flexibilidad para diseñar dashboards, informes o visualizaciones de datos.
+
+![Vista general del editor de widgets](fef8a677-789a-44c2-a101-35c26a415cfa.png)
+
+---
+
+## Crear un nuevo widget
+
+Para crear un nuevo widget, dirígete a la pestaña **ChatGPT Apps** dentro de tu MCP y haz clic en **New**.
+
+Se abrirá el editor de componentes, donde podrás definir el contenido del widget usando tres pestañas principales:
+
+- **HTML** — estructura del componente.  
+- **CSS** — estilo visual.  
+- **JS** — comportamiento dinámico o scripts.
+
+![Nuevo widget creado](fc3b4937-a0a5-4c19-be49-c5b439d655ad.png)
+
+---
+
+### Ejemplo de widget simple
+
+**HTML**
+```html
+<div class="widget">Hello Widget</div>
+```
+
+**CSS**
+```css
+.widget {
+  font-family: system-ui;
+  padding: 8px;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+}
+```
+
+**JS**
+```js
+// You can access the root element with document.currentScript?.parentElement
+console.log('widget loaded');
+```
+
+![Editor HTML, CSS y JS del widget](b88d1a1f-82ea-473d-b254-0f033e3bfa12.png)
+
+---
+
+## Parámetros del componente
+
+A la derecha del editor, puedes configurar las propiedades del widget:
+
+- **Name** — nombre único del componente.  
+- **Description** — breve descripción del propósito del widget.  
+- **Invoking Text / Invoked Text** — textos mostrados mientras el widget se ejecuta.  
+- **Display with card border** — opción para mostrar el widget dentro de una tarjeta visual.
+
+![Configuración de parámetros del componente](b4dea45c-d457-4396-bbfc-763ca1988b38.png)
+
+---
+
+## Vincular un widget a una Tool
+
+Para que un widget pueda ser invocado automáticamente desde una **Tool**, debe asociarse a ella mediante el campo **Widget Binding** disponible en la sección **More Options** del configurador de la tool.
+
+Esto permite que, cuando la tool sea ejecutada, Devic renderice el widget vinculado con los datos devueltos.
+
+![Vincular widget en More Options de la Tool](e3fd56af-2f11-4ba2-964e-9a615f1d4a4f.png)
+
+> ⚙️ **Importante:** el nombre indicado en *Widget Binding* debe coincidir exactamente con el nombre del widget creado.  
+> Si no hay coincidencia, el componente no podrá ser invocado desde la tool.
+
+---
+
+## Integración con SDKs
+
+Los SDKs de Devic permiten conectar tus MCPs y widgets desde aplicaciones externas.  
+Con ellos puedes:
+
+- Ejecutar tools desde tus propios scripts.  
+- Invocar widgets personalizados mediante APIs.  
+- Integrar dashboards visuales directamente en tus plataformas.
+
+La plataforma ofrece SDKs en varios lenguajes (JavaScript, Python y próximamente Go) para facilitar la integración con tus sistemas.
+
+<Card
+  title="Siguiente paso"
+  icon="code"
+  href="/mcp/my-mcps/sdk-integration"
+>
+  Aprende cómo integrar tus MCPs y widgets en aplicaciones externas mediante los SDKs de Devic.
+</Card>

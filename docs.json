@@ -94,7 +94,6 @@
                   "devic/MCPs/my-mcps/configure-tools",
                   "devic/MCPs/my-mcps/publish",
                   "devic/MCPs/my-mcps/sessions",
-                  "devic/MCPs/my-mcps/tool-calls",
                   "devic/MCPs/my-mcps/sdks-and-widgets",
                   "devic/MCPs/my-mcps/integration-with-llms"
                 ]
