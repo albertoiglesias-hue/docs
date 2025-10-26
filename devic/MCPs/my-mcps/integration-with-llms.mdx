@@ -1,5 +1,81 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Integration with LLMs"
+description: "Conecta tus MCPs con modelos de lenguaje como ChatGPT, Claude o Cursor, y habilita su uso desde agentes y asistentes en Devic."
 ---
+
+## Introducción
+
+La integración con **modelos de lenguaje (LLMs)** permite que tus herramientas y servicios (MCPs) puedan ser consumidos directamente por modelos conversacionales como **ChatGPT**, **Claude**, **Cursor**, o incluso por los **Agentes** y **Asistentes** definidos dentro de la propia plataforma Devic.
+
+Esto convierte a tus MCPs en **extensiones conversacionales vivas**, capaces de ejecutar funciones reales de tu SaaS o infraestructura cuando un modelo las invoca mediante lenguaje natural.
+
+---
+
+## Ejemplo: integración con ChatGPT
+
+Cuando un MCP personalizado se publica a través de su URL, **puede ponerse a disposición de cualquier modelo de lenguaje** compatible con el estándar MCP.  
+Esto incluye ChatGPT, que permite configurar conectores personalizados e invocar tools directamente desde la conversación.
+
+![Ejemplo de integración MCP con ChatGPT - configuración del conector](cb6bdf11-b65d-4c72-a7c1-8c86b50fe462.png)
+
+### Cómo habilitarlo
+1. Accede a la sección **Connectors** en ChatGPT.  
+2. Habilita el **Developer Mode**.  
+3. Crea un nuevo conector personalizado introduciendo la **URL del MCP** (por ejemplo: `https://mcp.devic.ai/suntropy-solar-service`).  
+4. Selecciona las **acciones (tools)** que deseas habilitar.  
+5. Guarda los cambios y ChatGPT podrá comunicarse directamente con tu MCP.
+
+![Ejemplo de ChatGPT Developer Mode con MCP conectado](e4d50582-fa2d-4b86-b004-08c5e4dba499.png)
+
+> 💡 **Consejo:** Desde este punto, ChatGPT podrá invocar tus tools directamente dentro del flujo conversacional, permitiendo que el usuario interactúe con tu SaaS mediante lenguaje natural.
+
+---
+
+## Ejemplo de ejecución real
+
+Una vez conectado el MCP, los usuarios pueden hacer preguntas naturales como:
+
+> _“¿Cuántos inversores solares tengo disponibles?”_  
+> _“Muéstrame el resumen de estudios solares de septiembre.”_
+
+El modelo, a través del MCP, ejecuta las tools correspondientes y renderiza los resultados visuales definidos con widgets.
+
+![Ejemplo de widget renderizado dentro de ChatGPT con datos en tiempo real](69b6e2dc-9c22-46a7-b9ea-acb19eeaecc4.png)
+
+Esto no solo muestra los datos, sino que puede hacerlo con **la imagen de marca de tu SaaS**, gracias a los widgets definidos en Devic.
+
+---
+
+## Integración desde Agentes y Asistentes
+
+Además de poder conectarse con ChatGPT o Claude, **los MCPs también pueden ser consumidos desde los Agentes y Asistentes configurados en Devic**.  
+Esto permite que tus automatizaciones internas, workflows o asistentes empresariales se beneficien de las mismas capacidades de integración que un modelo de lenguaje externo.
+
+- Los **Agentes** pueden invocar MCPs dentro de sus flujos de tareas o tareas periódicas.  
+  Consulta la documentación específica:  
+  👉 [Agents → Tools](../agents/tools)
+
+- Los **Asistentes** pueden usar MCPs durante conversaciones o integraciones de proyectos, mostrando resultados interactivos o embebiendo widgets.  
+  Consulta la documentación específica:  
+  👉 [Assistants → Project Integration](../assistants/project-integration)
+
+![Vista de selección de tools desde un agente en Devic](4c5e144c-3c1d-4f77-a991-4279d788f9b2.png)
+
+![Asistente configurando tools MCP en Devic](596e2c81-a989-43df-be65-8e955e9afada.png)
+
+---
+
+## Beneficios de la integración con LLMs
+
+- 🌐 **Interacción directa** entre tu SaaS y modelos de lenguaje como ChatGPT o Claude.  
+- ⚙️ **Ejecución de acciones reales** sobre tus sistemas, con autenticación y control.  
+- 🎨 **Branding y experiencia visual personalizada** gracias a los widgets integrados.  
+- 🤖 **Reutilización interna**, ya que tus Agentes y Asistentes pueden usar los mismos MCPs para automatizar tareas o conversaciones.
+
+---
+
+## Próximos pasos
+
+- Aprende a crear tus propios **Agentes** que usen tools personalizadas → [Agents Documentation](../agents/overview)  
+- Descubre cómo **Asistentes** pueden mostrar widgets y ejecutar actions → [Assistants Documentation](../assistants/overview)
 
