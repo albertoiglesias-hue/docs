@@ -1,5 +1,95 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Sesiones y actividad del MCP"
+description: "Monitorea la actividad de tu servidor MCP en tiempo real, incluyendo sesiones activas, llamadas de tools y rendimiento general."
 ---
 
+## Panel de sesiones
+
+Una vez publicado tu MCP, puedes acceder a la pestaña **Sessions** para supervisar en tiempo real cómo interactúan los agentes o servicios con tus tools.  
+Desde este panel podrás ver estadísticas de uso, duración media de las sesiones y detalles sobre cada conexión activa.
+
+![Panel de sesiones activo](06f8751e-556a-4b81-ab10-701a7eba8343.png)
+
+---
+
+## Analíticas de sesión
+
+En la parte superior del panel se muestran los indicadores principales:
+
+- **Total Sessions:** número total de sesiones creadas.  
+- **Active Sessions:** cuántas están activas actualmente.  
+- **Avg Duration:** duración media de las sesiones activas.
+
+La gráfica **Sessions Over Time** muestra la evolución de las conexiones a lo largo del tiempo, permitiendo identificar los picos de actividad.
+
+![Gráfica de sesiones](7a2cdcf7-f2cf-4550-8df5-4b072cc41b2e.png)
+
+---
+
+## Detalle de sesiones
+
+Debajo del gráfico encontrarás la tabla **Session Details**, donde se listan todas las conexiones realizadas al MCP.
+
+Cada fila incluye:
+
+- **Session ID**: identificador único de la sesión.  
+- **Status**: estado actual (por ejemplo, *Connected*).  
+- **Created / Last Activity**: fecha de creación y última actividad registrada.  
+- **Protocol**: protocolo utilizado para la conexión.  
+- **Actions**: botón para inspeccionar la actividad de la sesión.
+
+![Listado de sesiones y actividad](c689f5e4-e3b7-469b-b5d9-bab7dc14abc1.png)
+
+---
+
+## Actividad detallada de sesión
+
+Al hacer clic en **View Activity**, se abre el panel **Session Activity**, donde puedes visualizar cada interacción ocurrida dentro de la sesión, incluyendo:
+
+- **REQUESTS** realizados por el cliente o agente.  
+- **TOOL EXECUTIONS** ejecutadas.  
+- **Resultados** y mensajes de error devueltos.
+
+Esto te permite auditar el comportamiento de los agentes y depurar posibles incidencias en tiempo real.
+
+![Detalle de actividad de una sesión](6a4c292f-893b-4e73-a226-b5b23a9dc773.png)
+
+---
+
+## Tool Calls Analytics
+
+En la pestaña **Tool Calls**, puedes analizar el rendimiento de tus herramientas (tools) dentro del MCP.  
+Aquí se muestran métricas clave como:
+
+- **Total Calls:** número total de ejecuciones.  
+- **Success Rate:** porcentaje de éxito.  
+- **Avg Latency:** tiempo promedio de respuesta.  
+- **Failed Calls:** ejecuciones con error.
+
+![Métricas de Tool Calls](c1a9190a-571e-4c27-8704-c3b75fa48e1f.png)
+
+---
+
+## Historial de ejecuciones
+
+La tabla inferior muestra las llamadas a las tools registradas, con información sobre:
+
+- **Hora exacta de ejecución**  
+- **Tool utilizada**  
+- **Estado (Success / Failed)**  
+- **Latencia medida**  
+- **Sesión asociada**
+
+![Historial de ejecuciones](cb11f4d6-fce1-446a-9456-a9c200716512.png)
+
+Al hacer clic en **Details**, puedes revisar el log completo de la llamada, incluyendo el **input**, **output** y posibles errores devueltos por la API.
+
+---
+
+<Card
+  title="Siguiente paso"
+  icon="activity"
+  href="/mcp/my-mcps/logs"
+>
+  Aprende cómo registrar y exportar logs avanzados de tus MCPs para auditoría o integración externa.
+</Card>
