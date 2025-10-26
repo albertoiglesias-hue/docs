@@ -11,18 +11,25 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Guías",
         "groups": [
           {
-            "group": "Getting started",
-            "pages": ["index", "quickstart", "development"]
+            "group": "Primeros pasos",
+            "pages": [
+              "index",
+              "quickstart",
+              "development"
+            ]
           },
           {
-            "group": "Customization",
-            "pages": ["essentials/settings", "essentials/navigation"]
+            "group": "Personalización",
+            "pages": [
+              "essentials/settings",
+              "essentials/navigation"
+            ]
           },
           {
-            "group": "Writing content",
+            "group": "Escritura de contenido",
             "pages": [
               "essentials/markdown",
               "essentials/code",
@@ -31,7 +38,7 @@
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Herramientas de IA",
             "pages": [
               "ai-tools/cursor",
               "ai-tools/claude-code",
@@ -41,14 +48,16 @@
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Referencia API",
         "groups": [
           {
-            "group": "API documentation",
-            "pages": ["api-reference/introduction"]
+            "group": "Documentación API",
+            "pages": [
+              "api-reference/introduction"
+            ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Ejemplos de endpoints",
             "pages": [
               "api-reference/endpoint/get",
               "api-reference/endpoint/create",
@@ -63,10 +72,14 @@
         "groups": [
           {
             "group": "Introducción",
-            "pages": ["devic/introduction", "devic/quickstart"]
+            "pages": [
+              "devic/introduction",
+              "devic/quickstart"
+            ]
           },
           {
             "group": "Mis MCPs",
+            "collapsed": true,
             "pages": [
               "devic/MCPs/my-mcps/index",
               "devic/MCPs/my-mcps/what-it-is",
@@ -81,13 +94,15 @@
             ]
           },
           {
-            "group": "Import third party MCPs",
+            "group": "Importar MCPs de terceros",
+            "collapsed": true,
             "pages": [
               "devic/MCPs/import-third-party-mcps/import-third-party-mcps"
             ]
           },
           {
-            "group": "Built-in Tools",
+            "group": "Herramientas integradas (Built-in Tools)",
+            "collapsed": true,
             "pages": [
               "devic/MCPs/built-in-tools/index",
               "devic/MCPs/built-in-tools/update-knowledge",
@@ -111,15 +126,24 @@
           },
           {
             "group": "Agentes",
-            "pages": ["devic/Agentes/que-son"]
+            "collapsed": true,
+            "pages": [
+              "devic/Agentes/que-son"
+            ]
           },
           {
             "group": "Asistentes",
-            "pages": ["devic/Asistentes/que-son"]
+            "collapsed": true,
+            "pages": [
+              "devic/Asistentes/que-son"
+            ]
           },
           {
             "group": "Bases de datos (BD)",
-            "pages": ["devic/Basesdedatos/vision-general"]
+            "collapsed": true,
+            "pages": [
+              "devic/Basesdedatos/vision-general"
+            ]
           }
         ]
       }
@@ -127,7 +151,7 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
+          "anchor": "Documentación",
           "href": "https://mintlify.com/docs",
           "icon": "book-open-cover"
         },
@@ -147,7 +171,7 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
+        "label": "Soporte",
         "href": "mailto:hi@mintlify.com"
       }
     ],
