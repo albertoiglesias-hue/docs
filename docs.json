@@ -73,8 +73,15 @@
           {
             "group": "Introducción",
             "pages": [
-              "devic/introduccion",
               "devic/quickstart"
+            ]
+          },
+          {
+            "group": "MCPs",
+            "pages": [
+              "devic/MCPs/my-mcps/index",
+              "devic/MCPs/import-third-party-mcps",
+              "devic/MCPs/built-in-tools/index"
             ]
           },
           {
