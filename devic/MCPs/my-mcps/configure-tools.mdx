@@ -1,5 +1,85 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Configurar las tools"
+description: "Edita, define y prueba las tools que componen tu MCP: parámetros, autenticación, métodos y endpoints."
 ---
 
+## Configurar las tools
+
+Una vez creado o importado tu MCP, puedes ajustar el comportamiento de cada **tool** desde el panel de configuración.  
+Cada tool representa un endpoint de tu API y define cómo el modelo podrá interactuar con él.
+
+![Vista de configuración de tool](b7445a5c-afc9-4155-bc0d-d518a28f34e2.png)
+
+---
+
+## Editor de tool
+
+Al seleccionar una tool, se abrirá el **editor de configuración**, donde podrás definir los siguientes campos:
+
+- **Function name:** nombre interno de la función.  
+- **Description:** explica brevemente la función de la tool (ejemplo: “Recupera los estudios categorizados por tipo en un rango de fechas”).  
+- **Parameters:** define los parámetros requeridos por la API (nombre, tipo y descripción).  
+- **Endpoint:** ruta del servicio (`/api/analytics/studies/counts-by-type`, por ejemplo).  
+- **Method:** método HTTP utilizado (GET, POST, PUT, DELETE).  
+
+<Card
+  title="Detección automática de propiedades"
+  icon="wand-magic-sparkles"
+  horizontal
+>
+  Devic detecta automáticamente los parámetros incluidos en la definición JSON y los muestra como <strong>Detected Properties</strong>, listos para vincular con el cuerpo o la ruta del endpoint.
+</Card>
+
+![Parámetros y propiedades detectadas](bc561475-d457-45fc-a0ec-16cfa5f24778.png)
+
+---
+
+## Modos de edición
+
+Puedes definir una tool en dos modos:
+
+- **Form:** interfaz visual con campos editables para cada propiedad.  
+- **JSON:** vista estructurada del esquema completo, compatible con especificaciones OpenAPI.
+
+El botón **Generate** convierte automáticamente los parámetros del modo formulario en la definición JSON correspondiente.
+
+![Vista en modo JSON](6428b69d-3914-4798-9f40-6990f42b83d2.png)
+
+---
+
+## Propiedades avanzadas
+
+En la parte inferior del panel encontrarás las opciones adicionales de configuración:
+
+- **Query Parameters:** parámetros enviados por URL (`?param=value`).  
+- **Path Parameters:** variables incluidas dentro de la ruta (`/api/{id}/data`).  
+- **Body Property Key:** propiedad principal del cuerpo JSON.  
+- **Custom Headers:** cabeceras personalizadas necesarias para la autenticación o el contexto de ejecución.  
+- **Widget Binding:** permite vincular la tool con widgets o SDKs embebidos.
+
+<Card
+  title="Confirmar y guardar cambios"
+  icon="floppy-disk"
+  horizontal
+>
+  Haz clic en <strong>Confirm</strong> para validar los cambios de la tool, y luego en <strong>Save Changes</strong> para aplicar la configuración al MCP.
+</Card>
+
+![Opciones avanzadas y guardado](467483ce-64bb-4d5f-85a3-33364323dfa2.png)
+
+---
+
+## Validación y testing
+
+Una vez configurada la tool, el MCP quedará actualizado y listo para su uso.  
+Puedes probar la ejecución directamente desde los agentes o asistentes, o revisar su funcionamiento en la pestaña **Tool Calls**, donde se registran las invocaciones realizadas.
+
+---
+
+<Card
+  title="Siguiente paso"
+  icon="bullhorn"
+  href="/mcp/my-mcps/publish"
+>
+  Aprende cómo publicar tu MCP para que esté disponible para agentes internos o entornos externos.
+</Card>
