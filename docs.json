@@ -78,12 +78,6 @@
             ]
           },
           {
-            "group": "MCP",
-            "pages": [
-              "devic/MCPs/mis-mcps"
-            ]
-          },
-          {
             "group": "Agentes",
             "pages": [
               "devic/Agentes/que-son"
