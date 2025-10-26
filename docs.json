@@ -15,18 +15,11 @@
         "groups": [
           {
             "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
+            "pages": ["index", "quickstart", "development"]
           },
           {
             "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
+            "pages": ["essentials/settings", "essentials/navigation"]
           },
           {
             "group": "Writing content",
@@ -52,9 +45,7 @@
         "groups": [
           {
             "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
+            "pages": ["api-reference/introduction"]
           },
           {
             "group": "Endpoint examples",
@@ -72,80 +63,63 @@
         "groups": [
           {
             "group": "Introducción",
+            "pages": ["devic/introduction", "devic/quickstart"]
+          },
+          {
+            "group": "Mis MCPs",
             "pages": [
-              "devic/introduction",
-              "devic/quickstart"
+              "devic/MCPs/my-mcps/index",
+              "devic/MCPs/my-mcps/what-it-is",
+              "devic/MCPs/my-mcps/import-tool",
+              "devic/MCPs/my-mcps/tools-menu",
+              "devic/MCPs/my-mcps/configure-tools",
+              "devic/MCPs/my-mcps/publish",
+              "devic/MCPs/my-mcps/sessions",
+              "devic/MCPs/my-mcps/tool-calls",
+              "devic/MCPs/my-mcps/sdks-and-widgets",
+              "devic/MCPs/my-mcps/integration-with-llms"
             ]
           },
           {
-            "group": "MCPs",
+            "group": "Import third party MCPs",
             "pages": [
-              "devic/MCPs/my-mcps/index",
-              "devic/MCPs/import-third-party-mcps/import-third-party-mcps",
-              "devic/MCPs/built-in-tools/index"
-            ],
-            "subgroups": [
-              {
-                "group": "Mis MCPs",
-                "pages": [
-                  "devic/MCPs/my-mcps/what-it-is",
-                  "devic/MCPs/my-mcps/import-tool",
-                  "devic/MCPs/my-mcps/tools-menu",
-                  "devic/MCPs/my-mcps/configure-tools",
-                  "devic/MCPs/my-mcps/publish",
-                  "devic/MCPs/my-mcps/sessions",
-                  "devic/MCPs/my-mcps/tool-calls",
-                  "devic/MCPs/my-mcps/sdks-and-widgets",
-                  "devic/MCPs/my-mcps/integration-with-llms"
-                ]
-              },
-              {
-                "group": "Import third party MCPs",
-                "pages": [
-                  "devic/MCPs/import-third-party-mcps/import-third-party-mcps"
-                ]
-              },
-              {
-                "group": "Built-in Tools",
-                "pages": [
-                  "devic/MCPs/built-in-tools/update-knowledge",
-                  "devic/MCPs/built-in-tools/send-email",
-                  "devic/MCPs/built-in-tools/ocr",
-                  "devic/MCPs/built-in-tools/pdf-from-html",
-                  "devic/MCPs/built-in-tools/code-execution-tools",
-                  "devic/MCPs/built-in-tools/web-search",
-                  "devic/MCPs/built-in-tools/manage-tasks",
-                  "devic/MCPs/built-in-tools/files-and-directories",
-                  "devic/MCPs/built-in-tools/chart-images",
-                  "devic/MCPs/built-in-tools/search-knowledge",
-                  "devic/MCPs/built-in-tools/read-emails",
-                  "devic/MCPs/built-in-tools/databases",
-                  "devic/MCPs/built-in-tools/pdf-from-markdown",
-                  "devic/MCPs/built-in-tools/text-file-templates",
-                  "devic/MCPs/built-in-tools/spreadsheet-tools",
-                  "devic/MCPs/built-in-tools/sharepoint-api",
-                  "devic/MCPs/built-in-tools/short-and-medium-term-memory"
-                ]
-              }
+              "devic/MCPs/import-third-party-mcps/import-third-party-mcps"
+            ]
+          },
+          {
+            "group": "Built-in Tools",
+            "pages": [
+              "devic/MCPs/built-in-tools/index",
+              "devic/MCPs/built-in-tools/update-knowledge",
+              "devic/MCPs/built-in-tools/send-email",
+              "devic/MCPs/built-in-tools/ocr",
+              "devic/MCPs/built-in-tools/pdf-from-html",
+              "devic/MCPs/built-in-tools/code-execution-tools",
+              "devic/MCPs/built-in-tools/web-search",
+              "devic/MCPs/built-in-tools/manage-tasks",
+              "devic/MCPs/built-in-tools/files-and-directories",
+              "devic/MCPs/built-in-tools/chart-images",
+              "devic/MCPs/built-in-tools/search-knowledge",
+              "devic/MCPs/built-in-tools/read-emails",
+              "devic/MCPs/built-in-tools/databases",
+              "devic/MCPs/built-in-tools/pdf-from-markdown",
+              "devic/MCPs/built-in-tools/text-file-templates",
+              "devic/MCPs/built-in-tools/spreadsheet-tools",
+              "devic/MCPs/built-in-tools/sharepoint-api",
+              "devic/MCPs/built-in-tools/short-and-medium-term-memory"
             ]
           },
           {
             "group": "Agentes",
-            "pages": [
-              "devic/Agentes/que-son"
-            ]
+            "pages": ["devic/Agentes/que-son"]
           },
           {
             "group": "Asistentes",
-            "pages": [
-              "devic/Asistentes/que-son"
-            ]
+            "pages": ["devic/Asistentes/que-son"]
           },
           {
             "group": "Bases de datos (BD)",
-            "pages": [
-              "devic/Basesdedatos/vision-general"
-            ]
+            "pages": ["devic/Basesdedatos/vision-general"]
           }
         ]
       }
