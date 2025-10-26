@@ -73,6 +73,7 @@
           {
             "group": "Introducción",
             "pages": [
+              "devic/introduction",
               "devic/quickstart"
             ]
           },
