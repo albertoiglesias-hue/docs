@@ -1,75 +1,69 @@
 ---
-title: "Mis MCPs"
-description: "Gestiona y organiza tus herramientas e integraciones bajo el estándar Model Context Protocol (MCP)."
+title: "Qué es"
+description: "Convierte tus APIs o servicios en servidores MCP listos para ser invocados por modelos de lenguaje y agentes."
 ---
 
-## Qué es un MCP
+## Qué es “Mis MCPs”
 
-Un **MCP (Model Context Protocol)** es una herramienta o conector que amplía las capacidades de los modelos de lenguaje, permitiéndoles ejecutar acciones sobre sistemas externos o internos.  
-En Devic, los MCPs actúan como **interfaces de integración**, conectando tus agentes y asistentes con APIs, servicios o funciones personalizadas.
+La sección **Mis MCPs** permite transformar tus **APIs** o **servicios internos** en servidores MCP totalmente operativos.  
+Cada MCP actúa como un contenedor de *tools* (herramientas) que los modelos de lenguaje pueden invocar directamente desde los agentes o asistentes de tu entorno.
 
-Cada MCP puede ser:
+En otras palabras, Devic convierte tu API en una interfaz estándar **Model Context Protocol**, lista para que cualquier modelo o agente pueda acceder a sus endpoints y ejecutar acciones reales sobre tus sistemas.
 
-- **Importado:** desde una especificación existente (por ejemplo, OpenAPI o JSON).  
-- **Creado de forma personalizada:** para conectar tu propio SaaS o servicios internos.  
-- **Publicado:** como endpoint accesible por otros modelos o entornos externos (como ChatGPT).
-
-El módulo **Mis MCPs** centraliza todos los conectores disponibles en tu entorno, tanto los nativos como los creados por tu organización.
-
-![Vista de Mis MCPs](592a46cd-2b67-4ba8-80a5-06c81a26e6f6.png)
+![Vista general de Mis MCPs](1e214fa7-89f9-41e3-b648-b47242a86e4d.png)
 
 ---
 
 ## Estructura de la vista
 
-La vista principal muestra todas las herramientas disponibles bajo el estándar MCP.  
-Cada tarjeta incluye:
+El panel muestra todos los MCPs disponibles creados dentro de tu organización.  
+Cada tarjeta representa un conector activo e incluye:
 
 - **Nombre del MCP**  
-- **Descripción corta**  
-- **Indicador de estado** (verde = activo, gris = inactivo)  
-- **Proveedor o propietario**  
+- **Descripción breve del servicio**  
+- **Indicador de estado** (verde = activo)  
+- **Accesos directos de acción:** editar, eliminar o publicar.  
 
-En la parte superior encontrarás la opción **“Add custom MCP”**, que permite crear un nuevo conector directamente desde la interfaz.
+En la parte superior izquierda se encuentra el botón **Add custom MCP**, que inicia el proceso de creación de un nuevo conector basado en tu propia API.
 
 <Card
-  title="Agregar un nuevo MCP"
+  title="Crear un nuevo MCP"
   icon="plus"
   horizontal
 >
-  Haz clic en <strong>Add custom MCP</strong> para iniciar la configuración de un nuevo conector desde tu API o servicio interno.
+  Haz clic en <strong>Add custom MCP</strong> para empezar la configuración de un servidor MCP a partir de la especificación de tu API (OpenAPI o JSON).
 </Card>
-
-![Panel de MCPs personalizados](dcb5d7b5-e98f-4191-b79f-9204d5c3203f.png)
 
 ---
 
-## Cómo se utilizan los MCPs
+## Diferencia entre “Mis MCPs” e “Importados”
 
-Una vez creados o importados, los MCPs quedan disponibles para todos los agentes y asistentes del entorno.  
-Pueden ser invocados mediante lenguaje natural o como parte de un flujo automatizado.
+- **Mis MCPs:** son MCPs que tú defines y controlas, creados directamente a partir de tus propios servicios o endpoints.  
+- **Importados:** son integraciones externas cargadas desde un archivo o una URL pública, sin modificar su estructura original.  
 
-<Columns cols={2}>
-  <Card
-    title="Uso interno"
-    icon="link"
-  >
-    Los agentes pueden ejecutar herramientas MCP de forma autónoma como parte de su lógica de negocio.
-  </Card>
-  <Card
-    title="Uso externo"
-    icon="globe"
-  >
-    Los MCPs pueden publicarse y exponerse a otros entornos —por ejemplo, ChatGPT o servicios de terceros— mediante una URL de acceso.
-  </Card>
-</Columns>
+Ambos tipos de MCPs aparecen organizados dentro de la misma vista, pero con secciones diferenciadas:
+
+![Panel de Mis MCPs y MCPs importados](c601dc58-d752-4a6a-a8de-938f8e929560.png)
+
+---
+
+## Qué puedes hacer desde aquí
+
+Una vez creado un MCP, desde esta sección podrás:
+
+- Acceder al **menú de herramientas** del MCP para revisar sus endpoints.  
+- **Configurar** los parámetros de cada tool.  
+- **Publicar** el MCP como servicio disponible para tus agentes o para entornos externos (como ChatGPT).  
+- **Gestionar sesiones y logs** para monitorizar su uso y trazabilidad.  
+
+Cada MCP creado en Devic queda totalmente integrado dentro del ecosistema de la plataforma, sin necesidad de infraestructura adicional.
 
 ---
 
 <Card
   title="Siguiente paso"
-  icon="wrench"
-  href="/mcp/import-tool"
+  icon="arrow-right"
+  href="/mcp/my-mcps/import-tool"
 >
-  Aprende cómo importar un MCP o cargar una definición OpenAPI existente.
+  Aprende cómo importar tu primera API y transformarla en un MCP funcional.
 </Card>
