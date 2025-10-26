@@ -82,6 +82,7 @@
             "icon": "cpu",
             "expanded": false,
             "pages": [
+              "devic/MCPs/index",
               {
                 "group": "Mis MCPs",
                 "icon": "layers",
@@ -111,6 +112,7 @@
                 "icon": "wrench",
                 "expanded": false,
                 "pages": [
+                  "devic/MCPs/built-in-tools/index",
                   "devic/MCPs/built-in-tools/update-knowledge",
                   "devic/MCPs/built-in-tools/send-email",
                   "devic/MCPs/built-in-tools/ocr",
