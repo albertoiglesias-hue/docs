@@ -1,317 +1,81 @@
 ---
-title: "Update Knowledge
-Send Email
-OCR
-PDF from HTML
-Code Execution Tools
-Web Search
-Manage Tasks
-Files and Directories
-Chart Images
-Search Knowledge
-Read Emails
-Databases
-PDF from Markdown
-Text File Templates
-Spreadsheet Tools
-Sharepoint API
-Short and Mediu
-Term Memory"
-
-description: "Herramientas integradas de Devic que permiten ejecutar acciones comunes dentro de agentes, asistentes y MCPs, reduciendo la necesidad de desarrollos adicionales."
-hidden: true
+title: "Built-in Tools"
+description: "Descubre qué son las Built-in Tools en Devic, sus ventajas y cómo utilizarlas dentro de tus agentes, asistentes o MCPs."
 ---
 
 # Built-in Tools
 
-Las **Built-in Tools** son herramientas nativas incluidas en Devic que cubren las operaciones más habituales en entornos agénticos y de asistentes.  
-Su objetivo es **reducir al máximo la necesidad de desarrollos adicionales** o integraciones externas, proporcionando funciones listas para usar en tareas de automatización, consulta, análisis, comunicación y gestión de datos.
+Las **Built-in Tools** son un conjunto de herramientas nativas integradas en Devic que permiten a los agentes, asistentes y MCPs ejecutar tareas comunes sin necesidad de desarrollar integraciones externas.  
 
-Estas herramientas pueden ser invocadas desde **Agentes**, **Asistentes** o **MCPs**, y están disponibles dentro del selector de herramientas al configurar cualquiera de ellos.
-
----
-
-## 1. Update Knowledge
-
-La herramienta **Update Knowledge** permite mantener actualizada la base de conocimiento de los agentes y MCPs mediante operaciones de escritura o actualización.
-
-- **Tool:** `update_memory`  
-- **Descripción:** Actualiza la memoria RAG con el contenido proporcionado.  
-- **Uso recomendado:**  
-  - Incorporar nueva información a una base de conocimiento.  
-  - Actualizar datos o resúmenes que los agentes usan en sus respuestas.  
-  - Sincronizar conocimiento desde documentos o APIs externas.
+Estas herramientas cubren funciones clave como:
+- **Automatización de tareas y flujos.**
+- **Gestión de documentos, correos y bases de datos.**
+- **Análisis de información y generación de reportes.**
+- **Interacción con servicios externos (SharePoint, web, email, etc.).**
+- **Persistencia de memoria y conocimiento.**
 
 ---
 
-## 2. Send Email
+## 🎯 Objetivo
 
-La herramienta **Send Email** permite enviar correos electrónicos de forma automatizada directamente desde Devic.
+El propósito de las Built-in Tools es **reducir la complejidad técnica** de las integraciones y proporcionar **capacidades listas para usar**, asegurando que los usuarios puedan construir soluciones inteligentes rápidamente.
 
-- **Tool:** `send_basic_email`  
-- **Descripción:** Envía un correo electrónico a la dirección especificada y, opcionalmente, escucha una respuesta.  
-- **Uso recomendado:**  
-  - Notificaciones automáticas.  
-  - Envío de reportes o resultados de análisis.  
-  - Confirmaciones o alertas internas.
-
-![Send Email Tool](64cea700-c6f5-4476-894c-dbbc894d84d5.png)
+Cada herramienta puede ser invocada desde:
+- **Agentes:** para ejecutar acciones automáticas en contextos conversacionales.  
+- **Asistentes:** para ofrecer respuestas interactivas y personalizadas.  
+- **MCPs:** para exponer APIs, integraciones o servicios internos.
 
 ---
 
-## 3. OCR
+## ⚙️ Características principales
 
-La herramienta **OCR** (Optical Character Recognition) extrae texto de imágenes o documentos escaneados y permite realizar consultas sobre su contenido.
-
-- **Tools disponibles:**  
-  - `ocr_document`: extrae texto desde una imagen o documento.  
-  - `query_document`: permite hacer preguntas en lenguaje natural sobre un documento PDF.  
-
-![OCR Tools](ac2c1adb-c162-4ef9-a51f-efef332d01da.png)
+- **Disponibilidad inmediata:** todas las Built-in Tools están integradas en la plataforma Devic sin configuración adicional.  
+- **Compatibilidad completa:** pueden usarse de forma combinada dentro de flujos de agentes o asistentes.  
+- **Escalabilidad:** las herramientas pueden integrarse con datos y procesos externos.  
+- **Actualizaciones automáticas:** Devic mantiene las herramientas actualizadas sin necesidad de intervención del usuario.  
 
 ---
 
-## 4. PDF from HTML
+## 📚 Categorías de herramientas
 
-**PDF from HTML** genera documentos PDF a partir de contenido HTML renderizable.
+Las Built-in Tools se agrupan en distintas categorías funcionales:
 
-- **Tool:** `generate_pdf_from_html`  
-- **Descripción:** Convierte HTML en un PDF con formato visual.  
-- **Uso recomendado:**  
-  - Exportar vistas web o plantillas con estilo corporativo.  
-  - Generar informes o documentos con estructura HTML.
-
-![PDF from HTML Tools](0b354075-42a6-4be0-a00f-e76574187f6c.png)
-
----
-
-## 5. Code Execution Tools
-
-Permite ejecutar código en diferentes lenguajes directamente desde Devic.
-
-- **Tool:** `execute_python_code`  
-- **Descripción:** Ejecuta código Python y devuelve el resultado o error correspondiente.  
-- **Uso recomendado:**  
-  - Calcular resultados dinámicos.  
-  - Procesamiento de datos con scripts personalizados.  
-  - Pruebas automatizadas o validaciones de código.
-
-![Code Execution Tools](b7445a5c-afc9-4155-bc0d-d518a28f34e2.png)
+| Categoría | Descripción |
+|------------|-------------|
+| **Gestión del conocimiento** | Actualización y consulta de información (Update Knowledge, Search Knowledge). |
+| **Comunicación** | Envío y lectura de correos electrónicos. |
+| **Documentación** | OCR, generación de PDFs, plantillas de texto, gestión de archivos. |
+| **Datos** | Bases de datos, hojas de cálculo y conectores SharePoint. |
+| **Automatización** | Creación y control de tareas automáticas. |
+| **Memoria** | Acceso al contexto conversacional a corto y medio plazo. |
+| **Análisis y visualización** | Generación de gráficos y ejecución de código. |
 
 ---
 
-## 6. Web Search
+## 🧠 Ejemplo de uso
 
-**Web Search** permite realizar búsquedas de información actualizada en la web.
-
-- **Tools disponibles:**  
-  - `search_web`: busca información relevante en la web.  
-  - `web_extract`: devuelve el contenido de una URL específica.  
-
-- **Uso recomendado:**  
-  - Consultas actualizadas en fuentes externas.  
-  - Ampliar conocimiento sin depender de memoria local.
-
-![Web Search Tools](5b85d9eb-07c8-4aa6-87fe-811dffa9ee97.png)
+Un agente puede combinar varias Built-in Tools para automatizar un flujo completo, por ejemplo:
+1. **Leer un email entrante** con la tool *Read Emails*.  
+2. **Extraer información** del adjunto con *OCR*.  
+3. **Actualizar la base de conocimiento** con *Update Knowledge*.  
+4. **Generar un informe PDF** con *PDF from HTML*.  
+5. **Enviar el resultado** mediante *Send Email*.  
 
 ---
 
-## 7. Manage Tasks
-
-Permite crear, modificar y administrar tareas dentro de flujos de trabajo automatizados.
-
-- **Tools disponibles:**  
-  - `create_task`  
-  - `update_task`  
-  - `create_multiple_tasks`  
-
-- **Uso recomendado:**  
-  - Automatización de creación y seguimiento de tareas.  
-  - Sincronización con tableros o pipelines de proyectos.
-
-![Manage Tasks Tools](3a007992-b492-4ffa-b553-0a71ee717617.png)
-
----
-
-## 8. Files and Directories
-
-Ofrece herramientas para la gestión y organización de archivos y carpetas.
-
-- **Tools disponibles:**  
-  - `navigate_to_root`  
-  - `initialize_directory`  
-  - `create_folder`  
-  - `move_document_to_folder`  
-  - `get_folder_content`  
-  - `navigate_to_folder`  
-  - `create_generic_document`  
-
-- **Uso recomendado:**  
-  - Gestión jerárquica de documentos generados.  
-  - Creación de flujos automáticos de archivo y recuperación.
-
-![Files and Directories Tools](3ddc53d7-1f42-4548-b31d-d0ccbaae413e.png)
-
----
-
-## 9. Chart Images
-
-Genera gráficos visuales a partir de datos y series numéricas.
-
-- **Tool:** `generate_chart_image`  
-- **Descripción:** Crea gráficos de tipo barra, línea o área, generando una URL de imagen.  
-- **Uso recomendado:**  
-  - Visualización de resultados analíticos.  
-  - Inclusión de gráficos en reportes o dashboards.
-
-![Chart Images Tools](ba2618d7-4cff-4b40-9223-9393c955cf4b.png)
-
----
-
-## 10. Search Knowledge
-
-Permite a los agentes buscar información relevante dentro de bases de conocimiento.
-
-- **Tool:** `retrieve_from_rag_in_file`  
-- **Descripción:** Busca información relacionada con la consulta del usuario en documentos del modelo RAG.  
-- **Uso recomendado:**  
-  - Consultas contextuales a documentación o datasets.  
-  - Recuperar conocimiento relevante durante conversaciones.
-
-![Search Knowledge Tools](4c5e144c-3c1d-4f77-a991-4279d788f9b2.png)
-
----
-
-## 11. Read Emails
-
-Permite a los agentes leer y gestionar correos electrónicos.
-
-- **Tools disponibles:**  
-  - `get_unread_emails`  
-  - `get_email_chain_by_id`  
-  - `search_emails_by_header`  
-  - `mark_email_as_read`  
-  - `get_last_emails`  
-  - `get_mail_by_id`  
-  - `get_email_attachment`  
-
-- **Uso recomendado:**  
-  - Integración con flujos de atención al cliente.  
-  - Procesamiento de bandejas de entrada automáticas.
-
-![Read Emails Tools](d1cb3f56-d776-454b-96fe-4e933e852173.png)
-
----
-
-## 12. Databases
-
-Permite crear, consultar, actualizar y eliminar información dentro de bases de datos relacionales nativas de Devic.
-
-- **Ejemplos de Tools:**  
-  - `get_tables`, `create_table`, `update_row`, `filter_rows`, `assign_row_by_email`, `vector_search_table_rows`, entre otras.  
-
-- **Uso recomendado:**  
-  - Gestión dinámica de registros estructurados.  
-  - Ejecución de consultas y análisis en tiempo real.  
-  - Sincronización de datos con sistemas externos.
-
-![Databases Tools](00d7486c-724d-40ab-918a-cefecfb41598.png)
-
----
-
-## 13. PDF from Markdown
-
-Convierte texto Markdown en archivos PDF formateados.
-
-- **Tool:** `generate_pdf_from_markdown`  
-- **Uso recomendado:**  
-  - Generación de reportes técnicos o documentación.  
-  - Exportación de resultados de MCPs a formato PDF.
-
-![PDF from Markdown Tools](8d9e9930-418e-4357-9602-c09ba973635f.png)
-
----
-
-## 14. Text File Templates
-
-Genera documentos dinámicos basados en plantillas predefinidas.
-
-- **Tools disponibles:**  
-  - `fill_text_template`  
-  - `get_text_templates`  
-  - `get_template_parameters`  
-  - `merge_word_documents`  
-
-- **Uso recomendado:**  
-  - Generación de contratos, formularios o reportes.  
-  - Fusión de documentos para informes compuestos.
-
-![Text File Templates Tools](a840aee6-d175-4893-8194-2a96b7a0ff9d.png)
-
----
-
-## 15. Spreadsheet Tools
-
-Permite la lectura y manipulación de hojas de cálculo (Excel o CSV).
-
-- **Tools disponibles:**  
-  - `get_sheets`: obtiene las hojas disponibles.  
-  - `get_sheet_content`: recupera el contenido de una hoja.  
-
-![Spreadsheet Tools](8b78c172-8d43-46ed-8f0c-ed03d3641701.png)
-
----
-
-## 16. Sharepoint API
-
-Integra Devic con entornos Microsoft SharePoint.
-
-- **Tools disponibles:**  
-  - `check_active_site`  
-  - `check_root_folder_content`  
-  - `get_document_details`  
-  - `get_excel_content`  
-  - `update_cell`  
-
-- **Uso recomendado:**  
-  - Sincronización documental entre Devic y SharePoint.  
-  - Automatización de actualizaciones en hojas Excel compartidas.
-
-![Sharepoint API Tools](9e1b385f-14ab-46d7-9567-a0e223039d48.png)
-
----
-
-## 17. Short and Medium Term Memory
-
-Permite a los agentes acceder a la memoria reciente y contextual de sus interacciones.
-
-- **Tools disponibles:**  
-  - `get_agent_threads_summary`: obtiene un resumen de hilos recientes.  
-  - `query_agent_thread_details`: permite consultar detalles específicos de un hilo.  
-
-![Short and Medium Term Memory Tools](718678d3-6518-4a87-b318-056100ca03bc.png)
-
----
-
-## Vista general de todas las Built-in Tools
-
-![Vista general Built-in Tools](bb38ff30-0902-4600-8d7e-c02eb6c47790.png)
-
----
-
-## Próximos pasos
+## 🚀 Próximos pasos
 
 <CardGroup cols={2}>
-  <Card title="Integrar Built-in Tools en MCPs" icon="plug" href="../mcp/tools">
-    Aprende cómo utilizar estas herramientas desde tus MCPs para ampliar sus capacidades.
+  <Card title="Ver todas las herramientas" icon="list" href="./tools">
+    Consulta la lista completa de herramientas integradas disponibles en Devic.
+  </Card>
+  <Card title="Integrar en MCPs" icon="plug" href="../mcp/tools">
+    Aprende cómo conectar estas herramientas con tus MCPs para extender sus capacidades.
   </Card>
   <Card title="Automatización con agentes" icon="bot" href="../agents/overview">
-    Descubre cómo los agentes pueden invocar estas herramientas para ejecutar flujos automatizados.
+    Descubre cómo los agentes pueden utilizar las Built-in Tools en sus flujos automáticos.
   </Card>
-  <Card title="Creación de widgets visuales" icon="layout-grid" href="../mcp/widgets">
-    Combina herramientas como Chart Images o PDF con widgets personalizados para enriquecer las respuestas.
-  </Card>
-  <Card title="Gestión documental y conocimiento" icon="book" href="../knowledge/overview">
-    Aprende a usar OCR, plantillas y RAG para crear flujos de gestión del conocimiento avanzados.
+  <Card title="Widgets visuales" icon="layout-grid" href="../mcp/widgets">
+    Aprende a combinar Built-in Tools con widgets para crear experiencias interactivas.
   </Card>
 </CardGroup>
