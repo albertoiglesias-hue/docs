@@ -83,8 +83,11 @@
             "expanded": false,
             "pages": [
               {
-                "page": "devic/MCPs/index",
-                "icon": "info"
+                "group": "Qué son",
+                "icon": "info",
+                "pages": [
+                  "devic/MCPs/index"
+                ]
               },
               {
                 "group": "Mis MCPs",
