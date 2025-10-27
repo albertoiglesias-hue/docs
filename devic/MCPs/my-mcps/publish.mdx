@@ -1,43 +1,41 @@
 ---
 title: "Publicar MCP"
-description: "Haz tu MCP accesible para agentes, asistentes o servicios externos mediante una URL pública o privada."
+description: "Haz que tu MCP esté disponible para agentes, asistentes o servicios externos mediante una URL pública o privada."
 ---
 
-## Publicar un MCP
+## Descripción general
 
-Una vez que tus tools estén configuradas y validadas, el último paso es **publicar** tu MCP.  
-Esto permite que los agentes, asistentes o entornos externos puedan conectarse y ejecutar las tools definidas.
+Después de configurar y validar tus tools, el último paso es **publicar** el MCP para que pueda ser utilizado por agentes, asistentes o entornos externos.
 
-Para publicar, haz clic en el botón **Publish** situado en la parte superior derecha del panel.
+Para hacerlo, haz clic en el botón **Publish** ubicado en la parte superior derecha del panel.
 
 ![Botón de publicación](f37c8f66-3882-4a16-94b5-74b8cc93b255.png)
 
 ---
 
-## Opciones de visibilidad
+## Visibilidad del MCP
 
-Al hacer clic en *Publish*, se abrirá el cuadro de configuración de visibilidad.  
-Aquí puedes elegir quién tendrá acceso a tu servidor MCP.
+Al seleccionar *Publish*, se abre el cuadro de configuración donde eliges quién tendrá acceso al servidor MCP.
 
-Las opciones disponibles son:
+Opciones disponibles:
 
 - **Private — Only accessible by you:**  
-  El MCP será accesible únicamente desde tu entorno o por tus propios agentes.  
-  Ideal para integraciones internas o entornos de desarrollo.
+  El MCP será accesible solo desde tu entorno o por tus agentes.  
+  Ideal para integraciones internas o entornos de prueba.
 
   ![Publicación privada](110f78f5-a95c-4430-94f0-8e6adbf438d1.png)
 
 - **Public — Accessible to everyone:**  
-  Permite que el MCP esté disponible para cualquier entorno externo que soporte el protocolo MCP (por ejemplo, ChatGPT u otras instancias de Devic).  
+  Permite que el MCP esté disponible para cualquier entorno que soporte el protocolo MCP, como ChatGPT u otras instancias de Devic.  
   Esta opción genera una **URL pública de acceso** al servidor.
 
   ![Publicación pública](c8cf98a8-6659-47ad-b55d-ec32ac51d5f6.png)
 
 ---
 
-## URL del servidor
+## URL generada
 
-Durante la publicación, Devic genera automáticamente una URL bajo el dominio:
+Durante la publicación, Devic crea automáticamente una URL bajo el dominio:
 
 `https://mcp.devic.ai/<nombre-del-mcp>`
 
@@ -45,35 +43,37 @@ Por ejemplo:
 
 `https://mcp.devic.ai/suntropy-solar-service`
 
-Esa URL es el endpoint donde los agentes o sistemas externos podrán conectarse para invocar las tools del MCP.
+Esa dirección será el endpoint desde el cual agentes o sistemas externos podrán invocar las tools del MCP.
 
 ---
 
 <Card
-  title="Publicación exitosa"
+  title="Publicación completada"
   icon="check-circle"
   horizontal
 >
-  Cuando la publicación se complete, verás una notificación de éxito y el enlace de tu MCP quedará disponible en la parte superior del panel.
+  Al finalizar la publicación, recibirás una notificación de éxito y el enlace del MCP aparecerá en la parte superior del panel.
 </Card>
 
 ![Servidor publicado correctamente](f37c8f66-3882-4a16-94b5-74b8cc93b255.png)
 
 ---
 
-## Qué ocurre tras la publicación
+## Después de publicar
 
-Una vez publicado, el MCP:
+Una vez activo, el MCP:
 
-- Queda activo en la infraestructura de Devic.  
-- Puede ser consumido por tus agentes o asistentes internos.  
+- Se aloja en la infraestructura de Devic.  
+- Puede ser consumido por agentes y asistentes internos.  
 - Puede exponerse a otros entornos mediante el estándar **Model Context Protocol**.  
-- Se actualiza automáticamente si realizas cambios en las tools o en la configuración del MCP.
+- Se actualiza automáticamente si modificas las tools o la configuración.
+
+---
 
 <Card
   title="Siguiente paso"
   icon="plug"
-  href="/mcp/my-mcps/sessions"
+  href="/devic/MCPs/my-mcps/sessions"
 >
-  Descubre cómo ejecutar y monitorizar sesiones de tus MCPs activos.
+  Aprende cómo ejecutar y monitorizar sesiones de tus MCPs activos.
 </Card>

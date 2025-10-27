@@ -1,24 +1,24 @@
 ---
 title: "Configurar las tools"
-description: "Edita, define y prueba las tools que componen tu MCP: parámetros, autenticación, métodos y endpoints."
+description: "Edita y prueba las tools que conforman tu MCP: parámetros, autenticación, métodos y endpoints."
 ---
 
-## Configurar las tools
+## Descripción general
 
 Una vez creado o importado tu MCP, puedes ajustar el comportamiento de cada **tool** desde el panel de configuración.  
-Cada tool representa un endpoint de tu API y define cómo el modelo podrá interactuar con él.
+Cada tool representa un endpoint de tu API y define cómo el modelo interactuará con él.
 
 ![Vista de configuración de tool](b7445a5c-afc9-4155-bc0d-d518a28f34e2.png)
 
 ---
 
-## Editor de tool
+## Editor de configuración
 
-Al seleccionar una tool, se abrirá el **editor de configuración**, donde podrás definir los siguientes campos:
+Al seleccionar una tool se abre el **editor**, donde puedes definir los siguientes campos:
 
 - **Function name:** nombre interno de la función.  
-- **Description:** explica brevemente la función de la tool (ejemplo: “Recupera los estudios categorizados por tipo en un rango de fechas”).  
-- **Parameters:** define los parámetros requeridos por la API (nombre, tipo y descripción).  
+- **Description:** breve explicación del propósito de la tool (ejemplo: “Recupera los estudios categorizados por tipo en un rango de fechas”).  
+- **Parameters:** parámetros requeridos por la API (nombre, tipo y descripción).  
 - **Endpoint:** ruta del servicio (`/api/analytics/studies/counts-by-type`, por ejemplo).  
 - **Method:** método HTTP utilizado (GET, POST, PUT, DELETE).  
 
@@ -27,7 +27,7 @@ Al seleccionar una tool, se abrirá el **editor de configuración**, donde podr�
   icon="wand-magic-sparkles"
   horizontal
 >
-  Devic detecta automáticamente los parámetros incluidos en la definición JSON y los muestra como <strong>Detected Properties</strong>, listos para vincular con el cuerpo o la ruta del endpoint.
+  Devic detecta automáticamente los parámetros definidos en el JSON y los muestra como <strong>Detected Properties</strong>, listos para vincular con el cuerpo o la ruta del endpoint.
 </Card>
 
 ![Parámetros y propiedades detectadas](bc561475-d457-45fc-a0ec-16cfa5f24778.png)
@@ -36,50 +36,50 @@ Al seleccionar una tool, se abrirá el **editor de configuración**, donde podr�
 
 ## Modos de edición
 
-Puedes definir una tool en dos modos:
+Puedes definir una tool de dos maneras:
 
 - **Form:** interfaz visual con campos editables para cada propiedad.  
-- **JSON:** vista estructurada del esquema completo, compatible con especificaciones OpenAPI.
+- **JSON:** vista estructurada del esquema completo, compatible con OpenAPI.
 
-El botón **Generate** convierte automáticamente los parámetros del modo formulario en la definición JSON correspondiente.
+El botón **Generate** convierte los parámetros definidos en el modo formulario en su equivalente JSON.
 
 ![Vista en modo JSON](6428b69d-3914-4798-9f40-6990f42b83d2.png)
 
 ---
 
-## Propiedades avanzadas
+## Opciones avanzadas
 
-En la parte inferior del panel encontrarás las opciones adicionales de configuración:
+En la parte inferior del panel se encuentran los ajustes adicionales:
 
 - **Query Parameters:** parámetros enviados por URL (`?param=value`).  
-- **Path Parameters:** variables incluidas dentro de la ruta (`/api/{id}/data`).  
+- **Path Parameters:** variables incluidas en la ruta (`/api/{id}/data`).  
 - **Body Property Key:** propiedad principal del cuerpo JSON.  
-- **Custom Headers:** cabeceras personalizadas necesarias para la autenticación o el contexto de ejecución.  
-- **Widget Binding:** permite vincular la tool con widgets o SDKs embebidos.
+- **Custom Headers:** cabeceras personalizadas para autenticación o contexto.  
+- **Widget Binding:** vincula la tool con widgets o SDKs embebidos.
 
 <Card
-  title="Confirmar y guardar cambios"
+  title="Guardar configuración"
   icon="floppy-disk"
   horizontal
 >
-  Haz clic en <strong>Confirm</strong> para validar los cambios de la tool, y luego en <strong>Save Changes</strong> para aplicar la configuración al MCP.
+  Haz clic en <strong>Confirm</strong> para validar los cambios y en <strong>Save Changes</strong> para aplicarlos al MCP.
 </Card>
 
 ![Opciones avanzadas y guardado](467483ce-64bb-4d5f-85a3-33364323dfa2.png)
 
 ---
 
-## Validación y testing
+## Validación y prueba
 
-Una vez configurada la tool, el MCP quedará actualizado y listo para su uso.  
-Puedes probar la ejecución directamente desde los agentes o asistentes, o revisar su funcionamiento en la pestaña **Tool Calls**, donde se registran las invocaciones realizadas.
+Una vez configurada la tool, el MCP quedará listo para su uso.  
+Puedes probar su ejecución desde los agentes o asistentes, o verificarla en la pestaña **Tool Calls**, donde se registran todas las invocaciones realizadas.
 
 ---
 
 <Card
   title="Siguiente paso"
   icon="bullhorn"
-  href="/mcp/my-mcps/publish"
+  href="/devic/MCPs/my-mcps/publish"
 >
   Aprende cómo publicar tu MCP para que esté disponible para agentes internos o entornos externos.
 </Card>
