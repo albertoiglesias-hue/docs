@@ -82,7 +82,10 @@
             "icon": "cpu",
             "expanded": false,
             "pages": [
-              "devic/MCPs/index",
+              {
+                "page": "devic/MCPs/index",
+                "icon": "info"
+              },
               {
                 "group": "Mis MCPs",
                 "icon": "shield",
