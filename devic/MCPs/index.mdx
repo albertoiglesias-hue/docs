@@ -1,41 +1,40 @@
 ---
 title: "MCPs"
-description: "Gestiona y organiza tus herramientas e integraciones bajo el estándar Model Context Protocol (MCP)."
+description: "Organiza tus integraciones y herramientas bajo el estándar Model Context Protocol (MCP) para conectar agentes y asistentes con servicios externos o internos."
 ---
 
-## Qué es un MCP
+## Descripción general
 
-Un **MCP (Model Context Protocol)** es una herramienta o conector que amplía las capacidades de los modelos de lenguaje, permitiéndoles ejecutar acciones sobre sistemas externos o internos.  
-En Devic, los MCPs actúan como **interfaces de integración**, conectando tus agentes y asistentes con APIs, servicios o funciones personalizadas.
+El **Model Context Protocol (MCP)** amplía las capacidades de los modelos de lenguaje al permitirles ejecutar acciones sobre sistemas externos o internos.  
+En Devic, los MCPs funcionan como **interfaces de integración** que conectan agentes y asistentes con APIs, servicios o funciones personalizadas.
 
-Cada MCP puede ser:
+Según su origen o propósito, puedes trabajar con tres tipos principales:
 
-- **Mis MCPs:** trasnformas tu API en tu servidor MCP con las tools listas para ser usadas por los modelos.  
-- **Importado de terceros:** catálogo de MCPs de herramientas de terceros como Google calendar, Hubspot o Jira.  
-- **Built in tools:** catálogo de herramientas nativas que facilitan la vida al desarrollador, como por ejemplo, integración con correo electrónico vía protocolo IMAP, crear un PDF desde un HTML o leer un spreadshet.
-
+- **Mis MCPs:** transforma tu API en un servidor MCP con herramientas listas para ser usadas por los modelos.  
+- **Importados de terceros:** accede a un catálogo de integraciones como Google Calendar, Hubspot o Jira.  
+- **Built-in Tools:** aprovecha herramientas nativas como envío de correos vía IMAP, generación de PDFs desde HTML o lectura de hojas de cálculo.
 
 ![Vista de Mis MCPs](592a46cd-2b67-4ba8-80a5-06c81a26e6f6.png)
 
 ---
 
-## Cómo se utilizan los MCPs
+## Uso de los MCPs
 
 Una vez creados o importados, los MCPs quedan disponibles para todos los agentes y asistentes del entorno.  
-Pueden ser invocados mediante lenguaje natural o como parte de un flujo automatizado.
+Pueden invocarse mediante lenguaje natural o integrarse en flujos automatizados.
 
 <Columns cols={2}>
   <Card
     title="Uso interno"
     icon="link"
   >
-    Los agentes pueden ejecutar herramientas MCP de forma autónoma como parte de su lógica de negocio.
+    Los agentes ejecutan herramientas MCP de forma autónoma dentro de su lógica de negocio.
   </Card>
   <Card
     title="Uso externo"
     icon="globe"
   >
-    Los MCPs pueden publicarse y exponerse a otros entornos —por ejemplo, ChatGPT o servicios de terceros— mediante una URL de acceso.
+    Los MCPs pueden publicarse y compartirse con otros entornos —por ejemplo, ChatGPT o servicios de terceros— mediante una URL de acceso.
   </Card>
 </Columns>
 
@@ -44,7 +43,7 @@ Pueden ser invocados mediante lenguaje natural o como parte de un flujo automati
 <Card
   title="Siguiente paso"
   icon="wrench"
-  href="/mcp/import-tool"
+  href="/devic/MCPs/my-mcps/import-tool"
 >
   Aprende cómo importar un MCP o cargar una definición OpenAPI existente.
 </Card>
