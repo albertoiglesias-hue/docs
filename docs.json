@@ -110,24 +110,7 @@
                 "icon": "wrench",
                 "expanded": false,
                 "pages": [
-                  "devic/MCPs/built-in-tools/index",
-                  "devic/MCPs/built-in-tools/update-knowledge",
-                  "devic/MCPs/built-in-tools/send-email",
-                  "devic/MCPs/built-in-tools/ocr",
-                  "devic/MCPs/built-in-tools/pdf-from-html",
-                  "devic/MCPs/built-in-tools/code-execution-tools",
-                  "devic/MCPs/built-in-tools/web-search",
-                  "devic/MCPs/built-in-tools/manage-tasks",
-                  "devic/MCPs/built-in-tools/files-and-directories",
-                  "devic/MCPs/built-in-tools/chart-images",
-                  "devic/MCPs/built-in-tools/search-knowledge",
-                  "devic/MCPs/built-in-tools/read-emails",
-                  "devic/MCPs/built-in-tools/databases",
-                  "devic/MCPs/built-in-tools/pdf-from-markdown",
-                  "devic/MCPs/built-in-tools/text-file-templates",
-                  "devic/MCPs/built-in-tools/spreadsheet-tools",
-                  "devic/MCPs/built-in-tools/sharepoint-api",
-                  "devic/MCPs/built-in-tools/short-and-medium-term-memory"
+                  "devic/MCPs/built-in-tools/index"
                 ]
               }
             ]
