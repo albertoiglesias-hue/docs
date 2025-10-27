@@ -1,47 +1,47 @@
 ---
-title: "Qué es"
-description: "Convierte tus APIs o servicios en servidores MCP listos para ser invocados por modelos de lenguaje y agentes."
+title: "Mis MCPs"
+description: "Crea y gestiona tus propios servidores MCP a partir de APIs o servicios internos para que los modelos de lenguaje puedan ejecutarlos directamente."
 ---
 
-## Qué es “Mis MCPs”
+## Descripción general
 
-La sección **Mis MCPs** permite transformar tus **APIs** o **servicios internos** en servidores MCP totalmente operativos.  
-Cada MCP actúa como un contenedor de *tools* (herramientas) que los modelos de lenguaje pueden invocar directamente desde los agentes o asistentes de tu entorno.
+La sección **Mis MCPs** te permite transformar tus **APIs** o **servicios internos** en servidores compatibles con el estándar **Model Context Protocol (MCP)**.  
+Cada servidor MCP agrupa un conjunto de *tools* (herramientas) que los modelos pueden invocar directamente desde tus agentes o asistentes.
 
-En otras palabras, Devic convierte tu API en una interfaz estándar **Model Context Protocol**, lista para que cualquier modelo o agente pueda acceder a sus endpoints y ejecutar acciones reales sobre tus sistemas.
+En otras palabras, Devic convierte tu API en una interfaz estándar lista para ejecutar acciones reales sobre tus sistemas mediante lenguaje natural o flujos automatizados.
 
 ![Vista general de Mis MCPs](1e214fa7-89f9-41e3-b648-b47242a86e4d.png)
 
 ---
 
-## Estructura de la vista
+## Panel principal
 
-El panel muestra todos los MCPs disponibles creados dentro de tu organización.  
+La vista muestra todos los MCPs creados dentro de tu organización.  
 Cada tarjeta representa un conector activo e incluye:
 
 - **Nombre del MCP**  
-- **Descripción breve del servicio**  
+- **Descripción del servicio**  
 - **Indicador de estado** (verde = activo)  
-- **Accesos directos de acción:** editar, eliminar o publicar.  
+- **Accesos rápidos:** editar, eliminar o publicar.  
 
-En la parte superior izquierda se encuentra el botón **Add custom MCP**, que inicia el proceso de creación de un nuevo conector basado en tu propia API.
+En la parte superior izquierda encontrarás el botón **Add custom MCP**, que inicia el proceso de creación de un nuevo conector a partir de tu API.
 
 <Card
   title="Crear un nuevo MCP"
   icon="plus"
   horizontal
 >
-  Haz clic en <strong>Add custom MCP</strong> para empezar la configuración de un servidor MCP a partir de la especificación de tu API (OpenAPI o JSON).
+  Haz clic en <strong>Add custom MCP</strong> para comenzar la configuración de un servidor MCP basado en la especificación de tu API (OpenAPI o JSON).
 </Card>
 
 ---
 
-## Diferencia entre “Mis MCPs” e “Importados”
+## Tipos de MCP en la vista
 
-- **Mis MCPs:** son MCPs que tú defines y controlas, creados directamente a partir de tus propios servicios o endpoints.  
-- **Importados:** son integraciones externas cargadas desde un archivo o una URL pública, sin modificar su estructura original.  
+- **Mis MCPs:** conectores creados por ti, a partir de tus propios servicios o endpoints.  
+- **Importados:** integraciones externas cargadas desde un archivo o una URL pública, sin modificar su estructura original.  
 
-Ambos tipos de MCPs aparecen organizados dentro de la misma vista, pero con secciones diferenciadas:
+Ambos tipos se muestran organizados dentro de la misma vista, en secciones diferenciadas.
 
 ![Panel de Mis MCPs y MCPs importados](c601dc58-d752-4a6a-a8de-938f8e929560.png)
 
@@ -50,7 +50,7 @@ Ambos tipos de MCPs aparecen organizados dentro de la misma vista, pero con secc
 <Card
   title="Siguiente paso"
   icon="arrow-right"
-  href="/mcp/my-mcps/import-tool"
+  href="/devic/MCPs/my-mcps/import-tool"
 >
   Aprende cómo importar tu primera API y transformarla en un MCP funcional.
 </Card>
