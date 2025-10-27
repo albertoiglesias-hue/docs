@@ -71,10 +71,17 @@
         "tab": "Devic",
         "groups": [
           {
-            "group": "Introducción",
+            "group": "Comenzar",
+            "icon": "rocket",
             "pages": [
-              "devic/introduction",
-              "devic/quickstart"
+              {
+                "page": "devic/introduction",
+                "icon": "book-open"
+              },
+              {
+                "page": "devic/quickstart",
+                "icon": "list-check"
+              }
             ]
           },
           {
@@ -142,21 +149,7 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/devic-light.svg",
