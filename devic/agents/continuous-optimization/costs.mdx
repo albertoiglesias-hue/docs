@@ -1,5 +1,70 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Costes"
+description: "Monitoriza y optimiza el consumo de recursos de tus agentes mediante el sistema de seguimiento de tokens y caché de Devic."
 ---
 
+# Uso de tokens
+
+El control de tokens en Devic permite **analizar el consumo real de recursos** durante la ejecución de los agentes.  
+Cada interacción con el modelo —ya sea entrada de datos, generación de respuestas o uso de herramientas— queda registrada para ofrecer una visión precisa del **coste operativo y la eficiencia del agente**.
+
+![Vista general del uso de tokens por ejecución](8cd8cf88-e889-4ab0-918a-a6baa4534444.png)
+
+---
+
+## Desglose de consumo
+
+Al situar el cursor sobre el campo **Tokens** de cualquier ejecución, se despliega un resumen con el detalle de uso:
+
+![Detalle del desglose de tokens](802e12c1-fad0-4370-ab37-2456265e420d.png)
+
+| Métrica | Descripción |
+|----------|--------------|
+| **Input Tokens** | Tokens consumidos por la información de entrada (prompts, contexto, bases de conocimiento, etc.). |
+| **Output Tokens** | Tokens generados por el modelo como resultado o respuesta final. |
+| **Total Tokens** | Suma total de los tokens de entrada y salida. |
+| **Cached Tokens** | Tokens reutilizados mediante el sistema de caché, que no se vuelven a computar en el consumo activo. |
+
+---
+
+## Sistema de caché
+
+Devic implementa un sistema de **token caching** que optimiza automáticamente el uso de recursos.  
+Cuando un agente reutiliza información o fragmentos ya procesados (por ejemplo, instrucciones base o contexto del RAG), los tokens se recuperan desde la caché sin generar coste adicional.
+
+Esto permite:
+
+- **Reducir el consumo total de tokens.**  
+- **Acelerar las respuestas.**  
+- **Mantener coherencia contextual** en ejecuciones consecutivas.  
+
+---
+
+## Análisis y optimización del consumo
+
+El panel de ejecución ofrece una visión global del **rendimiento económico y técnico** del agente.  
+Estas métricas permiten a los desarrolladores y equipos de operaciones:
+
+- Detectar procesos o tareas con mayor coste promedio.  
+- Ajustar prompts, configuraciones y herramientas para mejorar la eficiencia.  
+- Comparar consumos entre versiones o agentes distintos.  
+- Medir el ahorro logrado gracias al uso de la caché.  
+
+---
+
+<Note>
+El seguimiento detallado del uso de tokens en Devic proporciona una trazabilidad completa del coste operativo, facilitando decisiones informadas sobre eficiencia y escalabilidad en entornos de producción.
+</Note>
+
+---
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Evaluaciones automáticas" icon="check-circle" href="./evaluaciones">
+    Analiza el rendimiento de los agentes a través de métricas automáticas generadas por Devic.
+  </Card>
+  <Card title="Configuración avanzada" icon="settings" href="../other-options">
+    Define límites, políticas de caché y parámetros de uso para optimizar recursos.
+  </Card>
+</CardGroup>

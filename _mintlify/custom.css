@@ -1,0 +1,39 @@
+/* ================================
+   Forzar modo oscuro en Mintlify
+================================= */
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background-color: #0e1015 !important;
+  color: #e5e7eb !important;
+}
+
+[data-theme="light"],
+[data-theme="system"] {
+  background-color: #0e1015 !important;
+  color: #e5e7eb !important;
+}
+
+a {
+  color: #6F8EFF !important;
+}
+
+/* Ocultar el botón de cambio de tema */
+.theme-toggle {
+  display: none !important;
+}
+
+/* Ajustes de bloques de código */
+pre, code {
+  background-color: #1a1d25 !important;
+  color: #d1d5db !important;
+}
+
+/* Tarjetas y contenedores */
+.card, .content, .sidebar, .docs-container {
+  background-color: #0f1219 !important;
+  color: #e5e7eb !important;
+}

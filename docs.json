@@ -181,5 +181,11 @@
       "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
-  }
+  },
+  "disableThemeToggle": true,
+  "customScripts": [
+    {
+      "src": "/_mintlify/custom.css"
+    }
+  ]
 }
