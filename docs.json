@@ -73,22 +73,10 @@
           {
             "group": "Comenzar",
             "icon": "rocket",
-            "expanded": false,
+            "expanded": true,
             "pages": [
-              {
-                "group": "Introducción",
-                "icon": "book-open",
-                "pages": [
-                  "devic/introduction"
-                ]
-              },
-              {
-                "group": "Primeros pasos",
-                "icon": "list-check",
-                "pages": [
-                  "devic/quickstart"
-                ]
-              }
+              "devic/introduction",
+              "devic/quickstart"
             ]
           },
           {
