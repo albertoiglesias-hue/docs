@@ -1,5 +1,89 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Evaluaciones automáticas"
+description: "Analiza el rendimiento de tus agentes mediante evaluaciones automáticas generadas por Devic, basadas en el enfoque LLM-as-Judge."
 ---
 
+# Evaluaciones automáticas del rendimiento del agente
+
+Devic incluye un sistema de **evaluación automática del rendimiento** que analiza el comportamiento de los agentes al finalizar cada ejecución.  
+Este módulo aplica métricas predefinidas que permiten medir de forma objetiva la precisión, planificación, ejecución y finalización de las tareas.
+
+![Panel de evaluación automática de ejecución](9147b810-ea00-444a-9b63-2d7cd2f23c37.png)
+
+---
+
+## Evaluaciones predefinidas
+
+Las evaluaciones vienen **configuradas por defecto** en la plataforma e incluyen indicadores clave del desempeño del agente:
+
+| Indicador | Descripción |
+|------------|-------------|
+| **Instruction Following** | Evalúa el grado de cumplimiento de las instrucciones proporcionadas. |
+| **Task Planning** | Mide la calidad y coherencia en la planificación de tareas. |
+| **Task Execution** | Analiza la precisión y consistencia de la ejecución. |
+| **Tool Usage** | Evalúa el uso eficiente de las herramientas disponibles. |
+| **Finalization** | Verifica que el agente cierre correctamente el flujo de trabajo. |
+
+Cada métrica se puntúa en una escala del **0 al 10**, generando un **Overall Score** (puntuación global) que resume el rendimiento general de la ejecución.
+
+---
+
+## Evaluaciones personalizadas
+
+Además de las métricas predefinidas, es posible **crear tus propias evaluaciones personalizadas** para adaptarlas a los objetivos o criterios específicos de tu organización.  
+
+Estas configuraciones se gestionan desde la sección:
+
+**Other Options → Evaluation Configuration**
+
+👉 [Ver configuración de evaluaciones personalizadas](https://devic.mintlify.app/devic/agents/other-options)
+
+Allí puedes definir nuevos criterios, ajustar ponderaciones o incorporar indicadores adicionales según las necesidades de tu flujo operativo.
+
+---
+
+## LLM as Judge
+
+Devic implementa el enfoque **LLM-as-Judge**, en el que **un modelo de lenguaje adicional actúa como evaluador** del rendimiento del agente.  
+Este modelo analiza los resultados generados, interpreta la coherencia de las acciones y emite una puntuación basada en criterios definidos.
+
+Gracias a este sistema, las evaluaciones son:
+
+- **Objetivas**, al provenir de un evaluador externo al agente ejecutor.  
+- **Consistentes**, ya que aplican las mismas reglas de análisis en cada ejecución.  
+- **Automatizadas**, eliminando la necesidad de revisión manual.  
+- **Explicativas**, con resúmenes interpretativos que describen fortalezas y áreas de mejora.
+
+![Evaluación con puntuación general y resumen de desempeño](9147b810-ea00-444a-9b63-2d7cd2f23c37.png)
+
+---
+
+## Interpretación de resultados
+
+El panel de evaluación muestra un resumen detallado que incluye:
+
+- **Overall Performance:** calificación general (por ejemplo, *Excellent*, *Good*, *Needs Improvement*).  
+- **Summary:** análisis textual generado por el modelo evaluador, con observaciones sobre el desempeño.  
+- **Strong Areas:** número de aspectos destacados.  
+- **Areas to Improve:** número de puntos de mejora detectados.
+
+Además, el botón **“Get Suggestions”** permite solicitar recomendaciones automáticas para optimizar el comportamiento del agente en futuras ejecuciones.
+
+---
+
+<Note>
+El sistema de evaluación automática de Devic combina la precisión del análisis cuantitativo con la interpretación cualitativa de un modelo de lenguaje, proporcionando una visión integral del rendimiento del agente.
+</Note>
+
+---
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Human in the Loop" icon="user-check" href="./human-in-the-loop">
+    Aprende cómo incluir validación humana dentro del flujo de ejecución para reforzar el control operativo.
+  </Card>
+  <Card title="Configuración avanzada" icon="settings" href="../other-options">
+    Personaliza las métricas y criterios de evaluación de tus agentes.
+  </Card>
+</CardGroup>
