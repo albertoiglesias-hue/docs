@@ -1,5 +1,102 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Qué son los agentes"
+description: "Descubre qué son los agentes en Devic, cómo funcionan y en qué se diferencian de los flujos tradicionales."
 ---
 
+# Agentes
+
+Los **agentes en Devic** son entidades inteligentes capaces de **tomar decisiones autónomas** hasta lograr un objetivo concreto.  
+Se componen de tres elementos fundamentales:
+
+- 🧠 **Un modelo LLM** — el razonador principal.  
+- 💬 **Un prompt** — el contexto y las reglas de comportamiento.  
+- 🧩 **Un conjunto de herramientas (tools)** — las acciones que puede ejecutar.
+
+---
+
+## 🎯 Cómo los entendemos en Devic
+
+A diferencia de otros entornos donde los agentes se representan como **flujos o diagramas de cajitas y flechas**,  
+en **Devic no concebimos los agentes como flujos predefinidos**.  
+
+👉 Un agente **no sigue un camino rígido**:  
+es el propio agente quien **decide qué pasos dar**, qué herramientas usar y cuándo detenerse,  
+**hasta conseguir el resultado esperado**.
+
+Esto permite que los agentes de Devic sean **autónomos, adaptativos y resolutivos**, reaccionando a los contextos o datos que encuentran durante su ejecución.
+
+---
+
+## ⚙️ Estructura funcional
+
+Un agente combina:
+
+| Elemento | Descripción |
+|-----------|-------------|
+| **Prompt** | Define su propósito, tono, instrucciones y límites. |
+| **LLM** | Es el modelo base que analiza, razona y decide qué hacer. |
+| **Tools** | Son las capacidades ejecutivas del agente: pueden consultar datos, enviar correos, crear tareas, leer documentos, etc. |
+
+Esta combinación hace posible que el agente **razone y actúe de forma autónoma**, sin requerir flujos secuenciales programados.
+
+---
+
+## 🔄 Interacción con los agentes
+
+La interacción con los agentes **no es continua**, como ocurre con los **asistentes**.  
+Un agente **se ejecuta en respuesta a un disparador**, realiza sus acciones hasta completar la tarea y luego finaliza su ciclo.
+
+### 🕹️ Posibles disparadores de ejecución:
+- Ejecuciones **programadas periódicamente** (por ejemplo, cada día o semana).  
+- **Webhooks** o eventos externos que lo activan automáticamente.  
+- **Otras tools** o **agentes** que lanzan su ejecución.  
+- **Acciones manuales** desde la interfaz o API de Devic.
+
+---
+
+## 🧩 Ejemplo conceptual
+
+Un agente puede configurarse para:
+1. Ejecutarse cada lunes por la mañana.  
+2. Consultar una base de datos con las ventas semanales.  
+3. Generar un gráfico y un PDF resumen.  
+4. Enviar el informe al equipo por correo.
+
+Durante este proceso, **el agente decide**:
+- Qué herramientas usar (consultar base de datos, generar gráfico, enviar email).  
+- En qué orden emplearlas.  
+- Cuándo dar por finalizada la tarea.
+
+---
+
+## 💡 En resumen
+
+| Característica | Agentes en Devic |
+|-----------------|------------------|
+| **Ejecución** | Bajo demanda o programada. |
+| **Interacción** | No continua (a diferencia de los asistentes). |
+| **Comportamiento** | Autónomo, orientado a resultados. |
+| **Diseño** | Basado en decisiones, no en flujos visuales. |
+| **Componentes** | Prompt + LLM + Tools. |
+
+---
+
+<Note>
+Los agentes son la pieza clave para automatizar procesos complejos de forma inteligente en Devic, ya que **razonan y actúan por sí mismos hasta lograr el objetivo planteado**.
+</Note>
+
+---
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Estructura de un agente" icon="boxes" href="./estructura">
+    Aprende qué elementos definen a un agente y cómo se relacionan entre sí.
+  </Card>
+  <Card title="Prompt de agente" icon="terminal" href="./prompt">
+    Descubre cómo redactar prompts efectivos para guiar el comportamiento de tus agentes.
+  </Card>
+  <Card title="Histórico y versionado de prompts" icon="history" href="./historico-prompts">
+    Consulta cómo Devic gestiona el versionado y las modificaciones de los prompts de agente.
+  </Card>
+</CardGroup>
