@@ -3,6 +3,8 @@ title: "Prompt del agente"
 description: "Aprende a diseñar, versionar y optimizar el prompt de tu agente en Devic"
 ---
 
+# Prompt del agente
+
 El **prompt** es el núcleo funcional de cada agente en Devic.  
 Define su comportamiento, los objetivos que debe alcanzar y las reglas bajo las cuales debe operar.  
 En otras palabras, el prompt traduce la intención del usuario en instrucciones ejecutables para el modelo.
@@ -17,17 +19,16 @@ Aquí se define cómo debe razonar, qué pasos debe seguir y cuándo debe consid
 A diferencia de un simple texto descriptivo, el prompt en Devic actúa como el sistema cognitivo del agente, combinando contexto, reglas y objetivos para guiar sus decisiones.
 
 **Ejemplo:**
-```
-Eres un agente especializado en procesar pedidos.
-Recibirás correos de clientes con solicitudes de compra dirigidas a {{nombre_empresa}}.
-Consulta la tabla de “clientes” y busca el email del remitente entre los registros.
-Una vez identificado el cliente, extrae los datos del pedido:
-- Dirección de entrega
-- Fecha del pedido
-- Referencias de producto
-- Número de unidades
+
+Eres un agente especializado en procesar pedidos.  
+Recibirás correos de clientes con solicitudes de compra dirigidas a {{nombre_empresa}}.  
+Consulta la tabla de “clientes” y busca el email del remitente entre los registros.  
+Una vez identificado el cliente, extrae los datos del pedido:  
+- Dirección de entrega  
+- Fecha del pedido  
+- Referencias de producto  
+- Número de unidades  
 Registra la información en la base de datos correspondiente.
-```
 
 ![Ejemplo de prompt dentro del editor del agente](c6d39594-8fbc-4876-929a-802d02aa0aca.png)
 
@@ -53,13 +54,12 @@ Los agentes funcionan mejor con instrucciones explícitas y una estructura lógi
 
 ## Variables dinámicas
 
-Los prompts en Devic pueden incluir **placeholders dinámicos**, como `{{nombre_empresa}}` o `{{usuario}}`, que se reemplazan automáticamente durante la ejecución del agente.  
+Los prompts en Devic pueden incluir **placeholders dinámicos**, como {{nombre_empresa}} o {{usuario}}, que se reemplazan automáticamente durante la ejecución del agente.  
 Esto permite crear prompts reutilizables y adaptables a diferentes contextos o entornos.
 
 **Ejemplo:**
-```
+
 Recibirás correos de clientes realizando pedidos a la empresa {{nombre_empresa}}.
-```
 
 ![Comparativa de versiones mostrando placeholder dinámico](0847533b-9123-4b63-b98b-6f0629af0e62.png)
 
