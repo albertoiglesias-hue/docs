@@ -1,5 +1,95 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Otras opciones"
+description: "Configura funciones avanzadas de los agentes en Devic, como ejecuciones periódicas, planificación de tareas, gestión de costes, canales, evaluaciones y subagentes especializados."
 ---
 
+Desde el menú **Other Options** de cada agente, Devic ofrece una serie de configuraciones avanzadas que permiten ajustar su comportamiento, rendimiento y control operativo.
+
+Estas opciones amplían la capacidad de los agentes más allá de su configuración básica, permitiendo programar ejecuciones automáticas, definir su interacción con otros sistemas o especializarlos en tareas concretas.
+
+![Panel Other Options de un agente](1f26bc1a-6323-4209-b705-cd3c4c7cd7b7.png)
+
+---
+
+## Ejecuciones periódicas
+
+Permite programar al agente para que se **ejecute automáticamente** con una frecuencia determinada: diaria, semanal o personalizada.  
+De esta forma, el agente puede realizar tareas de mantenimiento, informes o supervisión sin intervención manual.
+
+![Configuración de ejecución periódica](6284b1db-623b-4fde-8bf7-608aa10c88a4.png)
+
+---
+
+## Pausar agente
+
+Suspende temporalmente las ejecuciones del agente.  
+Mientras está en pausa:
+- No se procesan nuevas entradas.  
+- Las ejecuciones en cola se detienen.  
+- No se disparan las ejecuciones programadas.  
+
+Esta opción es útil para realizar ajustes o mantenimiento sin eliminar el agente.
+
+![Pausar agente](dd7508d2-bd63-4f31-aa3f-be2a75a91a2a.png)
+
+---
+
+## Planificador de tareas del agente
+
+Permite definir **cómo debe ejecutar sus tareas** de manera controlada.  
+El usuario puede establecer una planificación específica que sirva como guía o secuencia, afinando el comportamiento del agente para obtener **mayor coherencia y rendimiento operativo**.
+
+![Planificador de tareas del agente](67148e33-55b2-42a7-97b5-bded0653f766.png)
+
+---
+
+## Configurar canales
+
+Configura los **canales de comunicación** del agente, como correo electrónico, para el envío y recepción de información durante las ejecuciones.  
+El agente puede recibir mensajes entrantes, iniciar nuevas ejecuciones desde correos y filtrar por remitente o asunto.
+
+![Configuración de canales del agente](bd4ee50f-ff85-4541-8523-873ffe13f262.png)
+
+---
+
+## Gestión de costes
+
+Devic incorpora un panel de **Cost Management** que muestra el coste acumulado y detallado de las ejecuciones del agente.  
+Se incluyen métricas como coste total, promedio diario y coste por hilo de ejecución, junto a gráficos de evolución temporal.
+
+![Gestión de costes](ff479b75-10f5-456c-93d4-61ebeb849a57.png)
+
+---
+
+## Configuración de evaluaciones
+
+En esta sección se definen las **evaluaciones automáticas** que califican el rendimiento del agente según criterios preestablecidos.  
+Además, el usuario puede **crear evaluaciones personalizadas** desde el panel *Evaluation Configuration*.
+
+> 🔗 Consulta cómo generar tus propias métricas en [Evaluaciones personalizadas](https://devic.mintlify.app/devic/agents/other-options).
+
+![Panel de configuración de evaluaciones](19ce5bb1-4610-4a85-b259-6d758e560ec8.png)
+
+---
+
+## Subagentes
+
+Permite transformar un agente en un **subagente especializado** en una tarea o conjunto de tareas concretas.  
+Una vez habilitado, puede ser **invocado por otros agentes como una tool**, facilitando la división de procesos complejos en componentes especializados.
+
+![Configuración de subagentes](b48c9425-b28f-4343-b8cb-ddfc82820648.png)
+
+---
+
+## Sugerencias de mejora
+
+El sistema de **Improvement Suggestions** analiza el rendimiento del agente y propone acciones para mejorar su comportamiento, prompts o estrategias.  
+Estas recomendaciones se generan a partir de las evaluaciones previas y los registros de ejecución, contribuyendo a un proceso de **optimización continua**.
+
+![Panel de sugerencias de mejora](87b21007-a7bd-4ad8-b1b0-3aaab08fb159.png)
+
+---
+
+<Note>
+Las opciones avanzadas de Devic permiten adaptar los agentes a entornos operativos complejos, combinando autonomía, trazabilidad y control sobre su comportamiento y coste.
+</Note>
