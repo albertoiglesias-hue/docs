@@ -109,7 +109,7 @@
             "expanded": true,
             "pages": [
               "devic/agents/index",
-              "devic/agents/structure",
+              "devic/agents/deploy-your-first-agent",
               "devic/agents/prompt",
               "devic/agents/rag",
               "devic/agents/tools",
