@@ -69,7 +69,7 @@
           },
           {
             "group": "MCPs",
-            "icon": "circuit-board",
+            "icon": "server",
             "expanded": true,
             "pages": [
               "devic/mcps/index",
