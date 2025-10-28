@@ -1,99 +1,129 @@
 ---
-title: "RAG (Retrieval Augmented Generation)"
-description: "Amplía la capacidad de tus agentes en Devic mediante el uso de RAG para consultar información externa y contextualizar sus respuestas."
+title: "Prompt del agente"
+description: "Aprende a diseñar, versionar y optimizar el prompt de tu agente en Devic"
 ---
 
-El **RAG (Retrieval Augmented Generation)** es el sistema que permite a los agentes en **Devic** acceder a información externa —como documentos, manuales, políticas o catálogos— y utilizarla durante su ejecución para generar respuestas más precisas y contextualizadas.
+# Prompt del agente
 
-Gracias al RAG, los agentes pueden trabajar con datos actualizados o específicos del dominio, sin depender únicamente del conocimiento preentrenado del modelo.
-
----
-
-## Cómo funciona
-
-De manera nativa, la plataforma incorpora un sistema **RAG** completamente integrado que permite al usuario añadir directamente documentos para enriquecer el contexto de los modelos.
-
-El proceso es **totalmente automático**:
-1. La plataforma analiza los documentos cargados y los **fragmenta en secciones o “chunks”** para facilitar su indexación y recuperación.  
-2. Se generan **descripciones automáticas** de cada fragmento, que ayudan al agente a contextualizar mejor la información.  
-3. Durante la ejecución, el agente decide **cuándo y cómo consultar** esos fragmentos, integrándolos dinámicamente en su contexto operativo.  
-
-Este enfoque elimina la necesidad de entrenamientos adicionales o integraciones externas, permitiendo que los agentes trabajen con **conocimiento actualizado y específico** sin complejidad técnica añadida.
-
-![Funcionamiento del sistema RAG](1bf12a22-4401-498f-995b-0b077ede4ff6.png)
-
-Gracias al RAG, las organizaciones pueden dotar a sus agentes de una memoria extendida que refuerza su capacidad de razonamiento y mejora la precisión en tareas complejas.
+El **prompt** es el núcleo funcional de cada agente en Devic.  
+Define su comportamiento, los objetivos que debe alcanzar y las reglas bajo las cuales debe operar.  
+En otras palabras, el prompt traduce la intención del usuario en instrucciones ejecutables para el modelo.
 
 ---
 
-## Configuración del RAG en un agente
+## Qué es el prompt
 
-Para añadir RAG a un agente:
+El prompt contiene las instrucciones que el modelo de lenguaje (LLM) sigue para ejecutar una tarea.  
+Aquí se define cómo debe razonar, qué pasos debe seguir y cuándo debe considerar que una tarea se ha completado correctamente.
 
-1. Abre el agente desde el panel lateral de Devic.  
-2. Desplázate hasta la sección **RAG**.  
-3. Selecciona **Add document** y sube los archivos que formarán parte de la base de conocimiento.
+A diferencia de un simple texto descriptivo, el prompt en Devic actúa como el sistema cognitivo del agente, combinando contexto, reglas y objetivos para guiar sus decisiones.
 
-Los formatos admitidos incluyen:
-- `.pdf`  
-- `.docx`  
-- `.txt`  
-- `.csv`  
+**Ejemplo**
 
-Cada archivo se procesa automáticamente y aparece listado en la interfaz del agente con su nombre y estado.
+Eres un agente especializado en procesar pedidos.  
+Recibirás correos de clientes con solicitudes de compra dirigidas a `{{nombre_empresa}}`.  
+Consulta la tabla de clientes y busca el email del remitente entre los registros.  
+Una vez identificado el cliente, extrae los datos del pedido:  
+- Dirección de entrega  
+- Fecha del pedido  
+- Referencias de producto  
+- Número de unidades  
+Registra la información en la base de datos correspondiente.
 
----
-
-## Visualización y resumen de documentos
-
-Tras subir un documento, puedes consultar sus detalles desde el panel lateral derecho.  
-Devic mostrará los **metadatos** y un **resumen automático** del contenido.
-
-| Campo | Descripción |
-|--------|-------------|
-| **Name** | Nombre del archivo cargado. |
-| **Size** | Tamaño del documento. |
-| **Created / Modified** | Fechas de creación y última modificación. |
-| **Summary** | Resumen del contenido, inyectado automáticamente en el contexto del agente. |
-
-![Detalle del documento en el panel lateral](11fd47bb-dec8-4355-b032-f6582eed9c4e.png)
-
-El campo **Summary** puede editarse manualmente para ajustar la descripción del documento.  
-Esto permite priorizar la información más relevante y optimizar las consultas del agente.
+![Ejemplo de prompt dentro del editor del agente](c6d39594-8fbc-4876-929a-802d02aa0aca.png)
 
 ---
 
-## Buenas prácticas
+## Cómo estructurar un buen prompt
 
-- Carga únicamente los documentos necesarios para el contexto del agente.  
-- Evita archivos muy extensos o con información irrelevante.  
-- Actualiza los resúmenes cuando cambie el contenido de los documentos.  
-- Usa nombres descriptivos que faciliten la identificación.  
-- Revisa periódicamente el conjunto de documentos para garantizar su vigencia.
+Un prompt bien diseñado mejora significativamente la precisión y la autonomía del agente.  
+A continuación se muestra una estructura recomendada para definirlo de manera clara y eficaz:
+
+| Sección | Descripción | Ejemplo |
+|----------|--------------|---------|
+| **Rol** | Define quién es el agente y cuál es su función. | Eres un agente especializado en atención al cliente. |
+| **Contexto** | Proporciona información sobre el entorno o las limitaciones. | Trabajas para la empresa `{{nombre_empresa}}` y recibes consultas por email. |
+| **Objetivo** | Describe el resultado que debe conseguir. | Tu tarea es clasificar los correos en categorías y responder automáticamente. |
+| **Acciones** | Indica los pasos concretos que debe seguir para lograr el objetivo. | Extrae la información del correo, verifica en la base de datos y responde según el resultado. |
+| **Criterios de éxito** | Define cuándo la tarea se considera completada. | La tarea se completa cuando el correo se clasifica correctamente y se envía la respuesta. |
+
+**Recomendación:** utiliza frases breves, directas y sin ambigüedades.  
+Los agentes funcionan mejor con instrucciones explícitas y una estructura lógica clara.
 
 ---
 
-## Casos de uso
+## Variables dinámicas
 
-| Tipo de agente | Aplicación del RAG |
-|-----------------|--------------------|
-| **Legal** | Consulta contratos o legislación almacenada en PDFs. |
-| **Comercial** | Busca datos en catálogos, fichas de producto o tarifas. |
-| **Técnico** | Recupera información desde manuales o guías internas. |
-| **Soporte** | Accede a bases de conocimiento o documentación de clientes. |
+Los prompts en Devic pueden incluir **placeholders dinámicos**, como `{{nombre_empresa}}` o `{{usuario}}`, que se reemplazan automáticamente durante la ejecución del agente.  
+Esto permite crear prompts reutilizables y adaptables a diferentes contextos o entornos.
+
+**Ejemplo**
+
+Recibirás correos de clientes realizando pedidos a la empresa `{{nombre_empresa}}`.
+
+![Comparativa de versiones mostrando placeholder dinámico](0847533b-9123-4b63-b98b-6f0629af0e62.png)
+
+---
+
+## Histórico y versionado
+
+Cada modificación del prompt se guarda automáticamente como una **nueva versión**.  
+Devic mantiene un registro completo de todas las versiones creadas, lo que permite consultar, comparar o restaurar versiones anteriores en cualquier momento.
+
+El historial se puede abrir desde la parte superior del editor, mediante la opción **History**.
+
+![Historial de versiones del prompt](cff0c803-10f9-43e7-8701-8d2f8b9d5ac3.png)
+
+---
+
+## Comparación de versiones
+
+La vista **Diff** permite comparar dos versiones del prompt de forma detallada, línea por línea.  
+Las diferencias se visualizan de la siguiente manera:
+
+- **Verde:** texto añadido  
+- **Rojo:** texto eliminado  
+- **Sin color:** texto sin cambios
+
+![Vista de comparación de versiones](0847533b-9123-4b63-b98b-6f0629af0e62.png)
+
+Esta función resulta especialmente útil para auditar cambios, revisar ajustes realizados por otros usuarios o controlar la evolución del comportamiento del agente.
+
+---
+
+## Mejores prácticas
+
+- Mantén el **rol del agente** claro y coherente.  
+- Utiliza **listas o pasos numerados** para estructurar las acciones.  
+- Incluye **variables dinámicas** cuando sea necesario.  
+- Evita instrucciones ambiguas o contradictorias.  
+- Realiza cambios incrementales en lugar de reescrituras completas.  
+- Documenta en el propio prompt los supuestos o excepciones relevantes.
+
+---
+
+## Cuándo actualizar el prompt
+
+Se recomienda crear una nueva versión del prompt cuando ocurra alguna de las siguientes situaciones:
+
+- Se modifica el **objetivo** o el **alcance** del agente.  
+- Se añaden o eliminan **herramientas** (Tools).  
+- Cambia la estructura de las **fuentes de datos**.  
+- Se detectan **errores de interpretación** en la ejecución.  
+- Se busca una mayor precisión o contexto en las respuestas.
 
 ---
 
 ## Próximos pasos
 
 <CardGroup cols={2}>
-  <Card title="Diseña un prompt efectivo" icon="terminal" href="./prompt">
-    Aprende a estructurar prompts que aprovechen la información del RAG para mejorar la precisión de los agentes.
+  <Card title="Histórico y versionado" icon="history" href="./historico-prompts">
+    Aprende cómo visualizar, comparar y restaurar versiones anteriores del prompt.
   </Card>
   <Card title="Optimización continua" icon="activity" href="./optimizacion">
-    Descubre cómo evaluar y ajustar el rendimiento de los agentes basados en RAG mediante logs y evaluaciones.
+    Descubre cómo mejorar el rendimiento de los agentes mediante logs, tareas y evaluaciones.
   </Card>
-  <Card title="Gestión de versiones" icon="history" href="./historico-prompts">
-    Consulta cómo Devic mantiene un histórico de cambios tanto en prompts como en la configuración del RAG.
+  <Card title="Configuración avanzada" icon="settings" href="./opciones">
+    Explora funcionalidades adicionales como subagentes, ejecuciones periódicas o sugerencias automáticas de mejora.
   </Card>
 </CardGroup>
