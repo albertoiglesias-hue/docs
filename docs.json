@@ -15,18 +15,11 @@
         "groups": [
           {
             "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
+            "pages": ["index", "quickstart", "development"]
           },
           {
             "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
+            "pages": ["essentials/settings", "essentials/navigation"]
           },
           {
             "group": "Writing content",
@@ -52,9 +45,7 @@
         "groups": [
           {
             "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
+            "pages": ["api-reference/introduction"]
           },
           {
             "group": "Endpoint examples",
@@ -74,14 +65,11 @@
             "group": "Comenzar",
             "icon": "rocket",
             "expanded": true,
-            "pages": [
-              "devic/introduction",
-              "devic/quickstart"
-            ]
+            "pages": ["devic/introduction", "devic/quickstart"]
           },
           {
             "group": "MCPs",
-            "icon": "cpu",
+            "icon": "circuit-board",
             "expanded": true,
             "pages": [
               "devic/MCPs/index",
@@ -117,21 +105,15 @@
           },
           {
             "group": "Agentes",
-            "pages": [
-              "devic/Agentes/que-son"
-            ]
+            "pages": ["devic/Agentes/que-son"]
           },
           {
             "group": "Asistentes",
-            "pages": [
-              "devic/Asistentes/que-son"
-            ]
+            "pages": ["devic/Asistentes/que-son"]
           },
           {
             "group": "Bases de datos (BD)",
-            "pages": [
-              "devic/Basesdedatos/vision-general"
-            ]
+            "pages": ["devic/Basesdedatos/vision-general"]
           }
         ]
       }
