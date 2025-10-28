@@ -1,5 +1,82 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Human in the Loop"
+description: "Supervisa y aprueba decisiones de los agentes antes de su ejecución definitiva mediante el sistema de validación humana de Devic."
 ---
 
+# Validación humana en el ciclo de ejecución
+
+Devic incorpora un sistema de **Human in the Loop (HITL)** que permite incluir al usuario en el flujo de ejecución del agente cuando se requiere **validación, corrección o aprobación manual** antes de continuar con un proceso automatizado.
+
+Esta funcionalidad garantiza que las tareas críticas puedan revisarse y aprobarse por un responsable humano, manteniendo la trazabilidad y el control sobre la toma de decisiones del agente.
+
+---
+
+## Estados de ejecución
+
+Cuando un agente requiere intervención humana, la ejecución pasa automáticamente al estado **“Waiting for approval”**.  
+Desde el panel de ejecuciones es posible visualizar y filtrar las tareas en espera de aprobación, junto con su progreso y evaluación.
+
+![Vista de ejecuciones con tareas en espera de aprobación](a46efbc1-7c5c-4e6f-b207-324c8ba087ee.png)
+
+Los estados disponibles incluyen:
+
+| Estado | Descripción |
+|---------|--------------|
+| **Completed** | Ejecución finalizada correctamente. |
+| **Waiting for approval** | Requiere revisión o aprobación humana antes de continuar. |
+| **Paused** | Ejecución detenida temporalmente hasta recibir acción del usuario. |
+
+---
+
+## Proceso de aprobación
+
+Al hacer clic sobre una ejecución en estado **“Waiting for approval”**, se abre la ventana de validación.  
+En ella, el agente presenta la **solicitud de aprobación** junto con los datos extraídos o las acciones que pretende ejecutar.
+
+![Ventana de aprobación de agente](58e167b9-b7d8-40c2-8a79-c3b01e9cdc55.png)
+
+El usuario puede:
+
+- **Aprobar** la acción para que el agente continúe automáticamente con el flujo.  
+- **Rechazar y finalizar** la ejecución, deteniendo el proceso.  
+- **Continuar con feedback**, añadiendo comentarios o correcciones que el agente deberá incorporar antes de seguir.
+
+---
+
+## Supervisión contextual
+
+El panel de aprobación muestra toda la información relevante que el agente ha recopilado hasta ese punto:  
+por ejemplo, datos de clientes, documentos analizados o referencias cruzadas.  
+De esta manera, el usuario puede revisar los resultados **en su contexto operativo**, sin necesidad de salir de la interfaz del agente.
+
+![Ejemplo de solicitud de aprobación con detalles extraídos](a46efbc1-7c5c-4e6f-b207-324c8ba087ee.png)
+
+---
+
+## Beneficios del enfoque Human in the Loop
+
+La validación humana integrada permite equilibrar **automatización y control**, ofreciendo:
+
+- **Seguridad y precisión** en tareas sensibles o de alto impacto.  
+- **Trazabilidad completa** de las decisiones humanas dentro del flujo automatizado.  
+- **Aprendizaje iterativo**, al permitir que el agente incorpore feedback humano en futuras ejecuciones.  
+- **Cumplimiento normativo**, en procesos donde la intervención humana es obligatoria.
+
+---
+
+<Note>
+El sistema HITL convierte cada aprobación o rechazo en parte del aprendizaje operativo del agente, contribuyendo a la mejora continua de su desempeño y fiabilidad.
+</Note>
+
+---
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Logs y trazabilidad" icon="list" href="./logs">
+    Aprende a revisar los registros técnicos de ejecución y el timeline de eventos de los agentes.
+  </Card>
+  <Card title="Evaluaciones automáticas" icon="check-circle" href="./evaluaciones">
+    Configura métricas y notas automáticas para medir el rendimiento de tus agentes tras cada iteración.
+  </Card>
+</CardGroup>
