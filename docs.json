@@ -105,7 +105,7 @@
           },
           {
             "group": "Agentes",
-            "icon": "server",
+            "icon": "microchip",
             "expanded": true,
             "pages": [
               "devic/agents/index",
