@@ -69,51 +69,75 @@
           },
           {
             "group": "MCPs",
-            "icon": "server",
+            "icon": "circuit-board",
             "expanded": true,
             "pages": [
-              "devic/MCPs/index",
+              "devic/mcps/index",
               {
                 "group": "Mis MCPs",
                 "expanded": false,
                 "pages": [
-                  "devic/MCPs/my-mcps/what-it-is",
-                  "devic/MCPs/my-mcps/import-tool",
-                  "devic/MCPs/my-mcps/tools-menu",
-                  "devic/MCPs/my-mcps/configure-tools",
-                  "devic/MCPs/my-mcps/publish",
-                  "devic/MCPs/my-mcps/sessions",
-                  "devic/MCPs/my-mcps/sdks-and-widgets",
-                  "devic/MCPs/my-mcps/integration-with-llms"
+                  "devic/mcps/my-mcps/what-it-is",
+                  "devic/mcps/my-mcps/import-tool",
+                  "devic/mcps/my-mcps/tools-menu",
+                  "devic/mcps/my-mcps/configure-tools",
+                  "devic/mcps/my-mcps/publish",
+                  "devic/mcps/my-mcps/sessions",
+                  "devic/mcps/my-mcps/sdks-and-widgets",
+                  "devic/mcps/my-mcps/integration-with-llms"
                 ]
               },
               {
                 "group": "Importar MCPs de terceros",
                 "pages": [
-                  "devic/MCPs/import-third-party-mcps/import-third-party-mcps"
+                  "devic/mcps/import-third-party-mcps/import-third-party-mcps"
                 ]
               },
               {
                 "group": "Built-in Tools",
                 "expanded": false,
                 "pages": [
-                  "devic/MCPs/built-in-tools/index",
-                  "devic/MCPs/built-in-tools/tools-list"
+                  "devic/mcps/built-in-tools/index",
+                  "devic/mcps/built-in-tools/tools-list"
                 ]
               }
             ]
           },
           {
             "group": "Agentes",
-            "pages": ["devic/Agentes/que-son"]
+            "icon": "bot",
+            "expanded": true,
+            "pages": [
+              "devic/agents/index",
+              "devic/agents/structure",
+              "devic/agents/prompt",
+              "devic/agents/rag",
+              "devic/agents/tools",
+              {
+                "group": "Optimización continua",
+                "expanded": false,
+                "pages": [
+                  "devic/agents/continuous-optimization/logs",
+                  "devic/agents/continuous-optimization/human-in-the-loop",
+                  "devic/agents/continuous-optimization/tasks",
+                  "devic/agents/continuous-optimization/evaluations",
+                  "devic/agents/continuous-optimization/costs"
+                ]
+              },
+              "devic/agents/other-options"
+            ]
           },
           {
             "group": "Asistentes",
-            "pages": ["devic/Asistentes/que-son"]
+            "icon": "message-square",
+            "expanded": true,
+            "pages": ["devic/asistentes/que-son"]
           },
           {
             "group": "Bases de datos (BD)",
-            "pages": ["devic/Basesdedatos/vision-general"]
+            "icon": "database",
+            "expanded": true,
+            "pages": ["devic/basesdedatos/vision-general"]
           }
         ]
       }
