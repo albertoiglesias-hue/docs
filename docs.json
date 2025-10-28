@@ -84,12 +84,7 @@
             "icon": "cpu",
             "expanded": true,
             "pages": [
-              {
-                "group": "Qué son",
-                "pages": [
-                  "devic/MCPs/index"
-                ]
-              },
+              "devic/MCPs/index",
               {
                 "group": "Mis MCPs",
                 "expanded": false,
