@@ -1,5 +1,112 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Logs"
+description: "Consulta, interpreta y depura las ejecuciones de tus agentes mediante los logs técnicos y el timeline de eventos en Devic."
 ---
 
+# Logs
+
+Devic proporciona un sistema completo de **registro y depuración** que permite analizar en detalle el comportamiento interno de los agentes durante cada ejecución.  
+A través de los **logs** es posible seguir paso a paso las acciones ejecutadas, las herramientas utilizadas, los mensajes intercambiados con el modelo y el estado de cada tarea.
+
+---
+
+## Acceso a los logs
+
+Desde el historial de ejecuciones del agente, cada entrada cuenta con opciones para **inspeccionar su registro técnico**.  
+Al seleccionarla, se abre el panel **Thread Log**, que muestra en tiempo real todos los eventos generados durante la ejecución.
+
+![Panel principal de logs](fbfe25bf-0dcf-4e9b-a97a-e3f88f37056a.png)
+
+El panel de logs está dividido en tres niveles de información:
+
+| Nivel | Descripción |
+|--------|--------------|
+| **LOG / INFO** | Mensajes informativos del proceso de ejecución. |
+| **DEBUG** | Detalles de bajo nivel sobre llamadas a herramientas, pasos de razonamiento o variables intermedias. |
+| **WARN / ERROR** | Incidencias detectadas o errores que interrumpen la ejecución. |
+
+---
+
+## Thread Log
+
+El **Thread Log** permite revisar en detalle la conversación técnica entre el agente, las herramientas y el modelo.  
+Cada evento queda registrado con fecha, tipo y contenido.
+
+![Vista del Thread Log con eventos](530961a6-236a-4501-a870-95183e207721.png)
+
+Este registro ofrece trazabilidad total sobre:
+
+- **Tool calls** ejecutadas y sus argumentos.  
+- **Respuestas del modelo (LLM Response)**.  
+- **Mensajes internos de sistema** (por ejemplo, inicio o finalización de ejecución).  
+- **Estados de las tareas** y pasos completados.
+
+---
+
+## Detalle de mensajes
+
+Al seleccionar un evento concreto, se abre el panel **Assistant Message Details**, donde se muestran las llamadas a herramientas realizadas por el agente junto con su *payload* y respuesta.
+
+![Detalle de llamada a herramienta](473c3d8a-9cff-4797-b24c-6c40a1e4bf71.png)
+
+Esto permite verificar exactamente qué instrucción envió el agente, qué datos procesó y cómo respondió cada herramienta.  
+Es especialmente útil para auditar flujos complejos o detectar comportamientos inesperados en el razonamiento.
+
+---
+
+## Timeline de eventos
+
+El **Thread Events Timeline** ofrece una visualización secuencial y gráfica de la ejecución completa del agente, mostrando la relación entre el usuario, el modelo y las herramientas llamadas durante el proceso.
+
+![Visualización del timeline de eventos](fe9ed0de-e9b9-44d8-9ab5-16e807642c34.png)
+
+Cada bloque del timeline representa un paso o acción:
+
+| Elemento | Descripción |
+|-----------|-------------|
+| **User** | Mensaje o instrucción inicial enviada al agente. |
+| **Planning** | Etapa de planificación interna antes de ejecutar acciones. |
+| **Tool Call** | Ejecución de una herramienta (por ejemplo, consulta RAG, actualización de tarea, generación de PDF). |
+| **Tool Response** | Resultado devuelto por la herramienta. |
+| **Finish Execution** | Paso final donde el agente concluye la tarea. |
+
+---
+
+## Filtros y depuración avanzada
+
+El panel incluye opciones para **filtrar por tipo de evento, herramienta o contenido textual**, lo que facilita el análisis de procesos complejos o de alto volumen.
+
+![Filtros de timeline y logs](a9a9fe1f-a133-45c2-8719-da74b6e2666b.png)
+
+Los desarrolladores y administradores pueden utilizar esta vista para:
+
+- Depurar errores o incidencias específicas.  
+- Identificar cuellos de botella o pasos repetitivos.  
+- Analizar el orden y la duración de cada acción.  
+- Validar el cumplimiento del flujo esperado.
+
+---
+
+## Exportación y análisis externo
+
+Los registros pueden **exportarse para su análisis externo** o para integrarlos con sistemas de observabilidad y auditoría.  
+De esta forma, Devic facilita la trazabilidad completa de los agentes en entornos corporativos o de cumplimiento normativo.
+
+---
+
+<Note>
+El sistema de logs de Devic no solo ofrece visibilidad técnica, sino que constituye una herramienta esencial para **la mejora continua y la validación operativa de los agentes**.
+</Note>
+
+---
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Evaluaciones automáticas" icon="check-circle" href="./evaluaciones">
+    Aprende a configurar métricas y notas automáticas para evaluar el rendimiento de tus agentes.
+  </Card>
+  <Card title="Gestión de costes" icon="coins" href="./costes">
+    Supervisa el consumo de tokens y analiza los recursos utilizados por cada ejecución.
+  </Card>
+</CardGroup>
