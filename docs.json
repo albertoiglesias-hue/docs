@@ -82,7 +82,7 @@
           {
             "group": "MCPs",
             "icon": "cpu",
-            "expanded": false,
+            "expanded": true,
             "pages": [
               {
                 "group": "Qué son",
