@@ -2,6 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Devic Documentation",
+  "mode": "dark",
   "colors": {
     "primary": "#4764E6",
     "light": "#6F8EFF",
@@ -145,7 +146,7 @@
     ]
   },
   "logo": {
-    "light": "/logo/devic-light.svg",
+    "light": "/logo/devic-dark.svg",
     "dark": "/logo/devic-dark.svg",
     "height": "28px"
   },
