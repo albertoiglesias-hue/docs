@@ -1,5 +1,166 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Lanza tu primer agente"
+description: "Guía paso a paso para crear y configurar tu primer agente en Devic: modelo, prompt, herramientas y conocimiento."
 ---
 
+Los agentes son el núcleo de la automatización inteligente dentro de **Devic**.  
+Combinan **razonamiento, herramientas y conocimiento** para ejecutar tareas de forma autónoma hasta alcanzar un objetivo.  
+
+En esta guía aprenderás a crear tu primer agente y a configurar los elementos que lo hacen funcionar: el **modelo (LLM)**, el **prompt**, las **tools** y el **RAG (conocimiento)**.
+
+---
+
+## 🧠 Qué es un agente en Devic
+
+Un agente es una entidad inteligente capaz de **tomar decisiones por sí misma**.  
+A diferencia de los flujos tradicionales —donde las acciones se representan con cajitas y flechas—, en Devic **el agente decide qué pasos seguir y cuándo detenerse**.
+
+Cada agente se construye combinando:
+- Un **modelo de lenguaje (LLM)**, que razona y genera acciones.  
+- Un **prompt**, que define su propósito y reglas.  
+- Un conjunto de **tools**, que le permiten actuar sobre datos o sistemas.  
+- Y opcionalmente, un espacio de **RAG**, donde almacena información de referencia.
+
+---
+
+## 🧩 Paso 1: Crear un nuevo agente
+
+En el panel lateral de Devic, abre la sección **Agentes** y selecciona **New Agent**.  
+Empieza asignando un **nombre** y una **descripción** que definan claramente su función.
+
+| Campo | Descripción |
+|--------|-------------|
+| **Nombre** | Identificador principal del agente. Usa uno descriptivo, como *Gestor de Pedidos* o *Analista de Tickets*. |
+| **Descripción** | Explica brevemente el propósito o el contexto del agente. Es visible para otros usuarios del proyecto. |
+
+💡 *Ejemplo:*  
+> “Agente especializado en procesar pedidos recibidos por email y registrarlos en la base de datos de ventas.”
+
+---
+
+## 💬 Paso 2: Definir el prompt
+
+El **prompt** es el núcleo del agente.  
+En él describes cómo debe comportarse, qué objetivo debe cumplir y bajo qué condiciones debe actuar.  
+
+Un buen prompt debería incluir:
+- El **rol** del agente.  
+- El **objetivo** o resultado esperado.  
+- Las **reglas o límites** que debe respetar.  
+- Los **criterios de éxito**.
+
+🧩 *Ejemplo de prompt:*
+
+```
+Eres un agente especializado en procesar pedidos.
+Recibirás correos de clientes con solicitudes de compra.
+Tu tarea es identificar el cliente, el producto y la cantidad solicitada,
+y actualizar la base de datos de pedidos.
+```
+
+![Ejemplo de prompt](051f5a68-ef2b-4cfd-871a-d50593dfe157.png)
+
+---
+
+## ⚙️ Paso 3: Elegir el modelo (LLM)
+
+El **modelo** es el motor de razonamiento del agente.  
+Devic permite elegir entre distintos **proveedores y modelos**, adaptándose a tus necesidades de rendimiento, coste o privacidad.
+
+### Proveedores disponibles
+- **OpenAI** — Modelos GPT-4 y GPT-4o.  
+- **DeepSeek** — Modelos rápidos y optimizados en coste.  
+- **Anthropic** — Modelos Claude, excelentes en tareas de razonamiento.  
+- **XAi** — Modelos Grok, con enfoque generalista.  
+- **Kimi / K2** — Modelos alternativos compatibles con Devic.  
+
+### Modelos On-Premise
+También puedes desplegar tus propios modelos **on-premise**, lo que permite:
+- Controlar completamente el tratamiento de los datos.  
+- Cumplir políticas de privacidad o compliance.  
+- Evitar dependencias con servicios externos.
+
+![Selección de modelo y proveedor](533bce97-6d71-424c-beef-44c968fad01a.png)
+
+---
+
+## 🧰 Paso 4: Añadir Tools
+
+Las **tools** son las capacidades ejecutivas del agente.  
+Le permiten interactuar con correos, bases de datos, documentos o servicios externos.  
+
+Puedes añadir herramientas desde el apartado **Tools → Add tools**.
+
+| Tool | Descripción |
+|------|--------------|
+| 📨 **Read Emails** | Lee correos electrónicos y extrae su contenido. |
+| 📤 **Send Email** | Envía mensajes o notificaciones automáticas. |
+| 🗄️ **Databases** | Permite crear, consultar o actualizar registros. |
+| 📄 **OCR** | Extrae texto de documentos o imágenes. |
+| 📊 **Spreadsheet Tools** | Lee datos de hojas de cálculo o CSVs. |
+
+![Ejemplo de Tools configuradas](cf6c1197-6452-4c48-bcbb-d17f513c59cf.png)
+
+💡 *Consejo:*  
+Configura solo las herramientas necesarias.  
+Por ejemplo, un **agente de soporte** podría necesitar `Read Emails`, `Databases` y `Send Email`, pero no `OCR`.
+
+---
+
+## 📚 Paso 5: Añadir conocimiento (RAG)
+
+El **RAG (Retrieval Augmented Generation)** es el sistema de memoria del agente.  
+Le permite consultar documentos o archivos externos para obtener información contextual durante su ejecución.
+
+Puedes subir archivos en formato:
+- `.pdf`
+- `.docx`
+- `.txt`
+- `.csv`
+
+🧠 *Ejemplos de uso:*
+- Un agente legal consulta contratos o leyes cargados como PDFs.  
+- Un agente comercial busca información en catálogos o tarifas.  
+- Un agente técnico accede a manuales o guías internas.
+
+![RAG o Knowledge en un agente](533bce97-6d71-424c-beef-44c968fad01a.png)
+
+---
+
+## ✅ Paso 6: Guardar y ejecutar
+
+Cuando hayas configurado el nombre, prompt, modelo, herramientas y RAG, pulsa **Save changes**.  
+El agente quedará listo para ejecutarse manualmente, mediante **webhooks**, o programado con una periodicidad.
+
+Puedes probarlo directamente desde la interfaz o integrarlo con tus **asistentes**, **MCPs** o **flujos automatizados**.
+
+---
+
+## 🧩 Resumen de componentes
+
+| Elemento | Propósito |
+|-----------|------------|
+| **Nombre y descripción** | Identifican al agente y explican su función. |
+| **Prompt** | Define su comportamiento y reglas. |
+| **Modelo (LLM)** | Es el motor de razonamiento. |
+| **Tools** | Permiten ejecutar acciones y acceder a servicios. |
+| **RAG** | Extiende su conocimiento con documentos o datos externos. |
+
+---
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Diseña un prompt efectivo" icon="terminal" href="./prompt">
+    Aprende las mejores prácticas para redactar prompts precisos y adaptados a cada tarea.
+  </Card>
+  <Card title="Versionado e histórico de prompts" icon="history" href="./historico-prompts">
+    Descubre cómo Devic gestiona y versiona los prompts de cada agente.
+  </Card>
+  <Card title="Optimización continua" icon="activity" href="./optimizacion">
+    Aprende a mejorar el rendimiento de tus agentes mediante logs, evaluaciones y feedback humano.
+  </Card>
+  <Card title="Gestión de costes y ejecución" icon="coins" href="./costes">
+    Monitorea el uso de modelos y optimiza los costes de tus agentes.
+  </Card>
+</CardGroup>
