@@ -2,7 +2,6 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Devic Documentation",
-  "mode": "light",
   "colors": {
     "primary": "#4764E6",
     "light": "#6F8EFF",
@@ -147,7 +146,7 @@
   },
   "logo": {
     "light": "/logo/devic-light.svg",
-    "dark": "/logo/devic-light.svg",
+    "dark": "/logo/devic-dark.svg",
     "height": "28px"
   },
   "navbar": {
@@ -181,11 +180,5 @@
       "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
-  },
-  "disableThemeToggle": true,
-  "customScripts": [
-    {
-      "src": "/_mintlify/custom.css"
-    }
-  ]
+  }
 }
