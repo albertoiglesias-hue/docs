@@ -86,14 +86,12 @@
             "pages": [
               {
                 "group": "Qué son",
-                "icon": "info",
                 "pages": [
                   "devic/MCPs/index"
                 ]
               },
               {
                 "group": "Mis MCPs",
-                "icon": "shield",
                 "expanded": false,
                 "pages": [
                   "devic/MCPs/my-mcps/what-it-is",
@@ -108,14 +106,12 @@
               },
               {
                 "group": "Importar MCPs de terceros",
-                "icon": "cloud-download",
                 "pages": [
                   "devic/MCPs/import-third-party-mcps/import-third-party-mcps"
                 ]
               },
               {
                 "group": "Built-in Tools",
-                "icon": "wrench",
                 "expanded": false,
                 "pages": [
                   "devic/MCPs/built-in-tools/index",
