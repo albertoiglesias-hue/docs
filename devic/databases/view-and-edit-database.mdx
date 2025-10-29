@@ -1,5 +1,93 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Ver y editar base de datos"
+description: "Explora, filtra y actualiza los registros de tus bases de datos en Devic. Accede a la búsqueda semántica, filtros avanzados y edición de estructura desde un único panel."
 ---
+
+## Descripción general
+
+Cada base de datos en Devic cuenta con una vista dedicada donde puedes **consultar, filtrar y modificar registros** en tiempo real.  
+Esta interfaz centraliza toda la información almacenada y te permite mantener la coherencia de los datos sin salir de la plataforma.
+
+---
+
+## Navegación principal
+
+Al acceder a una base de datos, encontrarás la tabla con todos los registros disponibles.  
+En la parte superior se muestran varias herramientas clave:
+
+- **Vector Search:** realiza búsquedas semánticas por significado en lugar de coincidencias exactas.  
+- **Table Settings:** abre el panel lateral de configuración de la base (estructura, campos, colores, etc.).  
+- **Add New Row:** permite añadir manualmente un nuevo registro.  
+
+![Vista general de base de datos](64c6c5dd-e817-44bd-8c88-8f51e979fc2d.png)
+
+---
+
+## Filtros y búsqueda avanzada
+
+Utiliza el módulo **Filters** para acotar la información mostrada:
+
+1. Selecciona un campo del menú desplegable (por ejemplo, *Referencia* o *ID del cliente*).  
+2. Introduce el valor que deseas buscar.  
+3. Puedes añadir varios filtros simultáneamente con el botón **Add another filter**.  
+
+Esto permite segmentar los datos sin necesidad de consultas complejas, facilitando la exploración rápida de registros.
+
+![Ejemplo de filtros múltiples](e8b57194-88a0-4322-b22e-6ae2e3ae986e.png)
+
+---
+
+## Búsqueda semántica (Vector Search)
+
+El motor de **Vector Search** permite realizar consultas en lenguaje natural sobre los campos personalizados.  
+Es ideal para buscar por contexto o significado.
+
+1. Haz clic en **Vector Search**.  
+2. Escribe tu consulta, por ejemplo:  
+
+¿Cuántos pedidos se han hecho?
+
+3. La plataforma interpretará la intención y devolverá los resultados más relevantes según el contenido de los registros.
+
+![Ejemplo de búsqueda semántica](f9bc91bc-3323-4cc7-afb1-c8fa63e300d0.png)
+
+---
+
+## Añadir y editar registros
+
+Para crear un nuevo registro:
+
+1. Haz clic en **Add New Row**.  
+2. Completa los campos según la estructura definida de la base.  
+3. Guarda los cambios y el nuevo registro aparecerá inmediatamente en la tabla.
+
+Para editar un registro existente:
+
+- Haz clic en el icono **👁️** en la columna *Actions* para ver o modificar su contenido.  
+- Usa el icono **🗑️** para eliminar un registro de forma permanente.
+
+![Edición de registros](6a022e27-2953-42fb-a519-f05f954e7f49.png)
+
+---
+
+## Configuración de la tabla
+
+El panel lateral de configuración permite modificar la estructura o el comportamiento de la base de datos:
+
+- **Table Name y Color:** ajusta el nombre y color identificativo.  
+- **Entity Name (singular/plural):** edita los nombres de entidad.  
+- **Include table in smart search:** habilita o desactiva la inclusión en búsquedas semánticas globales.  
+- **Custom Fields:** añade, edita o agrupa campos existentes.
+
+![Configuración lateral de tabla](2101335e-8eca-4c69-99b1-eb7c71fb36ea.png)
+
+---
+
+<Card
+title="Siguiente paso"
+icon="bot"
+href="/devic/agents/what-they-are"
+>
+Descubre cómo los agentes pueden usar tus bases de datos como fuente de información en tiempo real.
+</Card>
 
