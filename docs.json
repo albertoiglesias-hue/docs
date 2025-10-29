@@ -131,7 +131,7 @@
           },
           {
             "group": "Asistentes",
-            "icon": "message-square",
+            "icon": "robot",
             "expanded": true,
             "pages": [
               "devic/assistants/index",
