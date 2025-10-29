@@ -1,5 +1,153 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Tools"
+description: "Configura y gestiona las herramientas disponibles para tus asistentes en Devic: Built-in Tools, Mis MCPs y Code Snippets."
 ---
 
+Las **Tools** definen las capacidades que un asistente puede utilizar durante una conversación.  
+Funcionan como **extensiones operativas**, que permiten al modelo **consultar información, ejecutar acciones o interactuar con sistemas externos** directamente desde el chat.
+
+Cada Tool amplía las posibilidades del asistente, haciéndolo más útil y autónomo dentro del contexto conversacional.
+
+---
+
+## Vista general del panel de Tools
+
+En la configuración de un asistente, la sección **Tools** muestra todas las herramientas que tendrá disponibles durante sus interacciones con el usuario.
+
+![Panel de Tools en un asistente](d488437e-c4e1-4bde-8323-3c545dab45da.png)
+
+Desde este panel puedes:
+
+- **Añadir nuevas Tools** con el botón **Add tools**.  
+- **Configurar** los parámetros y autenticación de cada Tool.  
+- **Eliminar** las que no sean necesarias.  
+
+---
+
+## Añadir nuevas Tools
+
+Al pulsar **Add tools**, se abre el selector principal de herramientas disponibles.  
+Aquí podrás elegir entre tres pestañas:
+
+- **Built-in Tools** → Herramientas integradas nativas de Devic.  
+- **My MCPs** → Integraciones externas creadas por tu organización.  
+- **Code Snippets** → Fragmentos de código reutilizables como mini-tools.
+
+![Selector de Tools del asistente](d6ef1b80-9645-4f3b-8f1a-0098e73732af.png)
+
+---
+
+## Built-in Tools
+
+Las **Built-in Tools** son herramientas nativas de Devic que no requieren configuración adicional.  
+Permiten al asistente realizar tareas habituales como:
+
+- **Search Knowledge** — Buscar información en el RAG o base documental.  
+- **Send Email** — Enviar correos electrónicos directamente desde la conversación.  
+- **Read Emails** — Leer y analizar mensajes recibidos.  
+- **Databases** — Consultar o actualizar registros en bases de datos.  
+- **OCR** — Extraer texto de documentos o imágenes.  
+- **Spreadsheet Tools** — Leer o editar datos en hojas de cálculo.  
+- **Manage Tasks** — Crear y actualizar tareas.  
+- **Files and Directories** — Acceder y gestionar archivos.  
+- **PDF from Markdown / HTML** — Generar documentos PDF.  
+
+![Listado de Built-in Tools](e5bbaeb3-6b40-40c9-97ac-29b929fdda8e.png)
+
+Estas herramientas se mantienen actualizadas automáticamente y cubren los casos de uso más comunes.  
+Consulta la documentación completa en:  
+[**Listado de Built-in Tools**](../mcps/built-in-tools/tools-list)
+
+---
+
+## My MCPs
+
+La pestaña **My MCPs** muestra los **servidores MCP (Model Context Protocol)** configurados dentro de tu organización.  
+Cada MCP puede contener varias herramientas que conectan al asistente con servicios externos, APIs corporativas o integraciones internas.
+
+![Vista de My MCPs](27fafae1-1327-41c2-b386-b8d1f660a006.png)
+
+Desde esta vista puedes:
+- Añadir herramientas desarrolladas por tu equipo.  
+- Incluir integraciones públicas o compartidas.  
+- Configurar credenciales, endpoints o parámetros de conexión.
+
+**Ejemplos de uso:**
+- Un asistente comercial puede usar un MCP de **Zoho CRM** para acceder a datos de clientes.  
+- Un asistente técnico puede conectarse a una **API de incidencias internas** para registrar tickets.  
+- Un asistente administrativo puede generar informes en **Google Drive o Sheets**.
+
+Consulta cómo crear y configurar tus propios MCPs en:  
+[**Mis MCPs**](../mcps/my-mcps/what-it-is)
+
+---
+
+## MCPs de terceros (Importados)
+
+Además de tus propios MCPs, puedes **importar MCPs externos** desde la pestaña **Imported MCPs**.  
+Esto te permite incorporar herramientas desarrolladas por terceros sin necesidad de configurarlas manualmente.
+
+![Vista de MCPs importados](7f9bfcb0-7100-4b1f-a161-ad6249df103e.png)
+
+Para añadir uno:
+1. Accede a la sección **Imported MCPs**.  
+2. Pulsa **Import MCP**.  
+3. Introduce la URL o archivo de configuración del MCP externo.  
+
+Una vez importado, el asistente podrá utilizar sus herramientas igual que cualquier otro MCP.  
+Esto es especialmente útil para añadir **integraciones públicas o colaborativas** creadas por la comunidad Devic o partners certificados.
+
+---
+
+## Code Snippets
+
+Los **Code Snippets** permiten crear pequeñas herramientas de código reutilizables sin necesidad de desarrollar un MCP completo.  
+Pueden usarse para ejecutar lógica simple, cálculos o transformaciones de datos directamente desde el asistente.
+
+![Vista de Code Snippets](27fafae1-1327-41c2-b386-b8d1f660a006.png)
+
+Cada snippet puede incluir:
+- Código en **Python** u otros lenguajes soportados.  
+- Parámetros personalizados.  
+- Resultados que se integran en la conversación del asistente.
+
+Puedes crear tu primer snippet desde el botón **Create First Snippet** o añadir nuevos mediante **New Snippet**.
+
+---
+
+## Ejemplo de uso real
+
+En este ejemplo, el asistente **Alexandria** utiliza varias Tools durante su conversación con el usuario:
+
+- **Search Knowledge** → busca información relevante en los manuales cargados.  
+- **Send Email** → envía un resumen o documentación al cliente.  
+- **Databases** → actualiza el estado de incidencias registradas.  
+- **Cliq MCP** → conecta con la API de Zoho para comunicarse con equipos internos.  
+
+![Asistente configurado con múltiples Tools](d488437e-c4e1-4bde-8323-3c545dab45da.png)
+
+---
+
+## Buenas prácticas
+
+- Activa solo las Tools necesarias para el propósito del asistente.  
+- Comprueba la autenticación de los MCPs antes de usarlos en producción.  
+- Usa nombres descriptivos para identificar cada Tool fácilmente.  
+- Aprovecha los **Snippets** para automatizar pequeñas tareas sin sobrecargar el asistente.  
+- Evita redundancias: si una Tool ya ofrece una función, no la dupliques.  
+
+---
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Built-in Tools" icon="cog" href="../mcps/built-in-tools">
+    Explora todas las herramientas integradas disponibles en Devic.
+  </Card>
+  <Card title="Mis MCPs" icon="wrench" href="../mcps/my-mcps/what-it-is">
+    Aprende a crear y gestionar tus propias integraciones externas.
+  </Card>
+  <Card title="Code Snippets" icon="code" href="../mcps/my-mcps/tools-menu">
+    Crea herramientas ligeras de código reutilizable para tus asistentes.
+  </Card>
+</CardGroup>
