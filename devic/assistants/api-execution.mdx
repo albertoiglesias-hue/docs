@@ -45,26 +45,3 @@ A continuación se muestra un ejemplo en **JavaScript** utilizando `fetch`:
 Este ejemplo crea una **nueva conversación** con el asistente, enviando un mensaje inicial.  
 El campo `chatUuid` permite identificar la sesión o conversación activa; si se envía como `null`, se creará una nueva.
 
----
-
-## Continuar una conversación existente
-
-Para continuar una conversación ya iniciada, basta con incluir el identificador de chat (`chatUuid`) obtenido en la primera respuesta:
-
-    const response = await fetch('https://api.devic.ai/api/v1/assistants/{assistant_id}/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer YOUR_API_TOKEN'
-      },
-      body: JSON.stringify({
-        message: 'Gracias, continúa con el siguiente paso del informe.',
-        chatUuid: 'existing-chat-id'
-      })
-    })
-
-    const data = await response.json()
-    console.log(data)
-
----
-
