@@ -1,5 +1,131 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Otras opciones"
+description: "Descubre las formas disponibles para ofrecer tus asistentes de Devic a usuarios finales: widgets web, integraciones externas y control avanzado de configuración."
 ---
 
+Además de ejecutarse desde la **consola de conversación interna**, los asistentes de **Devic** pueden ponerse a disposición de los usuarios finales a través de distintos métodos.  
+Estas opciones permiten integrar el asistente en aplicaciones web, portales de clientes o sistemas corporativos, manteniendo el control total sobre su comportamiento y estilo.
+
+---
+
+## Opciones de despliegue
+
+Las principales alternativas para exponer un asistente son:
+
+| Opción | Descripción | Ideal para... |
+|--------|--------------|---------------|
+| **Widget embebido (Chat Widget)** | Permite integrar el asistente directamente en una página web mediante un fragmento de código JavaScript. | Sitios web, portales de clientes, áreas privadas. |
+| **API Execution** | Invoca al asistente mediante peticiones HTTP a la API de Devic, ideal para integraciones programáticas. | Aplicaciones internas o backend. |
+| **Consola de conversación** | Entorno interno para probar y depurar el comportamiento del asistente. | Equipos técnicos y desarrolladores. |
+
+![Panel del asistente con opciones avanzadas y coste](057d3aa2-5ab0-4bde-a54e-8b74924b318b.png)
+
+---
+
+## Configuración del Chat Widget
+
+El **Chat Widget** es la forma más rápida de ofrecer tu asistente a los usuarios finales.  
+Se configura desde el menú de opciones del asistente, en el apartado **Advanced Settings → Chat Widget**.
+
+![Acceso a la configuración del widget](e7e3ac53-0aa7-4c7a-b22b-44c73c29c93d.png)
+
+Allí podrás habilitarlo y definir los dominios autorizados desde los que podrá usarse.
+
+### Campos principales
+
+| Campo | Descripción |
+|--------|-------------|
+| **Enabled** | Activa el uso del asistente a través del widget. |
+| **Allowed Sources** | Lista de dominios (con `http` o `https`) desde los que puede cargarse el widget. |
+| **Welcome Message** | Mensaje inicial que verá el usuario al abrir el chat. |
+| **Style Configuration** | Personaliza el tamaño, color y estilo visual del widget. |
+
+---
+
+## Inserción del widget en tu web
+
+Una vez habilitado, Devic genera automáticamente el **fragmento de código JavaScript** que puedes copiar y pegar en tu sitio web.  
+Este script inicializa el asistente y define su comportamiento dentro de la página.
+
+<script type="module" src="https://widget.suntropy.ai"></script>
+<script type="module">
+  var d = document;
+  var config = {
+    containerId: "suntropyai-chat-widget",
+    assistantId: "68d8e28195e45739d8ca41",
+    context: {}, // Opcional: información que quieras pasar al asistente
+    options: { defaultSize: "small" } // Tamaño inicial del widget
+  };
+  var container = d.createElement("div");
+  container.id = config.containerId;
+  d.body.appendChild(container);
+  window.initChatWidget(config);
+</script>
+
+![Vista del script del widget en la configuración avanzada](73613b99-cf5d-4409-abce-1ae47a4bb4db.png)
+
+💡 **Consejo:** Puedes usar el campo `context` para pasar información dinámica al asistente, como el ID del usuario, idioma o preferencia de producto.
+
+---
+
+## Personalización y control de acceso
+
+Devic permite restringir el uso del widget a **dominios específicos** mediante el campo **Allowed Sources**.  
+Esto garantiza que el asistente solo pueda cargarse desde las direcciones autorizadas (por ejemplo, `https://tuempresa.com` o `*.intranet.local`).
+
+También puedes ajustar el **formato de respuesta** del asistente mediante el apartado **Response Format**, usando definiciones JSON para estructurar la salida cuando sea necesario.
+
+![Configuración avanzada del asistente con formato de respuesta](b13754e1-26f2-4a40-9864-37d8ad50bf4c.png)
+
+---
+
+## Supervisión del uso y costes
+
+Todas las ejecuciones realizadas a través del widget, la API o la consola se registran en el panel de **Cost Management**, disponible desde el mismo menú de opciones del asistente.
+
+En él podrás ver:
+- Coste total y promedio diario.  
+- Número de conversaciones ejecutadas.  
+- Tokens de entrada y salida por día.  
+
+![Panel de Cost Management del asistente](057d3aa2-5ab0-4bde-a54e-8b74924b318b.png)
+
+---
+
+## Buenas prácticas
+
+- **Restringe los dominios permitidos** para evitar uso no autorizado del widget.  
+- **Define un mensaje de bienvenida claro** para guiar la interacción inicial.  
+- **Valida el comportamiento** del asistente en la **consola de conversación** antes de publicarlo.  
+- **Supervisa el coste** y optimiza prompts o modelos según el volumen de uso.  
+- **Usa API Execution** cuando necesites control total del flujo o integración backend.
+
+---
+
+## En resumen
+
+| Elemento | Propósito |
+|-----------|------------|
+| **Chat Widget** | Integración visual y directa en webs o portales. |
+| **Allowed Sources** | Limita los dominios desde los que puede cargarse el widget. |
+| **Response Format** | Define estructuras personalizadas de salida JSON. |
+| **Cost Management** | Supervisa costes, tokens y volumen de conversación. |
+
+---
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="API Execution" icon="code" href="./api-execution">
+    Aprende a invocar tus asistentes desde aplicaciones externas mediante la API de Devic.
+  </Card>
+  <Card title="Conversation Console" icon="terminal" href="./conversation-console">
+    Usa la consola para depurar y probar el comportamiento de tus asistentes antes de publicarlos.
+  </Card>
+  <Card title="Tools" icon="wrench" href="./tools">
+    Descubre cómo configurar y conectar herramientas a tus asistentes.
+  </Card>
+  <Card title="Cost Management" icon="coins" href="./costes">
+    Controla el uso de tokens y optimiza los costes de tus asistentes en producción.
+  </Card>
+</CardGroup>
