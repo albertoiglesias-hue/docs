@@ -1,5 +1,138 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "RAG (Retrieval Augmented Generation)"
+description: "Amplía la capacidad de tus asistentes en Devic mediante el uso de RAG para consultar información documental y contextualizar sus respuestas."
 ---
 
+El **RAG (Retrieval Augmented Generation)** permite a los **asistentes en Devic** acceder a información documental y utilizarla en tiempo real durante sus conversaciones.  
+Gracias a esta funcionalidad, los asistentes pueden ofrecer respuestas **más precisas, fundamentadas y actualizadas**, sin depender únicamente del conocimiento preentrenado del modelo.
+
+---
+
+## Cómo funciona
+
+El sistema RAG de Devic está completamente integrado con los asistentes y no requiere configuraciones complejas.  
+Cuando se añaden documentos a la base de conocimiento del asistente:
+
+1. **La plataforma analiza** automáticamente el contenido.  
+2. **Divide el texto en fragmentos** (“chunks”) para mejorar la búsqueda contextual.  
+3. **Genera resúmenes** que se inyectan en el contexto del modelo.  
+4. Durante la conversación, el asistente **decide cuándo consultar esos documentos** y utiliza los fragmentos más relevantes para elaborar su respuesta.
+
+![Funcionamiento del sistema RAG en asistentes](91ba7ad6-2f90-471e-96bb-c2546396d483.png)
+
+Este enfoque dota al asistente de una **memoria extendida**, que le permite contextualizar respuestas a partir de materiales cargados por el usuario —como manuales, informes o guías internas—.
+
+---
+
+## Configuración del RAG en un asistente
+
+Para añadir conocimiento a un asistente:
+
+1. Abre el asistente desde el panel lateral de Devic.  
+2. Dirígete a la sección **Knowledge**.  
+3. Haz clic en **Add document** y selecciona los archivos que quieras cargar.  
+
+Los formatos compatibles son:
+- `.pdf`
+- `.docx`
+- `.txt`
+- `.csv`
+
+Cada documento se procesará automáticamente y aparecerá listado en la interfaz con su nombre y tipo de archivo.
+
+![Documentos añadidos al conocimiento del asistente](9f18d717-60a4-4bc4-8d0f-62cd0bf31fee.png)
+
+<Note>
+Para que el asistente pueda consultar los documentos subidos, es necesario tener habilitada la tool **Search Knowledge** en la configuración del asistente.
+</Note>
+
+---
+
+## Visualización y detalles de documentos
+
+Puedes acceder a los detalles de cada documento haciendo clic sobre él.  
+El panel lateral mostrará su información y metadatos principales:
+
+| Campo | Descripción |
+|--------|-------------|
+| **Name** | Nombre del archivo. |
+| **Size** | Tamaño del documento. |
+| **Created / Modified** | Fechas de creación y modificación. |
+| **Summary** | Resumen automático o personalizado del contenido. |
+
+![Vista de detalles de documento y resumen](80467a8a-00e0-460c-996e-19e089b5c51e.png)
+
+El campo **Summary** se utiliza internamente para inyectar el contexto del documento en el prompt del asistente.  
+Puedes editarlo para adaptar o priorizar la información más relevante según el caso de uso.
+
+---
+
+## Previsualización de documentos
+
+Desde el mismo panel de detalle, puedes **previsualizar el contenido completo** del documento directamente en Devic, sin necesidad de descargarlo.
+
+![Previsualización de documento PDF en Devic](80467a8a-00e0-460c-996e-19e089b5c51e.png)
+
+Esta funcionalidad es útil para revisar la información antes de iniciar una conversación o ajustar los resúmenes.
+
+---
+
+## Buenas prácticas
+
+- Asegúrate de habilitar la tool **Search Knowledge** si el asistente debe usar el RAG.  
+- Sube únicamente los documentos relevantes para el contexto del asistente.  
+- Revisa los resúmenes generados automáticamente y edítalos si es necesario.  
+- Usa nombres descriptivos para los archivos.  
+- Mantén los documentos actualizados para garantizar respuestas coherentes.  
+- Evita subir archivos excesivamente grandes o con contenido no estructurado.
+
+---
+
+## Casos de uso
+
+| Tipo de asistente | Aplicación del RAG |
+|--------------------|--------------------|
+| **Soporte técnico** | Consulta manuales, guías de instalación o documentación de productos. |
+| **Atención al cliente** | Accede a FAQs o fichas de servicio para ofrecer respuestas precisas. |
+| **Comercial** | Busca información en catálogos o tarifas actualizadas. |
+| **Formación interna** | Responde dudas basadas en manuales o materiales de capacitación. |
+
+---
+
+## Ejemplo práctico
+
+En este ejemplo, el asistente **Alexandria** tiene cargado un conjunto de documentos técnicos y puede responder preguntas relacionadas con manuales de uso:
+
+1. El usuario sube el archivo `4011690_Manual Operador_e.pdf`.  
+2. Devic genera automáticamente un resumen con los aspectos clave.  
+3. Durante la conversación, Alexandria utiliza el RAG para recuperar fragmentos relevantes del manual y ofrecer instrucciones precisas.
+
+---
+
+## En resumen
+
+| Elemento | Función |
+|-----------|----------|
+| **Knowledge (RAG)** | Base documental del asistente. |
+| **Search Knowledge Tool** | Permite acceder a los documentos cargados. |
+| **Summary** | Texto de contexto que optimiza la comprensión del modelo. |
+| **Preview** | Visualización rápida de los documentos cargados. |
+
+---
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Prompt del asistente" icon="terminal" href="./prompt">
+    Aprende a redactar prompts que aprovechen la información del RAG.
+  </Card>
+  <Card title="Consola de conversación" icon="chat" href="./consola">
+    Descubre cómo probar el comportamiento del asistente en tiempo real.
+  </Card>
+  <Card title="Optimización continua" icon="activity" href="./optimizacion">
+    Mejora la precisión y eficiencia de tus asistentes mediante evaluaciones y feedback.
+  </Card>
+  <Card title="Tools del asistente" icon="wrench" href="./tools">
+    Configura las herramientas necesarias para que el asistente utilice su base de conocimiento.
+  </Card>
+</CardGroup>
