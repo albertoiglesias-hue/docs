@@ -125,7 +125,8 @@
                   "devic/agents/continuous-optimization/costs"
                 ]
               },
-              "devic/agents/other-options"
+              "devic/agents/other-options",
+              "devic/agents/api-execution"
             ]
           },
           {
