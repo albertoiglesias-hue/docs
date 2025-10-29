@@ -105,7 +105,7 @@
           },
           {
             "group": "Agentes",
-            "icon": "microchip",
+            "icon": "robot",
             "expanded": true,
             "pages": [
               "devic/agents/index",
@@ -131,7 +131,7 @@
           },
           {
             "group": "Asistentes",
-            "icon": "robot",
+            "icon": "comments",
             "expanded": true,
             "pages": [
               "devic/assistants/index",
