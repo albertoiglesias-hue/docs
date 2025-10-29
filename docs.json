@@ -133,7 +133,15 @@
             "group": "Asistentes",
             "icon": "message-square",
             "expanded": true,
-            "pages": ["devic/asistentes/que-son"]
+            "pages": [
+              "devic/assistants/index",
+              "devic/assistants/deploy-your-first-assistant",
+              "devic/assistants/prompt",
+              "devic/assistants/tools",
+              "devic/assistants/rag",
+              "devic/assistants/other-options",
+              "devic/assistants/api-execution"
+            ]
           },
           {
             "group": "Bases de datos (BD)",
