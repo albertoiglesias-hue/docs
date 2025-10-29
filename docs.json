@@ -95,6 +95,7 @@
               },
               {
                 "group": "Built-in Tools",
+                "icon": "wrench",
                 "expanded": false,
                 "pages": [
                   "devic/mcps/built-in-tools/index",
@@ -147,7 +148,11 @@
             "group": "Bases de datos (BD)",
             "icon": "database",
             "expanded": true,
-            "pages": ["devic/basesdedatos/vision-general"]
+            "pages": [
+              "devic/databases/index",
+              "devic/databases/create-new-database",
+              "devic/databases/view-and-edit-database"
+            ]
           }
         ]
       }
