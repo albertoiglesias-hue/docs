@@ -51,7 +51,6 @@
               },
               {
                 "group": "Built-in Tools",
-                "icon": "wrench",
                 "expanded": false,
                 "pages": [
                   "devic/mcps/built-in-tools/index",
