@@ -1,0 +1,6 @@
+/* Ocultar el selector de tema */
+[data-theme-toggle], 
+button[aria-label*="theme"],
+button[aria-label*="modo"] {
+  display: none !important;
+}
