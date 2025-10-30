@@ -8,9 +8,7 @@ description: "Renderiza componentes personalizados de tu SaaS en las conversacio
 Los **widgets** permiten **renderizar contenido visual o interactivo directamente dentro de las conversaciones de ChatGPT** cuando se invoca una tool del MCP.\
 Se basan en la tecnología de [ChatKit Widgets](https://platform.openai.com/docs/guides/chatkit-widgets) de OpenAI, que habilita la representación de componentes enriquecidos como gráficos, tablas, formularios o dashboards dentro del flujo conversacional.
 
-![Vista general del editor de widgets](/widget-chatgpt.png)
-![Vista general del editor de widgets](fc3b4937-a0a5-4c19-be49-c5b439d755ad.png)
----
+![Vista general del editor de widgets](/chatgpt-widget.png)
 
 ## Capa de abstracción de Devic
 
@@ -34,7 +32,7 @@ Se abrirá el editor de componentes, donde podrás definir el contenido del widg
 - **CSS** — estilo visual.
 - **JS** — comportamiento dinámico o scripts.
 
-![Nuevo widget creado](fc3b4937-a0a5-4c19-be49-c5b439d655ad.png)
+![Nuevo widget creado](/html-css-js.png)
 
 ---
 
@@ -65,7 +63,7 @@ Se abrirá el editor de componentes, donde podrás definir el contenido del widg
 console.log('widget loaded');
 ```
 
-![Editor HTML, CSS y JS del widget](b88d1a1f-82ea-473d-b254-0f033e3bfa12.png)
+![Editor HTML, CSS y JS del widget](/css-detail.png)
 
 ---
 
@@ -78,7 +76,7 @@ A la derecha del editor, puedes configurar las propiedades del widget:
 - **Invoking Text / Invoked Text** — textos mostrados mientras el widget se ejecuta.
 - **Display with card border** — opción para mostrar el widget dentro de una tarjeta visual.
 
-![Configuración de parámetros del componente](b4dea45c-d457-4396-bbfc-763ca1988b38.png)
+![Configuración de parámetros del componente](/widget-details.png)
 
 ---
 
@@ -88,7 +86,7 @@ Para que un widget pueda ser invocado automáticamente desde una **Tool**, debe 
 
 Esto permite que, cuando la tool sea ejecutada, Devic renderice el widget vinculado con los datos devueltos en la conversación de ChatGPT.
 
-![Vincular widget en More Options de la Tool](e3fd56af-2f11-4ba2-964e-9a615f1d4a4f.png)
+![Vincular widget en More Options de la Tool](/widget-tool-selection.png)
 
 > ⚙️ **Importante:** el nombre indicado en _Widget Binding_ debe coincidir exactamente con el nombre del widget creado.\
 > Si no hay coincidencia, el componente no podrá ser invocado desde la tool.
