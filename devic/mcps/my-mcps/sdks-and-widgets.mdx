@@ -5,11 +5,11 @@ description: "Renderiza componentes personalizados de tu SaaS en las conversacio
 
 ## Introducción
 
-Los **widgets** permiten **renderizar contenido visual o interactivo directamente dentro de las conversaciones de ChatGPT** cuando se invoca una tool del MCP.  
+Los **widgets** permiten **renderizar contenido visual o interactivo directamente dentro de las conversaciones de ChatGPT** cuando se invoca una tool del MCP.\
 Se basan en la tecnología de [ChatKit Widgets](https://platform.openai.com/docs/guides/chatkit-widgets) de OpenAI, que habilita la representación de componentes enriquecidos como gráficos, tablas, formularios o dashboards dentro del flujo conversacional.
 
-![Vista general del editor de widgets](fef8a677-789a-44c2-a101-35c26a415cfa.png)
-
+![Vista general del editor de widgets](/widget-chatgpt.png)
+![Vista general del editor de widgets](fc3b4937-a0a5-4c19-be49-c5b439d755ad.png)
 ---
 
 ## Capa de abstracción de Devic
@@ -17,9 +17,10 @@ Se basan en la tecnología de [ChatKit Widgets](https://platform.openai.com/docs
 **Devic** proporciona una capa de abstracción que permite a los equipos técnicos **definir y desplegar fácilmente los widgets que representarán visualmente su SaaS** cuando un usuario interactúe con ChatGPT a través de su MCP.
 
 En otras palabras:
-- Tu SaaS puede definir sus propios componentes de interfaz (widgets).  
-- Cuando un cliente usa ChatGPT y llama a una *tool* de tu MCP, el widget que hayas diseñado se mostrará con tu **imagen de marca y experiencia visual personalizada**.  
-- Devic se encarga de gestionar la infraestructura, el enlace entre las *tools* y los widgets, y la publicación automática para ChatGPT.
+
+- Tu SaaS puede definir sus propios componentes de interfaz (widgets).
+- Cuando un cliente usa ChatGPT y llama a una _tool_ de tu MCP, el widget que hayas diseñado se mostrará con tu **imagen de marca y experiencia visual personalizada**.
+- Devic se encarga de gestionar la infraestructura, el enlace entre las _tools_ y los widgets, y la publicación automática para ChatGPT.
 
 ---
 
@@ -29,8 +30,8 @@ Para crear un nuevo widget, dirígete a la pestaña **ChatGPT Apps** dentro de t
 
 Se abrirá el editor de componentes, donde podrás definir el contenido del widget usando tres pestañas principales:
 
-- **HTML** — estructura del componente.  
-- **CSS** — estilo visual.  
+- **HTML** — estructura del componente.
+- **CSS** — estilo visual.
 - **JS** — comportamiento dinámico o scripts.
 
 ![Nuevo widget creado](fc3b4937-a0a5-4c19-be49-c5b439d655ad.png)
@@ -40,11 +41,13 @@ Se abrirá el editor de componentes, donde podrás definir el contenido del widg
 ### Ejemplo de widget simple
 
 **HTML**
+
 ```html
 <div class="widget">Hello Widget</div>
 ```
 
 **CSS**
+
 ```css
 .widget {
   font-family: system-ui;
@@ -56,6 +59,7 @@ Se abrirá el editor de componentes, donde podrás definir el contenido del widg
 ```
 
 **JS**
+
 ```js
 // You can access the root element with document.currentScript?.parentElement
 console.log('widget loaded');
@@ -69,9 +73,9 @@ console.log('widget loaded');
 
 A la derecha del editor, puedes configurar las propiedades del widget:
 
-- **Name** — nombre único del componente.  
-- **Description** — breve descripción del propósito del widget.  
-- **Invoking Text / Invoked Text** — textos mostrados mientras el widget se ejecuta.  
+- **Name** — nombre único del componente.
+- **Description** — breve descripción del propósito del widget.
+- **Invoking Text / Invoked Text** — textos mostrados mientras el widget se ejecuta.
 - **Display with card border** — opción para mostrar el widget dentro de una tarjeta visual.
 
 ![Configuración de parámetros del componente](b4dea45c-d457-4396-bbfc-763ca1988b38.png)
@@ -86,20 +90,16 @@ Esto permite que, cuando la tool sea ejecutada, Devic renderice el widget vincul
 
 ![Vincular widget en More Options de la Tool](e3fd56af-2f11-4ba2-964e-9a615f1d4a4f.png)
 
-> ⚙️ **Importante:** el nombre indicado en *Widget Binding* debe coincidir exactamente con el nombre del widget creado.  
+> ⚙️ **Importante:** el nombre indicado en _Widget Binding_ debe coincidir exactamente con el nombre del widget creado.\
 > Si no hay coincidencia, el componente no podrá ser invocado desde la tool.
 
 ---
 
 ## Recursos adicionales
 
-Para aprender más sobre cómo construir y utilizar widgets compatibles con ChatGPT, consulta la documentación oficial de OpenAI sobre ChatKit Widgets:  
-👉 [https://platform.openai.com/docs/guides/chatkit-widgets](https://platform.openai.com/docs/guides/chatkit-widgets)
+Para aprender más sobre cómo construir y utilizar widgets compatibles con ChatGPT, consulta la documentación oficial de OpenAI sobre ChatKit Widgets:\
+👉 https://platform.openai.com/docs/guides/chatkit-widgets
 
-<Card
-  title="Siguiente paso"
-  icon="code"
-  href="/mcp/my-mcps/sdk-integration"
->
+<Card title="Siguiente paso" icon="code" href="/mcp/my-mcps/sdk-integration">
   Aprende cómo integrar tus MCPs y widgets en aplicaciones externas mediante los SDKs de Devic.
 </Card>
