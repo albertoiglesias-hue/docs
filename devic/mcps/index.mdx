@@ -5,45 +5,35 @@ description: "Organiza tus integraciones y herramientas bajo el estándar Model 
 
 ## Descripción general
 
-El **Model Context Protocol (MCP)** amplía las capacidades de los modelos de lenguaje al permitirles ejecutar acciones sobre sistemas externos o internos.  
+El **Model Context Protocol (MCP)** amplía las capacidades de los modelos de lenguaje al permitirles ejecutar acciones sobre sistemas externos o internos.\
 En Devic, los MCPs funcionan como **interfaces de integración** que conectan agentes y asistentes con APIs, servicios o funciones personalizadas.
 
 Según su origen o propósito, puedes trabajar con tres tipos principales:
 
-- **Mis MCPs:** transforma tu API en un servidor MCP con herramientas listas para ser usadas por los modelos.  
-- **Importados de terceros:** accede a un catálogo de integraciones como Google Calendar, Hubspot o Jira.  
+- **Mis MCPs:** transforma tu API en un servidor MCP con herramientas listas para ser usadas por los modelos.
+- **Importados de terceros:** accede a un catálogo de integraciones como Google Calendar, Hubspot o Jira.
 - **Built-in Tools:** aprovecha herramientas nativas como envío de correos vía IMAP, generación de PDFs desde HTML o lectura de hojas de cálculo.
 
-![Vista de Mis MCPs](592a46cd-2b67-4ba8-80a5-06c81a26e6f6.png)
+![Vista de Mis MCPs](/my-mcps-import-third-party-built-in-tools.png)
 
 ---
 
 ## Uso de los MCPs
 
-Una vez creados o importados, los MCPs quedan disponibles para todos los agentes y asistentes del entorno.  
+Una vez creados o importados, los MCPs quedan disponibles para todos los agentes y asistentes del entorno.\
 Pueden invocarse mediante lenguaje natural o integrarse en flujos automatizados.
 
 <Columns cols={2}>
-  <Card
-    title="Uso interno"
-    icon="link"
-  >
+  <Card title="Uso interno" icon="link">
     Los agentes ejecutan herramientas MCP de forma autónoma dentro de su lógica de negocio.
   </Card>
-  <Card
-    title="Uso externo"
-    icon="globe"
-  >
+  <Card title="Uso externo" icon="globe">
     Los MCPs pueden publicarse y compartirse con otros entornos —por ejemplo, ChatGPT o servicios de terceros— mediante una URL de acceso.
   </Card>
 </Columns>
 
 ---
 
-<Card
-  title="Siguiente paso"
-  icon="wrench"
-  href="/devic/MCPs/my-mcps/import-tool"
->
+<Card title="Siguiente paso" icon="wrench" href="/devic/MCPs/my-mcps/import-tool">
   Aprende cómo importar un MCP o cargar una definición OpenAPI existente.
 </Card>
