@@ -3,7 +3,7 @@ title: "Tools"
 description: "Configura y gestiona las herramientas disponibles para tus agentes en Devic: Built-in Tools, Mis MCPs, Code Snippets y Sub-Agents."
 ---
 
-Las **Tools** definen las capacidades que un agente puede utilizar durante su ejecución.  
+Las **Tools** definen las capacidades que un agente puede utilizar durante su ejecución.\
 Funcionan como **interfaces de acción**, permitiendo que el modelo interactúe con sistemas internos, servicios externos o recursos propios de la plataforma Devic.
 
 Cada Tool amplía el alcance del agente, permitiéndole realizar operaciones reales como enviar correos, consultar bases de datos, procesar documentos o conectar APIs mediante MCPs.
@@ -18,73 +18,77 @@ En la configuración de cada agente, la sección **Tools** muestra todas las her
 
 Desde este panel puedes:
 
-- **Añadir nuevas Tools** con el botón **Add tools**.  
-- **Configurar** parámetros y autenticación de cada Tool.  
-- **Eliminar** herramientas innecesarias.  
+- **Añadir nuevas Tools** con el botón **Add tools**.
+- **Configurar** parámetros y autenticación de cada Tool.
+- **Eliminar** herramientas innecesarias.
 - **Gestionar subagentes** como extensiones del agente principal.
 
 ---
 
 ## Añadir nuevas Tools
 
-Al pulsar **Add tools**, se abre el selector principal donde se agrupan todas las fuentes disponibles de herramientas.  
+Al pulsar **Add tools**, se abre el selector principal donde se agrupan todas las fuentes disponibles de herramientas.\
 Desde aquí puedes elegir entre **Built-in Tools**, **My MCPs**, **Code Snippets** o **Sub-Agents**.
 
-![Selector de Tools](94d75235-ac8e-4496-964e-d2209c77ff3f.png)
+![Añadir tools](/add-tools-agent.png)
+
+![Selector de Tools](/tools-selector-agent.png)
 
 ---
 
 ## Built-in Tools
 
-Las **Built-in Tools** son herramientas integradas de Devic, listas para usar sin configuración adicional.  
+Las **Built-in Tools** son herramientas integradas de Devic, listas para usar sin configuración adicional.\
 Permiten realizar operaciones comunes como:
 
-- **Search Knowledge:** búsqueda en bases de conocimiento internas (RAG).  
-- **Web Search:** búsqueda de información actualizada en la web.  
-- **Spreadsheet Tools:** lectura y gestión de hojas de cálculo.  
-- **Databases:** creación y consulta de tablas relacionales.  
-- **Send Email / Read Emails:** envío y recepción de correos.  
-- **OCR:** extracción de texto de documentos o imágenes.  
-- **PDF from HTML / Markdown:** generación de PDFs.  
+- **Search Knowledge:** búsqueda en bases de conocimiento internas (RAG).
+- **Web Search:** búsqueda de información actualizada en la web.
+- **Spreadsheet Tools:** lectura y gestión de hojas de cálculo.
+- **Databases:** creación y consulta de tablas relacionales.
+- **Send Email / Read Emails:** envío y recepción de correos.
+- **OCR:** extracción de texto de documentos o imágenes.
+- **PDF from HTML / Markdown:** generación de PDFs.
 - **Manage Tasks, Files and Directories, Chart Images**, entre otras.
 
-![Listado de Built-in Tools](94d75235-ac8e-4496-964e-d2209c77ff3f.png)
+![Listado de Built-in Tools](/built-in-tools\(1\).png)
 
-Estas herramientas están integradas nativamente en Devic y se mantienen actualizadas de forma automática.  
-Consulta la documentación completa en:  
+Estas herramientas están integradas nativamente en Devic y se mantienen actualizadas de forma automática.\
+Consulta la documentación completa en:\
 [**Listado de Built-in Tools**](../mcps/built-in-tools/tools-list)
 
 ---
 
 ## My MCPs
 
-En la pestaña **My MCPs** se listan los servidores MCP creados dentro de tu organización.  
+En la pestaña **My MCPs** se listan los servidores MCP creados dentro de tu organización.\
 Cada MCP representa un conjunto de herramientas derivadas de tus propias APIs o servicios internos, expuestos mediante el estándar **Model Context Protocol**.
 
-![Vista de Mis MCPs](0d3f6f71-fe74-4156-8572-8d8124786464.png)
+![Vista de Mis MCPs](/my-mcps-agent.png)
 
 Desde esta vista puedes:
-- Añadir herramientas creadas a partir de tus **APIs corporativas**.  
-- Incluir integraciones externas importadas desde MCPs públicos.  
-- Configurar la autenticación, endpoints y parámetros.  
+
+- Añadir herramientas creadas a partir de tus **APIs corporativas**.
+- Incluir integraciones externas importadas desde MCPs públicos.
+- Configurar la autenticación, endpoints y parámetros.
 
 Ejemplo: un agente que genera informes puede usar un MCP de **Google Drive API** para crear y almacenar hojas de cálculo.
 
-Consulta cómo crear y configurar MCPs personalizados en:  
+Consulta cómo crear y configurar MCPs personalizados en:\
 [**Mis MCPs**](../mcps/my-mcps/what-it-is)
 
 ---
 
 ## Code Snippets
 
-Los **Code Snippets** son bloques de código reutilizables que pueden actuar como mini-tools personalizadas.  
+Los **Code Snippets** son bloques de código reutilizables que pueden actuar como mini-tools personalizadas.\
 Permiten ejecutar lógica específica sin necesidad de desarrollar un MCP completo.
 
-![Panel de Code Snippets](b2c49244-ce4b-44fd-9031-161bb0cfaf76.png)
+![Panel de Code Snippets](/code-snippets-agent.png)
 
 Cada snippet puede contener:
-- Código en **Python** u otros lenguajes soportados.  
-- Parámetros de entrada definidos manualmente.  
+
+- Código en **Python** u otros lenguajes soportados.
+- Parámetros de entrada definidos manualmente.
 - Funcionalidades personalizadas reutilizables entre agentes.
 
 Pueden crearse desde **Create First Snippet** o **New Snippet**, y se añaden al agente igual que cualquier otra Tool.
@@ -93,12 +97,12 @@ Pueden crearse desde **Create First Snippet** o **New Snippet**, y se añaden al
 
 ## Sub-Agents
 
-Los **Sub-Agents** son agentes auxiliares que el agente principal puede invocar durante su ejecución.  
+Los **Sub-Agents** son agentes auxiliares que el agente principal puede invocar durante su ejecución.\
 Funcionan como herramientas autónomas capaces de resolver subtareas específicas, compartiendo recursos y herramientas del entorno.
 
-![Pestaña de Sub-Agents](ddd1ff56-fbe2-4372-918d-64fe9f0e4b7e.png)
+![Pestaña de Sub-Agents](/sub-agents.png)
 
-Ejemplo:  
+Ejemplo:\
 Un agente de soporte puede tener un sub-agente especializado en **análisis de incidencias técnicas**, al que llama cuando necesita clasificar un ticket complejo.
 
 Consulta más sobre su configuración en [**Subagentes**](./subagentes).
@@ -109,23 +113,23 @@ Consulta más sobre su configuración en [**Subagentes**](./subagentes).
 
 En este ejemplo, el agente **Prospección de Subvenciones** utiliza una combinación de Built-in Tools y MCPs personalizados para extraer y estructurar datos de resoluciones almacenadas en el RAG:
 
-- **Search Knowledge** → localiza la información base.  
-- **Web Search** → amplía datos de contexto público.  
-- **Spreadsheet Tools** → crea el reporte en Google Sheets.  
+- **Search Knowledge** → localiza la información base.
+- **Web Search** → amplía datos de contexto público.
+- **Spreadsheet Tools** → crea el reporte en Google Sheets.
 - **Google Drive API (MCP)** → guarda el archivo final en Drive.
 
-![Ejemplo de agente configurado con varias Tools](7be02a3f-d108-4ab3-9651-49a90c4e3b82.png)
+![Ejemplo de agente configurado con varias Tools](/agent-example.png)
 
 ---
 
 ## Buenas prácticas
 
-- Añade únicamente las Tools necesarias para el objetivo del agente.  
-- Mantén los MCPs sincronizados con sus APIs de origen.  
-- Revisa la autenticación de cada MCP antes de publicarlo.  
-- Utiliza nombres y descripciones claras para cada Tool.  
-- Aprovecha los Code Snippets para automatizar tareas pequeñas.  
-- Emplea Sub-Agents para modular agentes complejos.  
+- Añade únicamente las Tools necesarias para el objetivo del agente.
+- Mantén los MCPs sincronizados con sus APIs de origen.
+- Revisa la autenticación de cada MCP antes de publicarlo.
+- Utiliza nombres y descripciones claras para cada Tool.
+- Aprovecha los Code Snippets para automatizar tareas pequeñas.
+- Emplea Sub-Agents para modular agentes complejos.
 
 ---
 
