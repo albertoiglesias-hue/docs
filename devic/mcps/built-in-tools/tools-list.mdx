@@ -5,209 +5,175 @@ description: "Listado completo de las herramientas integradas de Devic y sus fun
 
 ## Descripción general
 
-A continuación encontrarás la descripción completa de las **17 Built-in Tools** incluidas en Devic, organizadas por su propósito funcional.
+A continuación encontrarás la descripción completa de las **Built-in Tools** incluidas en Devic, organizadas por su propósito funcional.
+
+![Built-in-tools description](/built-in-tools.png)
 
 ---
 
-## 1. Update Knowledge
+## Read Emails
 
-Actualiza la base de conocimiento de los agentes y MCPs mediante operaciones de escritura o sincronización de información.
+Lee y gestiona correos electrónicos.
 
-- **Tool:** `update_memory`
-- **Descripción:** Actualiza la memoria RAG con el contenido proporcionado.
-- **Uso recomendado:**  
-  - Mantener las fuentes de conocimiento actualizadas.  
-  - Sincronizar información desde documentos o APIs externas.
+- **Tools disponibles:**
+  - `get_unread_emails`, `get_last_emails`, `mark_email_as_read`, `get_email_attachment`, entre otras.
+
+![Read-emails description](/built-in-tools-read-email-detail.png)
 
 ---
 
-## 2. Send Email
+## Send Email
 
 Permite enviar correos electrónicos automatizados.
 
 - **Tool:** `send_basic_email`
 - **Descripción:** Envía un correo electrónico a la dirección especificada y puede escuchar una respuesta.
-- **Uso recomendado:**  
-  - Notificaciones automáticas o reportes.  
+- **Uso recomendado:**
+  - Notificaciones automáticas o reportes.
   - Alertas internas o comunicaciones entre agentes.
 
-![Send Email Tool](64cea700-c6f5-4476-894c-dbbc894d84d5.png)
-
 ---
 
-## 3. OCR
-
-Extrae texto de imágenes o documentos escaneados.
-
-- **Tools disponibles:**  
-  - `ocr_document`  
-  - `query_document`
-
-![OCR Tools](ac2c1adb-c162-4ef9-a51f-efef332d01da.png)
-
----
-
-## 4. PDF from HTML
-
-Convierte contenido HTML en documentos PDF con formato visual.
-
-- **Tool:** `generate_pdf_from_html`
-- **Uso recomendado:**  
-  - Creación de reportes corporativos o plantillas visuales.
-
-![PDF from HTML Tools](0b354075-42a6-4be0-a00f-e76574187f6c.png)
-
----
-
-## 5. Code Execution Tools
+## Code Execution Tools
 
 Ejecuta código en diferentes lenguajes desde Devic (actualmente Python).
 
 - **Tool:** `execute_python_code`
 - **Descripción:** Ejecuta código Python y devuelve el resultado o error.
-- **Uso recomendado:**  
+- **Uso recomendado:**
   - Procesamiento de datos o validación lógica.
 
-![Code Execution Tools](b7445a5c-afc9-4155-bc0d-d518a28f34e2.png)
-
 ---
 
-## 6. Web Search
-
-Permite realizar búsquedas de información actualizada en la web.
-
-- **Tools disponibles:**  
-  - `search_web`  
-  - `web_extract`
-
-![Web Search Tools](5b85d9eb-07c8-4aa6-87fe-811dffa9ee97.png)
-
----
-
-## 7. Manage Tasks
-
-Crea, actualiza y organiza tareas dentro de flujos automatizados.
-
-- **Tools disponibles:**  
-  - `create_task`, `update_task`, `create_multiple_tasks`
-
-![Manage Tasks Tools](3a007992-b492-4ffa-b553-0a71ee717617.png)
-
----
-
-## 8. Files and Directories
-
-Gestiona documentos y carpetas dentro del entorno Devic.
-
-- **Tools disponibles:**  
-  - `create_folder`, `get_folder_content`, `move_document_to_folder`, `navigate_to_folder`, entre otras.
-
-![Files and Directories Tools](3ddc53d7-1f42-4548-b31d-d0ccbaae413e.png)
-
----
-
-## 9. Chart Images
-
-Genera gráficos visuales a partir de datos estructurados.
-
-- **Tool:** `generate_chart_image`
-- **Descripción:** Crea gráficos de tipo barra, línea o área.
-- **Uso recomendado:**  
-  - Visualización de datos o reportes dinámicos.
-
-![Chart Images Tools](ba2618d7-4cff-4b40-9223-9393c955cf4b.png)
-
----
-
-## 10. Search Knowledge
+## Search Knowledge
 
 Busca información relevante dentro de bases de conocimiento internas.
 
 - **Tool:** `retrieve_from_rag_in_file`
 
-![Search Knowledge Tools](4c5e144c-3c1d-4f77-a991-4279d788f9b2.png)
+---
+
+## Update Knowledge
+
+Actualiza la base de conocimiento de los agentes y MCPs mediante operaciones de escritura o sincronización de información.
+
+- **Tool:** `update_memory`
+- **Descripción:** Actualiza la memoria RAG con el contenido proporcionado.
+- **Uso recomendado:**
+  - Mantener las fuentes de conocimiento actualizadas.
+  - Sincronizar información desde documentos o APIs externas.
 
 ---
 
-## 11. Read Emails
+## Web Search
 
-Lee y gestiona correos electrónicos.
+Permite realizar búsquedas de información actualizada en la web.
 
-- **Tools disponibles:**  
-  - `get_unread_emails`, `get_last_emails`, `mark_email_as_read`, `get_email_attachment`, entre otras.
-
-![Read Emails Tools](d1cb3f56-d776-454b-96fe-4e933e852173.png)
+- **Tools disponibles:**
+  - `search_web`
+  - `web_extract`
 
 ---
 
-## 12. Databases
+## Manage Tasks
+
+Crea, actualiza y organiza tareas dentro de flujos automatizados.
+
+- **Tools disponibles:**
+  - `create_task`, `update_task`, `create_multiple_tasks`
+
+---
+
+## Databases
 
 Crea, consulta, actualiza y elimina información estructurada en bases de datos internas.
 
-- **Tools:**  
-  `get_tables`, `create_table`, `filter_rows`, `update_row`, `vector_search_table_rows`, entre otras.
-
-![Databases Tools](00d7486c-724d-40ab-918a-cefecfb41598.png)
+- **Tools:**
+  - `get_tables`, `create_table`, `filter_rows`, `update_row`, `vector_search_table_rows`, entre otras.
 
 ---
 
-## 13. PDF from Markdown
+## Files and Directories
+
+Gestiona documentos y carpetas dentro del entorno Devic.
+
+- **Tools disponibles:**
+  - `create_folder`, `get_folder_content`, `move_document_to_folder`, `navigate_to_folder`, entre otras.
+
+---
+
+## OCR
+
+Extrae texto de imágenes o documentos escaneados.
+
+- **Tools disponibles:**
+  - `ocr_document`
+  - `query_document`
+
+---
+
+## PDF from HTML
+
+Convierte contenido HTML en documentos PDF con formato visual.
+
+- **Tool:** `generate_pdf_from_html`
+- **Uso recomendado:**
+  - Creación de reportes corporativos o plantillas visuales.
+
+---
+
+## PDF from Markdown
 
 Genera archivos PDF a partir de texto Markdown.
 
 - **Tool:** `generate_pdf_from_markdown`
 
-![PDF from Markdown Tools](8d9e9930-418e-4357-9602-c09ba973635f.png)
+---
+
+## Chart Images
+
+Genera gráficos visuales a partir de datos estructurados.
+
+- **Tool:** `generate_chart_image`
+- **Descripción:** Crea gráficos de tipo barra, línea o área.
+- **Uso recomendado:**
+  - Visualización de datos o reportes dinámicos.
 
 ---
 
-## 14. Text File Templates
-
-Genera documentos a partir de plantillas (Word, Excel, PDF).
-
-- **Tools disponibles:**  
-  - `fill_text_template`, `get_text_templates`, `merge_word_documents`
-
-![Text File Templates Tools](a840aee6-d175-4893-8194-2a96b7a0ff9d.png)
-
----
-
-## 15. Spreadsheet Tools
+## Spreadsheet Tools
 
 Permite leer y manipular hojas de cálculo (Excel o CSV).
 
-- **Tools:**  
+- **Tools:**
   - `get_sheets`, `get_sheet_content`
-
-![Spreadsheet Tools](8b78c172-8d43-46ed-8f0c-ed03d3641701.png)
 
 ---
 
-## 16. SharePoint API
+## Text File Templates
+
+Genera documentos a partir de plantillas (Word, Excel, PDF).
+
+- **Tools disponibles:**
+  - `fill_text_template`, `get_text_templates`, `merge_word_documents`
+
+---
+
+## SharePoint API
 
 Integra Devic con Microsoft SharePoint.
 
-- **Tools:**  
+- **Tools:**
   - `check_active_site`, `get_document_details`, `get_excel_content`, `update_cell`
-
-![SharePoint API Tools](9e1b385f-14ab-46d7-9567-a0e223039d48.png)
 
 ---
 
-## 17. Short and Medium Term Memory
+## Short and Medium Term Memory
 
 Permite a los agentes acceder al contexto de interacciones previas.
 
-- **Tools:**  
+- **Tools:**
   - `get_agent_threads_summary`, `query_agent_thread_details`
-
-![Short and Medium Term Memory Tools](718678d3-6518-4a87-b318-056100ca03bc.png)
-
----
-
-## Vista general
-
-![Vista general Built-in Tools](bb38ff30-0902-4600-8d7e-c02eb6c47790.png)
 
 ---
 
