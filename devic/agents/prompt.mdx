@@ -3,89 +3,84 @@ title: "Prompt del agente"
 description: "Aprende a diseñar, versionar y optimizar el prompt de tu agente en Devic"
 ---
 
-# Prompt del agente
-
-El **prompt** es el núcleo funcional de cada agente en Devic.  
-Define su comportamiento, los objetivos que debe alcanzar y las reglas bajo las cuales debe operar.  
+El **prompt** es el núcleo funcional de cada agente en Devic.\
+Define su comportamiento, los objetivos que debe alcanzar y las reglas bajo las cuales debe operar.\
 En otras palabras, el prompt traduce la intención del usuario en instrucciones ejecutables para el modelo.
 
 ---
 
 ## Qué es el prompt
 
-El prompt contiene las instrucciones que el modelo de lenguaje (LLM) sigue para ejecutar una tarea.  
+El prompt contiene las instrucciones que el modelo de lenguaje (LLM) sigue para ejecutar una tarea.\
 Aquí se define cómo debe razonar, qué pasos debe seguir y cuándo debe considerar que una tarea se ha completado correctamente.
 
 A diferencia de un simple texto descriptivo, el prompt en Devic actúa como el sistema cognitivo del agente, combinando contexto, reglas y objetivos para guiar sus decisiones.
 
 **Ejemplo**
 
-Eres un agente especializado en procesar pedidos.  
-Recibirás correos de clientes con solicitudes de compra dirigidas a `{{nombre_empresa}}`.  
-Consulta la tabla de clientes y busca el email del remitente entre los registros.  
-Una vez identificado el cliente, extrae los datos del pedido:  
-- Dirección de entrega  
-- Fecha del pedido  
-- Referencias de producto  
-- Número de unidades  
-Registra la información en la base de datos correspondiente.
+Eres un agente especializado en procesar pedidos.\
+Recibirás correos de clientes con solicitudes de compra dirigidas a `{{nombre_empresa}}`.\
+Consulta la tabla de clientes y busca el email del remitente entre los registros.\
+Una vez identificado el cliente, extrae los datos del pedido:
 
-![Ejemplo de prompt dentro del editor del agente](c6d39594-8fbc-4876-929a-802d02aa0aca.png)
+- Dirección de entrega
+- Fecha del pedido
+- Referencias de producto
+- Número de unidades\
+  Registra la información en la base de datos correspondiente.
 
----
+## ![Ejemplo de prompt](/prompt-example.png)
 
 ## Cómo estructurar un buen prompt
 
-Un prompt bien diseñado mejora significativamente la precisión y la autonomía del agente.  
+Un prompt bien diseñado mejora significativamente la precisión y la autonomía del agente.\
 A continuación se muestra una estructura recomendada para definirlo de manera clara y eficaz:
 
-| Sección | Descripción | Ejemplo |
-|----------|--------------|---------|
-| **Rol** | Define quién es el agente y cuál es su función. | Eres un agente especializado en atención al cliente. |
-| **Contexto** | Proporciona información sobre el entorno o las limitaciones. | Trabajas para la empresa `{{nombre_empresa}}` y recibes consultas por email. |
-| **Objetivo** | Describe el resultado que debe conseguir. | Tu tarea es clasificar los correos en categorías y responder automáticamente. |
-| **Acciones** | Indica los pasos concretos que debe seguir para lograr el objetivo. | Extrae la información del correo, verifica en la base de datos y responde según el resultado. |
-| **Criterios de éxito** | Define cuándo la tarea se considera completada. | La tarea se completa cuando el correo se clasifica correctamente y se envía la respuesta. |
+| Sección                | Descripción                                                         | Ejemplo                                                                                       |
+| ---------------------- | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **Rol**                | Define quién es el agente y cuál es su función.                     | Eres un agente especializado en atención al cliente.                                          |
+| **Contexto**           | Proporciona información sobre el entorno o las limitaciones.        | Trabajas para la empresa `{{nombre_empresa}}` y recibes consultas por email.                  |
+| **Objetivo**           | Describe el resultado que debe conseguir.                           | Tu tarea es clasificar los correos en categorías y responder automáticamente.                 |
+| **Acciones**           | Indica los pasos concretos que debe seguir para lograr el objetivo. | Extrae la información del correo, verifica en la base de datos y responde según el resultado. |
+| **Criterios de éxito** | Define cuándo la tarea se considera completada.                     | La tarea se completa cuando el correo se clasifica correctamente y se envía la respuesta.     |
 
-**Recomendación:** utiliza frases breves, directas y sin ambigüedades.  
+**Recomendación:** utiliza frases breves, directas y sin ambigüedades.\
 Los agentes funcionan mejor con instrucciones explícitas y una estructura lógica clara.
 
 ---
 
 ## Variables dinámicas
 
-Los prompts en Devic pueden incluir **placeholders dinámicos**, como `{{nombre_empresa}}` o `{{usuario}}`, que se reemplazan automáticamente durante la ejecución del agente.  
+Los prompts en Devic pueden incluir **placeholders dinámicos**, como `{{nombre_empresa}}` o `{{usuario}}`, que se reemplazan automáticamente durante la ejecución del agente.\
 Esto permite crear prompts reutilizables y adaptables a diferentes contextos o entornos.
-
-**Ejemplo**
-
-Recibirás correos de clientes realizando pedidos a la empresa `{{nombre_empresa}}`.
-
-![Comparativa de versiones mostrando placeholder dinámico](0847533b-9123-4b63-b98b-6f0629af0e62.png)
 
 ---
 
 ## Histórico y versionado
 
-Cada modificación del prompt se guarda automáticamente como una **nueva versión**.  
+Cada modificación del prompt se guarda automáticamente como una **nueva versión**.\
 Devic mantiene un registro completo de todas las versiones creadas, lo que permite consultar, comparar o restaurar versiones anteriores en cualquier momento.
 
 El historial se puede abrir desde la parte superior del editor, mediante la opción **History**.
 
-![Historial de versiones del prompt](cff0c803-10f9-43e7-8701-8d2f8b9d5ac3.png)
+![Historial de versiones del prompt](/prompt-version.png)
 
 ---
 
 ## Comparación de versiones
 
-La vista **Diff** permite comparar dos versiones del prompt de forma detallada, línea por línea.  
+La vista **Diff** permite comparar dos versiones del prompt de forma detallada, línea por línea.\
 Las diferencias se visualizan de la siguiente manera:
 
-- **Verde:** texto añadido  
-- **Rojo:** texto eliminado  
+- **Verde:** texto añadido
+- **Rojo:** texto eliminado
 - **Sin color:** texto sin cambios
 
-![Vista de comparación de versiones](0847533b-9123-4b63-b98b-6f0629af0e62.png)
+![Menu de versiones](/prompt-version-menu.png)
+
+
+
+![Vista de comparación de versiones](/prompt-dif.png)
 
 Esta función resulta especialmente útil para auditar cambios, revisar ajustes realizados por otros usuarios o controlar la evolución del comportamiento del agente.
 
@@ -93,11 +88,11 @@ Esta función resulta especialmente útil para auditar cambios, revisar ajustes 
 
 ## Mejores prácticas
 
-- Mantén el **rol del agente** claro y coherente.  
-- Utiliza **listas o pasos numerados** para estructurar las acciones.  
-- Incluye **variables dinámicas** cuando sea necesario.  
-- Evita instrucciones ambiguas o contradictorias.  
-- Realiza cambios incrementales en lugar de reescrituras completas.  
+- Mantén el **rol del agente** claro y coherente.
+- Utiliza **listas o pasos numerados** para estructurar las acciones.
+- Incluye **variables dinámicas** cuando sea necesario.
+- Evita instrucciones ambiguas o contradictorias.
+- Realiza cambios incrementales en lugar de reescrituras completas.
 - Documenta en el propio prompt los supuestos o excepciones relevantes.
 
 ---
@@ -106,10 +101,10 @@ Esta función resulta especialmente útil para auditar cambios, revisar ajustes 
 
 Se recomienda crear una nueva versión del prompt cuando ocurra alguna de las siguientes situaciones:
 
-- Se modifica el **objetivo** o el **alcance** del agente.  
-- Se añaden o eliminan **herramientas** (Tools).  
-- Cambia la estructura de las **fuentes de datos**.  
-- Se detectan **errores de interpretación** en la ejecución.  
+- Se modifica el **objetivo** o el **alcance** del agente.
+- Se añaden o eliminan **herramientas** (Tools).
+- Cambia la estructura de las **fuentes de datos**.
+- Se detectan **errores de interpretación** en la ejecución.
 - Se busca una mayor precisión o contexto en las respuestas.
 
 ---
