@@ -13,27 +13,31 @@ Esta funcionalidad garantiza que las tareas críticas puedan revisarse y aprobar
 
 ## Estados de ejecución
 
-Cuando un agente requiere intervención humana, la ejecución pasa automáticamente al estado **“Waiting for approval”**.  
+Cuando un agente requiere intervención humana, la ejecución pasa automáticamente al estado **“Waiting for Approval”**.  
 Desde el panel de ejecuciones es posible visualizar y filtrar las tareas en espera de aprobación, junto con su progreso y evaluación.
 
-![Vista de ejecuciones con tareas en espera de aprobación](a46efbc1-7c5c-4e6f-b207-324c8ba087ee.png)
+![Vista de ejecuciones con tareas en espera de aprobación](/human-in-the-loop-view.png)
 
 Los estados disponibles incluyen:
 
-| Estado | Descripción |
-|---------|--------------|
-| **Completed** | Ejecución finalizada correctamente. |
-| **Waiting for approval** | Requiere revisión o aprobación humana antes de continuar. |
-| **Paused** | Ejecución detenida temporalmente hasta recibir acción del usuario. |
+| Estado                   | Descripción                                                                 |
+| ------------------------ | --------------------------------------------------------------------------- |
+| **Queued**               | La ejecución ha sido creada y está en cola para comenzar.                   |
+| **Processing**           | El agente está actualmente procesando la tarea.                             |
+| **Completed**            | Ejecución finalizada correctamente.                                         |
+| **Failed**               | La ejecución ha fallado debido a un error o condición inesperada.           |
+| **Terminated**           | La ejecución fue detenida manualmente o por condiciones del sistema.        |
+| **Paused**               | Ejecución detenida temporalmente hasta recibir acción del usuario.          |
+| **Waiting for Approval** | Requiere revisión o aprobación humana antes de continuar.                   |
 
 ---
 
 ## Proceso de aprobación
 
-Al hacer clic sobre una ejecución en estado **“Waiting for approval”**, se abre la ventana de validación.  
+Al hacer clic sobre una ejecución en estado **“Waiting for Approval”**, se abre la ventana de validación.  
 En ella, el agente presenta la **solicitud de aprobación** junto con los datos extraídos o las acciones que pretende ejecutar.
 
-![Ventana de aprobación de agente](58e167b9-b7d8-40c2-8a79-c3b01e9cdc55.png)
+![Ventana de aprobación de agente](/waiting-for-approval.png)
 
 El usuario puede:
 
@@ -41,15 +45,9 @@ El usuario puede:
 - **Rechazar y finalizar** la ejecución, deteniendo el proceso.  
 - **Continuar con feedback**, añadiendo comentarios o correcciones que el agente deberá incorporar antes de seguir.
 
----
-
-## Supervisión contextual
-
 El panel de aprobación muestra toda la información relevante que el agente ha recopilado hasta ese punto:  
 por ejemplo, datos de clientes, documentos analizados o referencias cruzadas.  
 De esta manera, el usuario puede revisar los resultados **en su contexto operativo**, sin necesidad de salir de la interfaz del agente.
-
-![Ejemplo de solicitud de aprobación con detalles extraídos](a46efbc1-7c5c-4e6f-b207-324c8ba087ee.png)
 
 ---
 
