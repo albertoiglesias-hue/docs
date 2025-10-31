@@ -67,8 +67,8 @@
               "devic/agents/index",
               "devic/agents/deploy-your-first-agent",
               "devic/agents/prompt",
+              "devic/agents/tools",              
               "devic/agents/rag",
-              "devic/agents/tools",
               {
                 "group": "Optimización continua",
                 "expanded": false,
