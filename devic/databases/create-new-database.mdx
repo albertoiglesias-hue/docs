@@ -5,26 +5,22 @@ description: "Crea y configura una base de datos nativa dentro de Devic para alm
 
 ## Descripción general
 
-Las bases de datos nativas en Devic permiten estructurar y gestionar información de forma flexible, sin depender de sistemas externos.  
+Las bases de datos nativas en Devic permiten estructurar y gestionar información de forma flexible, sin depender de sistemas externos.\
 Desde la vista principal de **Databases**, puedes crear una nueva base en pocos pasos y definir su estructura inicial —nombre, entidades y campos personalizados—.
 
 ---
 
 ## Crear una nueva base
 
-1. Haz clic en el botón **+ Create New Table** en la esquina superior derecha del panel.  
+1. Haz clic en el botón **\+ Create New Table** en la esquina superior derecha del panel.
 2. En el cuadro **Create New Table**, completa los siguientes campos:
-
-   - **Table Name** *(obligatorio)*: nombre visible de la base, por ejemplo `Clientes` o `Pedidos`.  
-   - **Description** *(opcional)*: breve texto descriptivo sobre el propósito de la base.  
-   - **Entity Name (Singular)** *(obligatorio)*: nombre de la entidad individual (por ejemplo, `cliente`).  
-   - **Entity Name (Plural)** *(obligatorio)*: nombre plural que representará la colección de registros (por ejemplo, `clientes`).  
-
+   - **Table Name** _(obligatorio)_: nombre visible de la base, por ejemplo `Clientes` o `Pedidos`.
+   - **Description** _(opcional)_: breve texto descriptivo sobre el propósito de la base.
+   - **Entity Name (Singular)** _(obligatorio)_: nombre de la entidad individual (por ejemplo, `cliente`).
+   - **Entity Name (Plural)** _(obligatorio)_: nombre plural que representará la colección de registros (por ejemplo, `clientes`).
 3. Selecciona **Create Table** para confirmar.
 
-![Ventana de creación de base de datos](daf2d1a4-6531-4478-8eb9-3f5b51bc3901.png)
-
----
+![Ventana de creación de base de datos](/create-new-database.png)
 
 ## Configurar la base creada
 
@@ -32,43 +28,22 @@ Una vez creada, se abrirá la vista de configuración de la tabla, donde podrás
 
 ### Información básica
 
-- **Table Name:** permite editar el nombre principal de la base.  
-- **Color:** asigna un color de referencia para identificarla visualmente en el panel.  
-- **Entity Name (singular/plural):** modifica los nombres definidos durante la creación.  
-- **Include table in smart search:** activa o desactiva la inclusión de la base en las búsquedas semánticas globales.  
+- **Table Name:** permite editar el nombre principal de la base.
+- **Color:** asigna un color de referencia para identificarla visualmente en el panel.
+- **Entity Name (singular/plural):** modifica los nombres definidos durante la creación.
+- **Include table in smart search:** activa o desactiva la inclusión de la base en las búsquedas semánticas globales.
 
-![Configuración básica de la tabla](75061ded-4e9c-47bd-9dae-67ca6920af61.png)
+![Configuración básica de la tabla](/create-database.png)
 
----
-
-### Campos personalizados
-
-La sección **Custom Fields** define la estructura interna de la base.  
-Puedes agrupar campos y añadir tantos como necesites según el tipo de información que manejarás.
-
-- **New Group:** crea un grupo para organizar los campos por categoría (por ejemplo, *Datos generales*, *Información fiscal*, etc.).  
-- **Add Field:** añade un nuevo campo dentro del grupo seleccionado.
-
-Cada campo incluye:
-- **Nombre del campo**  
-- **Tipo de dato** (por ejemplo, *text*, *number*, *date*, *boolean*, etc.)  
-- **Acciones rápidas** para editar ✏️ o eliminar 🗑️ el campo.
-
-![Gestión de campos personalizados](84b34837-4755-4ca3-84df-9c090eb8aec8.png)
-
----
 
 ## Control de acceso
 
-Al final de la página encontrarás la sección **Access Control**, destinada a la configuración de permisos sobre cada base.  
-> *Nota: esta funcionalidad se encuentra actualmente en desarrollo (coming soon).*
+Al final de la página encontrarás la sección **Access Control**, destinada a la configuración de permisos sobre cada base.
+
+> _Nota: esta funcionalidad se encuentra actualmente en desarrollo (coming soon)._
 
 ---
 
-<Card
-  title="Siguiente paso"
-  icon="eye"
-  href="/devic/databases/view-and-edit-database"
->
+<Card title="Siguiente paso" icon="eye" href="/devic/databases/view-and-edit-database">
   Aprende cómo visualizar y editar registros dentro de una base de datos existente.
 </Card>
