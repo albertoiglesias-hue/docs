@@ -3,7 +3,7 @@ title: "Ejecución vía API"
 description: "Aprende cómo invocar asistentes de Devic mediante la API para integrarlos con tus aplicaciones o flujos personalizados."
 ---
 
-Los asistentes de **Devic** pueden ejecutarse no solo desde la interfaz visual o el widget, sino también de forma **programática** mediante la API pública.  
+Los asistentes de **Devic** pueden ejecutarse no solo desde la interfaz visual o el widget, sino también de forma **programática** mediante la API pública.\
 Esto permite integrarlos en sistemas externos, automatizar procesos o conectarlos con otras plataformas corporativas.
 
 Cada asistente dispone de un **endpoint dedicado** que permite enviar mensajes, iniciar conversaciones nuevas o continuar conversaciones existentes, todo mediante solicitudes HTTP estándar.
@@ -16,15 +16,19 @@ Cada asistente cuenta con una URL única para enviar mensajes:
 
 `POST https://api.devic.ai/api/v1/assistants/{assistant_id}/messages`
 
-El parámetro `{assistant_id}` se obtiene desde la vista del asistente, en el cuadro de diálogo **“API Documentation”**.
+El parámetro `{assistant_id}` se obtiene desde la vista del asistente, en el cuadro de diálogo **“Get Code”**.
 
-![Vista del panel API del asistente](fa7d3f7e-ede5-472c-a8b4-b30767ec8318.png)
+![Vista del panel API del asistente](/get-code-assistant.png)
+
+## 
+
+![Vista del panel API del asistente](/get-code-documentation-detail.png)
 
 ---
 
 ## Ejemplo de uso
 
-Puedes invocar un asistente utilizando cualquier lenguaje que soporte solicitudes HTTP (JavaScript, Python, cURL, etc.).  
+Puedes invocar un asistente utilizando cualquier lenguaje que soporte solicitudes HTTP (JavaScript, Python, cURL, etc.).\
 A continuación se muestra un ejemplo en **JavaScript** utilizando `fetch`:
 
 ```js
@@ -44,7 +48,7 @@ A continuación se muestra un ejemplo en **JavaScript** utilizando `fetch`:
     console.log(data)
 ```
 
-Este ejemplo crea una **nueva conversación** con el asistente, enviando un mensaje inicial.  
+Este ejemplo crea una **nueva conversación** con el asistente, enviando un mensaje inicial.\
 El campo `chatUuid` permite identificar la sesión o conversación activa; si se envía como `null`, se creará una nueva.
 
 ---
@@ -76,7 +80,7 @@ Para continuar una conversación ya iniciada, basta con incluir el identificador
 
 Todas las solicitudes deben incluir un encabezado de autorización con un **token válido**:
 
-    Authorization: Bearer YOUR_API_TOKEN
+Authorization: Bearer YOUR_API_TOKEN
 
 El token se obtiene desde tu cuenta en **Devic** y debe protegerse con cuidado, ya que otorga acceso a la ejecución del asistente.
 
@@ -84,7 +88,7 @@ El token se obtiene desde tu cuenta en **Devic** y debe protegerse con cuidado, 
 
 ## Respuesta de la API
 
-La API devuelve un objeto JSON con información sobre la conversación y la respuesta generada por el asistente.  
+La API devuelve un objeto JSON con información sobre la conversación y la respuesta generada por el asistente.\
 Un ejemplo simplificado de respuesta sería:
 
 ```js
@@ -95,36 +99,37 @@ Un ejemplo simplificado de respuesta sería:
       "timestamp": "2025-10-29T14:58:25Z"
     }
 ```
+
 ---
 
 ## Parámetros admitidos
 
-| Campo | Tipo | Descripción |
-|--------|------|-------------|
-| **message** | string | Texto del mensaje enviado al asistente. |
-| **chatUuid** | string o null | Identificador del chat. Si se deja vacío, se crea una nueva conversación. |
-| **context** | objeto *(opcional)* | Información adicional que puede usarse para personalizar la interacción. |
-| **metadata** | objeto *(opcional)* | Datos personalizados (por ejemplo, ID de usuario o idioma). |
+| Campo        | Tipo                | Descripción                                                               |
+| ------------ | ------------------- | ------------------------------------------------------------------------- |
+| **message**  | string              | Texto del mensaje enviado al asistente.                                   |
+| **chatUuid** | string o null       | Identificador del chat. Si se deja vacío, se crea una nueva conversación. |
+| **context**  | objeto _(opcional)_ | Información adicional que puede usarse para personalizar la interacción.  |
+| **metadata** | objeto _(opcional)_ | Datos personalizados (por ejemplo, ID de usuario o idioma).               |
 
 ---
 
 ## Buenas prácticas
 
-- **Reutiliza el `chatUuid`** para mantener el contexto conversacional.  
-- **Controla el número de peticiones** para evitar sobrecargas o costes innecesarios.  
-- **Guarda las respuestas** si necesitas trazabilidad o registro de conversaciones.  
+- **`Reutiliza el chatUuid`** para mantener el contexto conversacional.
+- **Controla el número de peticiones** para evitar sobrecargas o costes innecesarios.
+- **Guarda las respuestas** si necesitas trazabilidad o registro de conversaciones.
 - **Utiliza siempre HTTPS**, ya que la API no admite conexiones inseguras.
 
 ---
 
 ## En resumen
 
-| Elemento | Propósito |
-|-----------|------------|
-| **POST /assistants/{id}/messages** | Enviar mensajes o crear conversaciones con el asistente. |
-| **chatUuid** | Mantiene la continuidad de la conversación. |
-| **Authorization header** | Controla el acceso mediante token. |
-| **Response JSON** | Contiene el mensaje del asistente y los metadatos asociados. |
+| Elemento                       | Propósito                                                    |
+| ------------------------------ | ------------------------------------------------------------ |
+| **POST /assistants//messages** | Enviar mensajes o crear conversaciones con el asistente.     |
+| **chatUuid**                   | Mantiene la continuidad de la conversación.                  |
+| **Authorization header**       | Controla el acceso mediante token.                           |
+| **Response JSON**              | Contiene el mensaje del asistente y los metadatos asociados. |
 
 ---
 
@@ -141,5 +146,3 @@ Un ejemplo simplificado de respuesta sería:
     Conecta herramientas y APIs externas a tus asistentes para ampliar sus capacidades.
   </Card>
 </CardGroup>
-
-
