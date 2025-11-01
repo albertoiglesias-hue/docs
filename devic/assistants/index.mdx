@@ -9,9 +9,11 @@ Los **asistentes en Devic** son interfaces conversacionales que **interactúan e
 
 Se apoyan en tres bloques principales:
 
-- **Un modelo LLM** — el motor de comprensión y generación.  
-- **Un prompt (System Instruction)** — el contexto, las reglas y la voz del asistente.  
+- **Un modelo LLM** — el motor de comprensión y generación.
+- **Un prompt (System Instruction)** — el contexto, las reglas y la voz del asistente.
 - **Un conjunto de herramientas (tools)** — las acciones que puede invocar durante la conversación.
+
+![Panel de asistentes](/assistan-general-view.png)
 
 ---
 
@@ -27,12 +29,12 @@ El resultado es una experiencia **interactiva y guiada por el usuario**, con cap
 
 Un asistente combina:
 
-| Elemento | Descripción |
-|-----------|-------------|
-| **Prompt (System Instruction)** | Define su propósito, estilo, límites y políticas de respuesta. |
-| **LLM** | Interpreta el mensaje, razona y redacta la respuesta. |
-| **Tools** | Acceden a datos o ejecutan acciones (RAG, emails, bases de datos, hojas de cálculo, MCPs…). |
-| **RAG (opcional)** | Fuente documental para citar y contextualizar respuestas con información de tu dominio. |
+| Elemento                        | Descripción                                                                                 |
+| ------------------------------- | ------------------------------------------------------------------------------------------- |
+| **Prompt (System Instruction)** | Define su propósito, estilo, límites y políticas de respuesta.                              |
+| **LLM**                         | Interpreta el mensaje, razona y redacta la respuesta.                                       |
+| **Tools**                       | Acceden a datos o ejecutan acciones (RAG, emails, bases de datos, hojas de cálculo, MCPs…). |
+| **RAG (opcional)**              | Fuente documental para citar y contextualizar respuestas con información de tu dominio.     |
 
 Esta combinación permite que el asistente **responda con precisión**, y, cuando lo requiera, **actúe** mediante tools sin salir del chat.
 
@@ -43,8 +45,8 @@ Esta combinación permite que el asistente **responda con precisión**, y, cuand
 La interacción con los asistentes es **sincrónica y continua**: cada mensaje del usuario puede desencadenar razonamiento y llamadas a tools, devolviendo una respuesta inmediata.
 
 ### Canales habituales de uso
-- **Widget web** embebido en tu aplicación o portal.  
-- **Email / canales conectados** (p. ej., leer y responder correos).  
+
+- **Widget web** embebido en tu aplicación o portal.
 - **API** para integrarlo en otros flujos conversacionales o productos.
 
 ---
@@ -53,9 +55,9 @@ La interacción con los asistentes es **sincrónica y continua**: cada mensaje d
 
 Un asistente de soporte puede:
 
-1. Leer la pregunta del usuario sobre un procedimiento.  
-2. Consultar **RAG** para encontrar el apartado relevante del manual.  
-3. Responder con los pasos y, si procede, **enviar un PDF** o abrir una **tarea** asociada.  
+1. Leer la pregunta del usuario sobre un procedimiento.
+2. Consultar **RAG** para encontrar el apartado relevante del manual.
+3. Responder con los pasos y, si procede, **enviar un PDF** o abrir una **tarea** asociada.
 4. Mantener el contexto para las siguientes repreguntas del usuario dentro del mismo hilo.
 
 Durante el proceso, **el asistente decide** si necesita una tool (p. ej., “Search knowledge”, “Databases” o “Send email”) y cómo combinarla con su respuesta.
@@ -64,19 +66,19 @@ Durante el proceso, **el asistente decide** si necesita una tool (p. ej., “Sea
 
 ## En resumen
 
-| Característica | Asistentes en Devic |
-|----------------|----------------------|
-| **Interacción** | Conversación en tiempo real y continua. |
-| **Objetivo** | Resolver dudas y ejecutar acciones dentro del hilo. |
+| Característica     | Asistentes en Devic                                      |
+| ------------------ | -------------------------------------------------------- |
+| **Interacción**    | Conversación en tiempo real y continua.                  |
+| **Objetivo**       | Resolver dudas y ejecutar acciones dentro del hilo.      |
 | **Comportamiento** | Guiado por el usuario; puede invocar tools bajo demanda. |
-| **Diseño** | Conversacional, con contexto persistente por hilo. |
-| **Componentes** | Prompt + LLM + Tools (+ RAG opcional). |
+| **Diseño**         | Conversacional, con contexto persistente por hilo.       |
+| **Componentes**    | Prompt + LLM + Tools (+ RAG opcional).                   |
 
 ---
 
 <Note>
-Los asistentes son ideales para **atención al usuario, soporte interno, help desks y front-ends conversacionales**.  
-Al combinar conversación con tools y RAG, ofrecen respuestas precisas y pueden **actuar** sin abandonar el chat.
+  Los asistentes son ideales para **atención al usuario, soporte interno, help desks y front-ends conversacionales**.\
+  Al combinar conversación con tools y RAG, ofrecen respuestas precisas y pueden **actuar** sin abandonar el chat.
 </Note>
 
 ---
