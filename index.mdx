@@ -1,97 +1,72 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "Introducción"
+description: "Devic es una plataforma de abstracción que permite a empresas **SaaS** transformarse en organizaciones **AI-native**, integrando inteligencia artificial en sus procesos internos y en sus productos sin necesidad de desarrollar infraestructura propia"
 ---
 
-## Setting up
+La plataforma ofrece un entorno unificado para crear, desplegar y operar sistemas impulsados por IA, combinando **agentes**, **asistentes**, **bases de datos vectoriales** y **herramientas (MCPs)** en una arquitectura interoperable.
 
-Get your documentation site up and running in minutes.
+Devic nace de la experiencia de un equipo de emprendedores y técnicos que, tras años construyendo productos SaaS, detectaron la falta de un estándar para incorporar IA de forma estructurada, segura y escalable dentro de entornos empresariales.
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
+![Vista general de Devic](/Devic.ai.png)
+
+---
+
+## Por qué Devic
+
+<Card title="Capa de abstracción completa" icon="layers" horizontal>
+  Devic centraliza la gestión de modelos, prompts, herramientas y datos, eliminando la necesidad de desarrollar infraestructura AI desde cero.
 </Card>
 
-## Make it yours
-
-Design a docs site that looks great and empowers your users.
-
 <Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+  <Card title="Agnóstico de modelo" icon="brain">
+    Compatible con múltiples LLMs (OpenAI, Anthropic, Azure, modelos on-premise). Permite elegir el modelo más eficiente según el caso de uso.
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="Gestión de prompts" icon="file-lines">
+    Control de versiones, histórico y trazabilidad completa de cada prompt utilizado por agentes o asistentes.
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="MCPs y herramientas personalizadas" icon="plug">
+    Crea, importa y publica herramientas que los modelos pueden invocar directamente bajo el estándar MCP.
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  <Card title="RAG nativo" icon="book-open">
+    Ingesta automática de documentos con vectorización y búsqueda semántica integrada.
+  </Card>
+  <Card title="Evaluaciones automáticas" icon="scale-balanced">
+    Usa un modelo como juez (LLM as a Judge) para auditar resultados y evaluar calidad sin intervención humana.
+  </Card>
+  <Card title="FinOps y trazabilidad" icon="chart-line">
+    Control granular de costes, consumo de tokens y logs detallados de cada ejecución.
   </Card>
 </Columns>
 
-## Create beautiful pages
+---
 
-Everything you need to create world-class documentation.
+## Qué puedes construir
+
+Devic proporciona todos los componentes necesarios para construir productos y flujos **AI-native** dentro de tu propio entorno SaaS.
 
 <Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
+  <Card title="MCPs personalizados" icon="server">
+    Conecta tus APIs o servicios internos y publícalos como MCPs listos para ser usados por tus modelos o agentes.
   </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
+  <Card title="Agentes autónomos" icon="robot">
+    Configura agentes que ejecutan procesos de negocio complejos, con control de contexto, herramientas y tareas.
   </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
+  <Card title="Asistentes conversacionales" icon="comments">
+    Crea asistentes en tiempo real con acceso a tus datos y herramientas, integrables en tus productos o intranets.
   </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
+  <Card title="Widgets y SDKs" icon="window-maximize">
+    Integra tus agentes y asistentes en ChatGPT o cualquier interfaz mediante SDKs o widgets embebibles.
+  </Card>
+  <Card title="Procesos agénticos y Human-in-the-Loop" icon="user-check">
+    Diseña flujos híbridos que combinan automatización con validación humana en puntos críticos del proceso.
+  </Card>
+  <Card title="Bases de datos vectoriales" icon="database">
+    Crea y gestiona bases de datos nativas con búsqueda semántica y acceso directo desde tus agentes y MCPs.
   </Card>
 </Columns>
 
-## Need inspiration?
+---
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
+<Card title="Empieza ahora" icon="rocket" href="/quickstart">
+  Configura tu primer agente o asistente y transforma tu producto SaaS en una solución AI-native en minutos.
 </Card>
