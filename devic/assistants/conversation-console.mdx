@@ -5,7 +5,7 @@ description: "Descubre cómo probar, depurar y analizar el comportamiento de tus
 
 Interactua directamente con un asistente dentro de Devic para **probar su comportamiento**, **ver las herramientas que utiliza** y **realizar tareas de depuración (troubleshooting)**.
 
-No se trata de la interfaz final del usuario o cliente —esa se gestiona desde un **endpoint API** o mediante un **widget embebido**, explicados en las secciones [API Execution](./api-execution) y [Other options](./other-options) respectivamente—.  
+No se trata de la interfaz final del usuario o cliente —esa se gestiona desde un **endpoint API** o mediante un **widget embebido**, explicados en las secciones [API Execution](./api-execution) y [Other options](./other-options) respectivamente—.\
 Esta consola está pensada para **entornos de desarrollo y ajuste fino**.
 
 ---
@@ -14,11 +14,11 @@ Esta consola está pensada para **entornos de desarrollo y ajuste fino**.
 
 Para acceder:
 
-1. Abre el asistente desde el panel lateral de Devic.  
-2. Dirígete a la pestaña **Conversations**.  
+1. Abre el asistente desde el panel lateral de Devic.
+2. Dirígete a la pestaña **Conversations**.
 3. Selecciona una conversación existente o crea una nueva.
 
-![Acceso a la consola de conversación del asistente](4819eaf1-471b-4a83-b4a1-bccd8688b3e4.png)
+![Acceso a la consola de conversación del asistente](/conversation-console.png)
 
 Cada conversación muestra el **historial de mensajes** intercambiados entre el usuario y el asistente, junto con los detalles técnicos de cada interacción.
 
@@ -28,23 +28,23 @@ Cada conversación muestra el **historial de mensajes** intercambiados entre el 
 
 La consola ofrece una vista completa de la conversación y de los eventos generados durante la misma.
 
-![Vista principal de la consola de conversación](9d50139c-33b6-4bcd-b998-00ae27c83e32.png)
+![Vista principal de la consola de conversación](/conversation-console-events.png)
 
 Desde aquí puedes:
 
-- Enviar mensajes de prueba al asistente.  
-- Observar cómo responde y qué herramientas utiliza.  
-- Analizar en detalle los procesos internos del modelo.  
-- Acceder al **Chat Log** para ver los eventos del sistema.  
+- Enviar mensajes de prueba al asistente.
+- Observar cómo responde y qué herramientas utiliza.
+- Analizar en detalle los procesos internos del modelo.
+- Acceder al **Chat Log** para ver los eventos del sistema.
 
 ---
 
 ## Tool Calls
 
-Cuando el asistente ejecuta una acción (por ejemplo, consultar una base de datos, buscar en la web o enviar un correo), Devic lo muestra mediante una **Tool Call Card**.  
+Cuando el asistente ejecuta una acción (por ejemplo, consultar una base de datos, buscar en la web o enviar un correo), Devic lo muestra mediante una **Tool Call Card**.\
 Estas tarjetas indican qué herramienta se ha invocado, con qué argumentos y cuál fue la respuesta.
 
-![Ejemplo de tool calls ejecutadas por el asistente](a66d9765-27b7-4fb3-9ed7-67775ae2731b.png)
+![Ejemplo de tool calls ejecutadas por el asistente](/tool-call-assistant-detail.png)
 
 Puedes expandir cada tarjeta para ver la información completa del evento, incluyendo los parámetros enviados y los resultados obtenidos.
 
@@ -54,18 +54,23 @@ Puedes expandir cada tarjeta para ver la información completa del evento, inclu
 
 La pestaña **Logs** ofrece una vista detallada de todos los eventos registrados durante la conversación, incluyendo las llamadas a la API del modelo, tool calls, respuestas parciales y errores.
 
-![Vista del Chat Log con seguimiento de tool calls](e0be7bab-e792-41f8-835a-7f9918757203.png)
+![Vista del Chat Log con seguimiento de tool calls](/acces-logs-view-conversation-console.png)
+
+## 
+
+![Vista del Chat Log con seguimiento de tool calls](/logs-assistant.png)
 
 Desde esta vista puedes:
 
-- Filtrar por tipo de evento (`LOG`, `WARN`, `ERROR`, `DEBUG`).  
-- Seguir el orden cronológico de ejecución.  
-- Analizar tiempos de respuesta, mensajes internos y contenido procesado.  
-- Visualizar los parámetros exactos de cada **tool call**.  
+- Filtrar por tipo de evento (`LOG`, `WARN`, `ERROR`, `DEBUG`).
+- Seguir el orden cronológico de ejecución.
+- Analizar tiempos de respuesta, mensajes internos y contenido procesado.
+- Visualizar los parámetros exactos de cada **tool call**.
 
 Esto permite detectar fácilmente:
-- Por qué una tool no devolvió el resultado esperado.  
-- Si el asistente está interpretando correctamente el prompt.  
+
+- Por qué una tool no devolvió el resultado esperado.
+- Si el asistente está interpretando correctamente el prompt.
 - Cuándo interviene el modelo LLM y cuándo una herramienta externa.
 
 ---
@@ -74,44 +79,22 @@ Esto permite detectar fácilmente:
 
 Puedes inspeccionar cada mensaje intercambiado (tanto del usuario como del asistente) para revisar su estructura JSON completa, incluyendo entradas, respuestas y metadatos.
 
-![Detalle del mensaje con respuesta de una tool](a66d9765-27b7-4fb3-9ed7-67775ae2731b.png)
+![Detalle del mensaje con respuesta de una tool](/log-assistant-detail.png)
 
 Esta función resulta esencial para comprender cómo el asistente:
-- Procesa el contexto recibido.  
-- Decide qué herramienta usar.  
-- Genera la respuesta final visible en la conversación.  
+
+- Procesa el contexto recibido.
+- Decide qué herramienta usar.
+- Genera la respuesta final visible en la conversación.
 
 ---
 
 ## Buenas prácticas para troubleshooting
 
-- **Revisa los Logs** tras cada prueba para identificar posibles errores en tool calls o en la configuración de MCPs.  
-- **Valida los argumentos** enviados a cada herramienta antes de publicarlo en producción.  
-- **Utiliza conversaciones cortas y directas** durante las pruebas iniciales.  
-- **Activa el seguimiento de eventos (`Follow`)** para visualizar los logs en tiempo real.  
+- **Revisa los Logs** tras cada prueba para identificar posibles errores en tool calls o en la configuración de MCPs.
+- **Valida los argumentos** enviados a cada herramienta antes de publicarlo en producción.
+- **Utiliza conversaciones cortas y directas** durante las pruebas iniciales.
 - **Evalúa el rendimiento**: revisa tiempos de respuesta y uso de tokens en cada ejecución.
-
----
-
-## Casos de uso
-
-| Objetivo | Qué puedes verificar desde la consola |
-|-----------|----------------------------------------|
-| **Pruebas funcionales** | Comprueba si el asistente ejecuta correctamente las tools configuradas. |
-| **Depuración de errores** | Detecta fallos de autenticación, rutas de API incorrectas o errores de lógica. |
-| **Optimización de prompts** | Ajusta el comportamiento del asistente observando cómo interpreta las instrucciones. |
-| **Monitorización técnica** | Analiza tiempos, logs y consumo de recursos durante las conversaciones. |
-
----
-
-## En resumen
-
-| Elemento | Funcionalidad |
-|-----------|----------------|
-| **Conversación** | Interactúa directamente con el asistente. |
-| **Tool Calls** | Muestra las herramientas invocadas y sus resultados. |
-| **Chat Log** | Registra todos los eventos técnicos. |
-| **Developer Message** | Permite inspeccionar el contenido interno del contexto o del modelo. |
 
 ---
 
