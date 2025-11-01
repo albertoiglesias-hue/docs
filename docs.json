@@ -67,7 +67,7 @@
               "devic/agents/index",
               "devic/agents/deploy-your-first-agent",
               "devic/agents/prompt",
-              "devic/agents/tools",              
+              "devic/agents/tools",
               "devic/agents/rag",
               {
                 "group": "Optimización continua",
@@ -95,6 +95,7 @@
               "devic/assistants/prompt",
               "devic/assistants/tools",
               "devic/assistants/rag",
+              "devic/assistants/conversation-console",
               "devic/assistants/other-options",
               "devic/assistants/api-execution"
             ]
